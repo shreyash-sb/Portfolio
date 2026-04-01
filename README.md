@@ -1,17 +1,20 @@
 # 🌐 Personal Portfolio Website
 
 ## 🔗 Live Demo
-👉 https://your-username.github.io/portfolio-website/
+
+👉 https://github.com/shreyash-sb/Portfolio.git
 
 ---
 
 ## 📌 About The Project
+
 This is my personal portfolio website built using HTML, CSS, and JavaScript.  
 It showcases my skills, projects, and contact information in a clean and modern UI.
 
 ---
 
 ## 🚀 Features
+
 - Responsive design (mobile + desktop)
 - Smooth scrolling navigation
 - Dynamic typing animation
@@ -22,6 +25,7 @@ It showcases my skills, projects, and contact information in a clean and modern 
 ---
 
 ## 🛠️ Tech Stack
+
 - HTML5
 - CSS3
 - JavaScript (Vanilla JS)
@@ -29,13 +33,15 @@ It showcases my skills, projects, and contact information in a clean and modern 
 ---
 
 ## 📬 Contact
-- Email: your-email@example.com  
-- LinkedIn: (add link)  
-- GitHub: https://github.com/your-username  
+
+- Email: your-email@example.com
+- LinkedIn: (add link)
+- GitHub: https://github.com/your-username
 
 ---
 
 ## 🎯 Future Improvements
+
 - Add animations (GSAP / AOS)
 - Add backend for contact form
 - Convert to React
@@ -45,9 +51,11 @@ It showcases my skills, projects, and contact information in a clean and modern 
 ---
 
 ## ⭐ Acknowledgements
+
 Inspired by modern developer portfolios.
 
 ---
 
 ## 📄 License
+
 This project is open-source and available under the MIT License.

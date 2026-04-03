@@ -3,14 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name | Portfolio</title>
+    <title>Shreyash Bobalade | Portfolio</title>
+
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <!-- Navbar -->
+    <!-- NAVBAR -->
     <header>
       <nav class="navbar">
-        <h2 class="logo">Shreyash Bobalade</h2>
+        <h2 class="logo">Shreyash</h2>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -21,87 +29,72 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section id="home" class="hero">
-      <h1>Hello, I'm <span>SHREYASH</span></h1>
-      <h2>I am a <span id="typing"></span></h2>
-      <p>
-        Passionate IT engineering student with a strong foundation in web
-        development, data structures, and problem-solving. Skilled in building
-        full-stack applications using modern technologies. Actively seeking
-        opportunities to apply my skills and grow as a software developer.
-      </p>
-      <a href="my best resume.pdf" class="btn">Download Resume</a>
+      <div class="hero-content">
+        <h1>Hello, I'm <span>Shreyash</span></h1>
+        <h2>I am a <span id="typing"></span></h2>
+        <p>
+          Passionate IT engineering student skilled in web development, DSA, and
+          building real-world projects.
+        </p>
+        <a href="#projects" class="btn">View Projects</a>
+      </div>
     </section>
 
-    <!-- About -->
-    <section id="about">
+    <!-- ABOUT -->
+    <section id="about" class="section glass">
       <h2>About Me</h2>
       <p>
-        <!-- Add your description -->
-        I am a second-year IT engineering student at Walchand College of
-        Engineering with a strong academic background and a passion for
-        technology. I have a solid foundation in programming languages like C,
-        C++, and Python, along with knowledge of data structures and algorithms.
-        I am particularly interested in web development and enjoy building
-        full-stack applications using HTML, CSS, JavaScript, and modern
-        frameworks. I am continuously working on improving my development skills
-        by building real-world projects and exploring new technologies. I have
-        also developed strong problem-solving abilities through competitive
-        programming, where I actively practice on platforms like CodeChef. My
-        goal is to secure a high-paying software development role by
-        continuously learning, building impactful projects, and improving my
-        technical and analytical skills.
+        I am an IT engineering student with strong problem-solving skills and a
+        passion for development. I enjoy building full-stack applications and
+        learning new technologies.
       </p>
     </section>
 
-    <!-- Skills -->
-    <section id="skills">
+    <!-- SKILLS -->
+    <section id="skills" class="section">
       <h2>Skills</h2>
-      <div class="skills-container">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">React</div>
-        <div class="skill">Node.js</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">MongoDB</div>
-        <!-- Add more -->
+
+      <div class="card-container">
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">JavaScript</div>
+        <div class="card">React</div>
+        <div class="card">Node.js</div>
+        <div class="card">Python</div>
+        <div class="card">C / C++</div>
+        <div class="card">DSA</div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
       <h2>Projects</h2>
-      <div class="project-card">
-        <h3>Project Title</h3>
-        <p>Description...</p>
-        <a href="#">Live</a>
-        <a href="#">GitHub</a>
-      </div>
 
-      <div class="project-card">
-        <h3>Project Title</h3>
-        <p>Description...</p>
-        <a href="#">Live</a>
-        <a href="#">GitHub</a>
+      <div class="card-container">
+        <div class="project-card">
+          <h3>Smart Inventory System</h3>
+          <p>Predicts stock demand & alerts for low inventory using Python.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Job Board Website</h3>
+          <p>Full-stack app with authentication & dashboard.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Hotel Management System</h3>
+          <p>Web-based system with booking and food management.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
+    <!-- CONTACT -->
+    <section id="contact" class="section glass">
       <h2>Contact</h2>
-      <form>
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="Your Email" />
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send</button>
-      </form>
+      <p>Email: your-email@gmail.com</p>
     </section>
-
-    <footer>
-      <p>© 2026 Your Name</p>
-    </footer>
 
     <script src="script.js"></script>
   </body>

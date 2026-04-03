@@ -1,46 +1,37 @@
-// Typing effect
-const textArray = ["Developer", "Programmer", "Web Designer","Softwear Engineer","AI Engineer"];
-let index = 0;
-let charIndex = 0;
-let currentText = "";
+// Typing Effect
+const roles = ["Web Developer", "Programmer", "Problem Solver"];
+let i = 0;
+let j = 0;
+let current = "";
 let isDeleting = false;
 
-function typeEffect() {
-    const typing = document.getElementById("typing");
+function type() {
+  current = roles[i];
 
-    if (index < textArray.length) {
-        if (!isDeleting && charIndex <= textArray[index].length) {
-            currentText = textArray[index].substring(0, charIndex++);
-        } else if (isDeleting && charIndex >= 0) {
-            currentText = textArray[index].substring(0, charIndex--);
-        }
+  if (!isDeleting) {
+    document.getElementById("typing").textContent =
+      current.substring(0, j++);
+  } else {
+    document.getElementById("typing").textContent =
+      current.substring(0, j--);
+  }
 
-        typing.textContent = currentText;
+  if (j === current.length) isDeleting = true;
+  if (j === 0) {
+    isDeleting = false;
+    i = (i + 1) % roles.length;
+  }
 
-        if (charIndex === textArray[index].length) {
-            isDeleting = true;
-            setTimeout(typeEffect, 1000);
-            return;
-        }
-
-        if (charIndex === 0) {
-            isDeleting = false;
-            index++;
-            if (index === textArray.length) index = 0;
-        }
-    }
-
-    setTimeout(typeEffect, isDeleting ? 50 : 100);
+  setTimeout(type, isDeleting ? 50 : 100);
 }
 
-typeEffect();
+type();
 
-
-// Smooth scroll
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href"))
-            .scrollIntoView({ behavior: "smooth" });
-    });
+// Smooth Scroll
+document.querySelectorAll("a").forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
 });

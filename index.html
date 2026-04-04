@@ -4,97 +4,123 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shreyash Bobalade | Portfolio</title>
-
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
   </head>
-
   <body>
     <!-- NAVBAR -->
-    <header>
-      <nav class="navbar">
-        <h2 class="logo">Shreyash</h2>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav>
+      <h2>Shreyash</h2>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
     <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1>Hello, I'm <span>Shreyash</span></h1>
-        <h2>I am a <span id="typing"></span></h2>
-        <p>
-          Passionate IT engineering student skilled in web development, DSA, and
-          building real-world projects.
-        </p>
-        <a href="#projects" class="btn">View Projects</a>
+    <section class="hero">
+      <h1>Hi, I'm Shreyash Bobalade</h1>
+      <p>Aspiring Software Engineer | Full Stack Developer</p>
+      <div class="buttons">
+        <a href="resume.pdf" download class="btn">Download Resume</a>
+        <button onclick="scrollToSection('projects')" class="btn">
+          View Projects
+        </button>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section glass">
+    <section id="about">
       <h2>About Me</h2>
       <p>
-        I am an IT engineering student with strong problem-solving skills and a
-        passion for development. I enjoy building full-stack applications and
-        learning new technologies.
+        I am a second-year Engineering student at Walchand College of
+        Engineering with strong interest in software development and problem
+        solving. I have hands-on experience in web development and data
+        structures and aim to secure a high-impact software engineering role
+        (15+ LPA).
       </p>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="section">
+    <section id="skills">
       <h2>Skills</h2>
 
-      <div class="card-container">
-        <div class="card">HTML</div>
-        <div class="card">CSS</div>
-        <div class="card">JavaScript</div>
-        <div class="card">React</div>
-        <div class="card">Node.js</div>
-        <div class="card">Python</div>
-        <div class="card">C / C++</div>
-        <div class="card">DSA</div>
+      <div class="skill-box">
+        <h3>Languages</h3>
+        <p>C, C++, Python, JavaScript</p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Frontend</h3>
+        <p>HTML, CSS, JavaScript, React (learning)</p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Backend</h3>
+        <p>Node.js, Express (learning), PHP</p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Tools</h3>
+        <p>Git, GitHub, VS Code</p>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section">
+    <section id="projects">
       <h2>Projects</h2>
 
-      <div class="card-container">
-        <div class="project-card">
-          <h3>Smart Inventory System</h3>
-          <p>Predicts stock demand & alerts for low inventory using Python.</p>
-        </div>
+      <div class="card">
+        <h3>Job Board Website</h3>
+        <p>
+          Developed a full-stack job portal with authentication, job listings,
+          and dashboard. Tech Stack: React, Node.js, MongoDB
+        </p>
+      </div>
 
-        <div class="project-card">
-          <h3>Job Board Website</h3>
-          <p>Full-stack app with authentication & dashboard.</p>
-        </div>
+      <div class="card">
+        <h3>Hotel Management System</h3>
+        <p>
+          Designed a web-based system for booking and food services management.
+          Tech Stack: HTML, CSS, JavaScript
+        </p>
+      </div>
+    </section>
 
-        <div class="project-card">
-          <h3>Hotel Management System</h3>
-          <p>Web-based system with booking and food management.</p>
-        </div>
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="edu">
+        <h3>B.Tech (Engineering)</h3>
+        <p>Walchand College of Engineering, Sangli</p>
+        <p>CGPA: 7.43</p>
+      </div>
+
+      <div class="edu">
+        <h3>HSC</h3>
+        <p>80.17%</p>
+      </div>
+
+      <div class="edu">
+        <h3>SSC</h3>
+        <p>90.20%</p>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section glass">
+    <section id="contact">
       <h2>Contact</h2>
-      <p>Email: your-email@gmail.com</p>
+      <p>Email: yourmail@gmail.com</p>
+      <p>GitHub: github.com/yourusername</p>
+      <p>LinkedIn: linkedin.com/in/yourprofile</p>
     </section>
+
+    <footer>
+      <p>© 2026 Shreyash Bobalade</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>

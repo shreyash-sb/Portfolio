@@ -61,7 +61,7 @@ portfolio/
 1. Clone the repository
 
 ```
-git clone https://github.com/your-username/portfolio.git
+https://github.com/shreyash-sb/Portfolio.git
 ```
 
 2. Open the project folder

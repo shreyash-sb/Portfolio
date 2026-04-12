@@ -1,31 +1,28 @@
-const words=["Full Stack Developer","Problem Solver","Tech Enthusiast"];
-let i=0,j=0,current="",deleting=false;
+const text = ["MERN Stack Developer", "Problem Solver", "Tech Enthusiast"];
+let index = 0;
+let charIndex = 0;
 
-function type(){
-current=words[i];
-document.querySelector(".typing").textContent=current.substring(0,j);
+const typingElement = document.getElementById("typing");
 
-if(!deleting){
-j++;
-if(j>current.length){
-deleting=true;
-setTimeout(type,1000);
-return;
-}
-}else{
-j--;
-if(j===0){
-deleting=false;
-i=(i+1)%words.length;
-}
+function typeEffect() {
+    if (charIndex < text[index].length) {
+        typingElement.textContent += text[index].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, 100);
+    } else {
+        setTimeout(eraseEffect, 1500);
+    }
 }
 
-setTimeout(type,deleting?50:100);
+function eraseEffect() {
+    if (charIndex > 0) {
+        typingElement.textContent = text[index].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(eraseEffect, 50);
+    } else {
+        index = (index + 1) % text.length;
+        setTimeout(typeEffect, 200);
+    }
 }
 
-type();
-
-document.getElementById("form").addEventListener("submit",function(e){
-e.preventDefault();
-alert("Message Sent");
-});
+typeEffect();

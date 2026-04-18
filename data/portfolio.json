@@ -1,0 +1,276 @@
+{
+  "meta": {
+    "brand": "Shreyash Bobalade",
+    "role": "Information Technology Undergraduate",
+    "footer": "Shreyash Bobalade | Information Technology Undergraduate | Full Stack Developer"
+  },
+  "hero": {
+    "name": "Shreyash Bobalade",
+    "roles": [
+      "Full Stack Developer",
+      "IT Undergraduate",
+      "Problem Solver"
+    ],
+    "headline": "I build clean full-stack web projects, solve DSA problems regularly, and enjoy turning ideas into products that are actually usable.",
+    "subtext": "Third-year B.Tech Information Technology student focused on React, Node.js, backend fundamentals, and interview-oriented problem solving.",
+    "availability": "Open to internships and fresher SDE roles",
+    "location": "Bhopal, India",
+    "education": "B.Tech in Information Technology, 2023 - 2027",
+    "badges": [
+      "MERN Stack",
+      "DSA + OOP",
+      "Hackathon Projects",
+      "Open Source Learning"
+    ],
+    "code": [
+      "const student = {",
+      "  focus: ['React', 'Node.js', 'MongoDB'],",
+      "  learning: ['System Design', 'TypeScript'],",
+      "  lookingFor: 'SDE Internship',",
+      "  strength: 'Build + Problem Solving'",
+      "};"
+    ]
+  },
+  "stats": [
+    {
+      "value": "650+",
+      "label": "DSA problems solved"
+    },
+    {
+      "value": "8+",
+      "label": "projects completed"
+    },
+    {
+      "value": "2",
+      "label": "internships and team roles"
+    },
+    {
+      "value": "9.1",
+      "label": "current CGPA"
+    }
+  ],
+  "about": {
+    "intro": "I am a student developer who likes building practical projects instead of only tutorial clones. Most of my work is around web apps, dashboards, authentication flows, and clean frontend experiences.",
+    "description": "Along with development, I spend time on DSA, DBMS, OS, and networking fundamentals because I want to be strong in both coding rounds and actual product building. I enjoy working on team projects, hackathons, and features that improve real user workflows.",
+    "quickFacts": [
+      {
+        "label": "Degree",
+        "value": "B.Tech IT"
+      },
+      {
+        "label": "Year",
+        "value": "3rd Year"
+      },
+      {
+        "label": "Primary Stack",
+        "value": "React, Node.js, MongoDB"
+      },
+      {
+        "label": "Goal",
+        "value": "Software Development Engineer"
+      }
+    ],
+    "coursework": [
+      "Data Structures and Algorithms",
+      "Object Oriented Programming",
+      "Database Management Systems",
+      "Operating Systems",
+      "Computer Networks",
+      "System Design Basics"
+    ]
+  },
+  "skills": [
+    {
+      "title": "Languages",
+      "items": [
+        "C++",
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "SQL"
+      ]
+    },
+    {
+      "title": "Frontend",
+      "items": [
+        "React",
+        "Vite",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "Responsive UI"
+      ]
+    },
+    {
+      "title": "Backend",
+      "items": [
+        "Node.js",
+        "Express",
+        "REST APIs",
+        "Authentication",
+        "CRUD Workflows"
+      ]
+    },
+    {
+      "title": "Database and Tools",
+      "items": [
+        "MongoDB",
+        "MySQL",
+        "Git",
+        "Postman",
+        "GitHub",
+        "Netlify",
+        "Vercel"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Campus Connect",
+      "type": "Full Stack Project",
+      "year": "2026",
+      "summary": "A student portal for clubs, event registrations, announcements, and participation tracking.",
+      "details": [
+        "Built role-based login for students and club admins",
+        "Created event management, approval, and attendance workflows",
+        "Focused on dashboard UX and reusable React components"
+      ],
+      "stack": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ]
+    },
+    {
+      "name": "CodeCollab",
+      "type": "Realtime Collaboration Project",
+      "year": "2025",
+      "summary": "A browser-based collaborative coding room for interview practice and pair programming sessions.",
+      "details": [
+        "Added live room creation and code sync behaviour",
+        "Implemented editor state handling and session joining flow",
+        "Designed the interface for quick team-based practice use"
+      ],
+      "stack": [
+        "React",
+        "Socket.IO",
+        "Node.js",
+        "CSS"
+      ]
+    },
+    {
+      "name": "HostelHub",
+      "type": "Problem Solving Project",
+      "year": "2025",
+      "summary": "A complaint and maintenance tracking portal for hostel students and administrators.",
+      "details": [
+        "Allowed issue submission, status updates, and category filtering",
+        "Added admin-side tracking for open and resolved complaints",
+        "Focused on practical workflow design over unnecessary features"
+      ],
+      "stack": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "JWT Auth"
+      ]
+    },
+    {
+      "name": "PrepTrack",
+      "type": "Student Productivity App",
+      "year": "2024",
+      "summary": "A preparation planner for tracking DSA topics, contests, aptitude progress, and revision streaks.",
+      "details": [
+        "Created topic-wise progress tracking and revision status views",
+        "Used charts and filters to make preparation progress easier to monitor",
+        "Designed for placement preparation and self-discipline tracking"
+      ],
+      "stack": [
+        "React",
+        "Chart UI",
+        "Local Storage",
+        "JavaScript"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "B.Tech in Information Technology",
+      "subtitle": "Lakshmi Narain College of Technology, Bhopal",
+      "period": "2023 - 2027",
+      "detail": "CGPA: 9.1 / 10.0"
+    },
+    {
+      "title": "Senior Secondary Education",
+      "subtitle": "CBSE Board",
+      "period": "2021 - 2023",
+      "detail": "PCM with Computer Science"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Frontend Developer Intern",
+      "subtitle": "ByteBridge Labs",
+      "period": "Summer 2025",
+      "detail": "Worked on dashboard UI improvements, reusable component cleanup, and API-integrated screens for internal tools."
+    },
+    {
+      "title": "Web Development Lead",
+      "subtitle": "Coding Club, College Chapter",
+      "period": "2024 - Present",
+      "detail": "Helped juniors with React basics, project structuring, and hackathon team collaboration."
+    }
+  ],
+  "achievements": [
+    "Solved 650+ problems across LeetCode, Codeforces, and college contests",
+    "Top 12 finish in a 24-hour college hackathon with a campus utility platform",
+    "Built and deployed multiple full-stack academic and hackathon projects",
+    "Regularly revise CS fundamentals for coding rounds and interview preparation"
+  ],
+  "profiles": [
+    {
+      "platform": "GitHub",
+      "handle": "shreyash-bobalade",
+      "summary": "Project repositories, practice builds, and consistent learning logs.",
+      "stats": [
+        "Full-stack project code",
+        "Deployment-ready repos",
+        "Version control workflow"
+      ]
+    },
+    {
+      "platform": "LeetCode",
+      "handle": "shreyash_codes",
+      "summary": "Primary platform for DSA practice, arrays to graph problems, and interview prep.",
+      "stats": [
+        "500+ solved",
+        "Strong in medium-level questions",
+        "Daily streak based practice"
+      ]
+    },
+    {
+      "platform": "Codeforces",
+      "handle": "shreyash_cf",
+      "summary": "Contest practice for improving speed, implementation, and pattern recognition.",
+      "stats": [
+        "Regular contest attempts",
+        "Focus on implementation and greedy",
+        "Competitive problem solving"
+      ]
+    }
+  ],
+  "contact": {
+    "email": "shreyash.dev.contact@gmail.com",
+    "location": "Bhopal, Madhya Pradesh",
+    "availability": "Available for internships, freelance work, and collaborative student projects",
+    "note": "If you want to discuss internships, freelance work, or project collaboration, feel free to reach out.",
+    "interests": [
+      "Internship opportunity",
+      "Freelance project",
+      "Portfolio website",
+      "Hackathon collaboration",
+      "General networking"
+    ]
+  }
+}

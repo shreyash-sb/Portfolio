@@ -1,0 +1,27 @@
+{
+  "name": "engineering-student-portfolio",
+  "version": "1.0.0",
+  "description": "A dark modern engineering student portfolio built with React and served by Node.js.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "backend": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "vite",
+    "student"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "vite": "^8.0.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.0"
+  }
+}

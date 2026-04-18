@@ -1,113 +1,45 @@
-# 🌐 Shreyash Portfolio
+# React Engineering Student Portfolio
 
-A modern, responsive personal portfolio website built using **HTML, CSS, and JavaScript**.
-Designed to showcase my projects, skills, and profile in a clean and professional way.
+This project is a React-based portfolio website styled like a modern engineering student portfolio.
 
----
+## Stack
 
-## 🚀 Live Demo
+- React
+- Vite
+- Node.js
+- JSON API for portfolio content and contact form submissions
 
-(Add your deployed link here)
+## Run
 
----
-
-## 📁 Project Structure
-
-```
-portfolio/
-│── index.html
-│── style.css
-│── script.js
-│── assets/
-│     ├── profile.jpg
-│     ├── resume.pdf
+```bash
+npm run build
+npm start
 ```
 
----
+This serves the website at:
 
-## ✨ Features
-
-- Responsive design (Mobile + Desktop)
-- Clean and modern UI
-- Hero section with profile image
-- Typing animation effect
-- Skills showcase
-- Project cards
-- Contact form (frontend)
-- Smooth layout and alignment
-
----
-
-## 🛠️ Tech Stack
-
-- HTML5
-- CSS3 (Flexbox + Grid)
-- JavaScript (Vanilla JS)
-
----
-
-## 📸 Sections Included
-
-- Home (Hero)
-- About
-- Skills
-- Projects
-- Contact
-
----
-
-## ⚙️ Setup Instructions
-
-1. Clone the repository
-
-```
-https://github.com/shreyash-sb/Portfolio.git
+```text
+http://localhost:3000
 ```
 
-2. Open the project folder
+## Useful Scripts
 
-```
-cd portfolio
-```
+- `npm run build` creates the production frontend build
+- `npm start` serves the built website
+- `npm run backend` runs the Node backend only
+- `npm run dev` runs the Vite frontend dev server
 
-3. Run the project
+If you use `npm run dev`, run `npm run backend` in a second terminal so the API is available.
 
-- Open `index.html` in your browser
+## API
 
----
+- `GET /api/portfolio`
+- `POST /api/contact`
 
-## 📌 Customization
+Contact submissions are saved to `data/messages.json`.
 
-- Replace `assets/profile.jpg` with your photo
-- Update `assets/resume.pdf`
-- Add your project links in `index.html`
-- Update skills and content as needed
+## Notes
 
----
-
-## 📬 Contact
-
-- Email: (your email)
-- LinkedIn: (your profile link)
-- GitHub: (your GitHub link)
-
----
-
-## 📈 Future Improvements
-
-- Add backend for contact form
-- Add animations (GSAP / AOS)
-- Convert to React + Tailwind
-- Deploy on Vercel / Netlify
-
----
-
-## ⭐ Acknowledgement
-
-This portfolio is built as part of my journey to become a **Full Stack Developer** and achieve a high-quality software engineering role.
-
----
-
-## 📄 License
-
-This project is open source and free to use.
+- Update visible portfolio content in `data/portfolio.json`
+- Update layout in `src/App.jsx`
+- Update styling in `src/styles.css`

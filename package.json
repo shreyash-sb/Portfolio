@@ -1,7 +1,7 @@
 {
-  "name": "engineering-student-portfolio",
+  "name": "shreyash-portfolio",
   "version": "1.0.0",
-  "description": "A dark modern engineering student portfolio built with React and served by Node.js.",
+  "description": "A complete working portfolio website built from scratch with React and Node.js.",
   "main": "server.js",
   "scripts": {
     "dev": "vite",
@@ -13,7 +13,7 @@
     "portfolio",
     "react",
     "vite",
-    "student"
+    "node"
   ],
   "license": "MIT",
   "dependencies": {

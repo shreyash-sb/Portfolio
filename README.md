@@ -1,45 +1,37 @@
-# React Engineering Student Portfolio
+# Portfolio
 
-This project is a React-based portfolio website styled like a modern engineering student portfolio.
-
-## Stack
-
-- React
-- Vite
-- Node.js
-- JSON API for portfolio content and contact form submissions
+A complete portfolio website built with React, Vite, and a small Node.js backend.
 
 ## Run
 
 ```bash
+npm install
 npm run build
 npm start
 ```
 
-This serves the website at:
+The site will be available at `http://localhost:3000`.
 
-```text
-http://localhost:3000
+## Development
+
+```bash
+npm install
+npm run dev
 ```
 
-## Useful Scripts
+If you want the contact API while using the Vite dev server, run:
 
-- `npm run build` creates the production frontend build
-- `npm start` serves the built website
-- `npm run backend` runs the Node backend only
-- `npm run dev` runs the Vite frontend dev server
+```bash
+npm run backend
+```
 
-If you use `npm run dev`, run `npm run backend` in a second terminal so the API is available.
+## Content
+
+Update portfolio content in `data/portfolio.json`.
 
 ## API
 
 - `GET /api/portfolio`
 - `POST /api/contact`
 
-Contact submissions are saved to `data/messages.json`.
-
-## Notes
-
-- Update visible portfolio content in `data/portfolio.json`
-- Update layout in `src/App.jsx`
-- Update styling in `src/styles.css`
+Contact form submissions are stored in `data/messages.json`.

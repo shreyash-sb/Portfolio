@@ -134,7 +134,7 @@ async function handleContactRequest(request, response) {
   await writeJson(MESSAGES_FILE, messages);
 
   sendJson(response, 201, {
-    message: "Message received. Thanks for reaching out."
+    message: "Message received. I will get back to you soon."
   });
 }
 
@@ -168,7 +168,7 @@ async function serveClient(requestPath, response) {
     response.end(fallback);
   } catch {
     response.writeHead(503, { "Content-Type": "text/plain; charset=utf-8" });
-    response.end("Frontend build not found. Run `npm run build` or `npm start`.");
+    response.end("Frontend build not found. Run `npm run build` first.");
   }
 }
 
@@ -203,7 +203,7 @@ const server = http.createServer(async (request, response) => {
 ensureDataFiles()
   .then(() => {
     server.listen(PORT, () => {
-      console.log(`Portfolio website running on http://localhost:${PORT}`);
+      console.log(`Portfolio running on http://localhost:${PORT}`);
     });
   })
   .catch((error) => {

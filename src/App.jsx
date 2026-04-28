@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function SectionHeader({ eyebrow, title, text }) {
   return (
-    <div className="section-header">
+    <div className="section-header reveal">
       <span className="section-eyebrow">{eyebrow}</span>
       <h2>{title}</h2>
       {text ? <p>{text}</p> : null}
@@ -14,14 +14,11 @@ function App() {
   const [portfolio, setPortfolio] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [typedRole, setTypedRole] = useState("");
-  const [roleIndex, setRoleIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
   const [formState, setFormState] = useState({
     status: "idle",
     message: ""
   });
+  const [roleIndex, setRoleIndex] = useState(0);
 
   useEffect(() => {
     async function loadPortfolio() {
@@ -34,7 +31,7 @@ function App() {
         }
 
         setPortfolio(data);
-        document.title = `${data.meta.brand} | ${data.meta.role}`;
+        document.title = `${data.meta.name} | ${data.meta.title}`;
       } catch (loadError) {
         setError(loadError.message);
       } finally {
@@ -50,32 +47,40 @@ function App() {
       return undefined;
     }
 
-    const currentRole = portfolio.hero.roles[roleIndex];
-    const shouldPause = !isDeleting && charIndex === currentRole.length;
-    const shouldSwitch = isDeleting && charIndex === 0;
+    const interval = window.setInterval(() => {
+      setRoleIndex((current) => (current + 1) % portfolio.hero.roles.length);
+    }, 2000);
 
-    const timeout = window.setTimeout(
-      () => {
-        if (shouldPause) {
-          setIsDeleting(true);
-          return;
-        }
+    return () => window.clearInterval(interval);
+  }, [portfolio]);
 
-        if (shouldSwitch) {
-          setIsDeleting(false);
-          setRoleIndex((currentIndex) => (currentIndex + 1) % portfolio.hero.roles.length);
-          return;
-        }
+  useEffect(() => {
+    const items = document.querySelectorAll(".reveal");
 
-        setCharIndex((current) => current + (isDeleting ? -1 : 1));
+    if (!("IntersectionObserver" in window)) {
+      items.forEach((item) => item.classList.add("is-visible"));
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
       },
-      shouldPause ? 1100 : isDeleting ? 45 : 80
+      {
+        threshold: 0.15
+      }
     );
 
-    setTypedRole(currentRole.slice(0, charIndex));
+    items.forEach((item) => observer.observe(item));
+    return () => observer.disconnect();
+  }, [portfolio]);
 
-    return () => window.clearTimeout(timeout);
-  }, [charIndex, isDeleting, portfolio, roleIndex]);
+  const heroCode = portfolio?.hero?.code ? portfolio.hero.code.join("\n") : "";
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -120,7 +125,7 @@ function App() {
       <div className="state-screen">
         <div className="state-card">
           <span className="section-eyebrow">Loading</span>
-          <h1>Building portfolio data...</h1>
+          <h1>Preparing portfolio...</h1>
         </div>
       </div>
     );
@@ -137,21 +142,17 @@ function App() {
     );
   }
 
-  const heroCode = Array.isArray(portfolio.hero.code)
-    ? portfolio.hero.code.join("\n")
-    : String(portfolio.hero.code || "");
-
   return (
     <div className="app-shell">
-      <div className="bg-glow bg-glow-one" />
-      <div className="bg-glow bg-glow-two" />
+      <div className="glow glow-left" />
+      <div className="glow glow-right" />
 
-      <header className="topbar">
+      <header className="topbar reveal">
         <a href="#home" className="brand">
-          <span className="brand-dot" />
+          <span className="brand-mark" />
           <div>
-            <strong>{portfolio.meta.brand}</strong>
-            <span>{portfolio.meta.role}</span>
+            <strong>{portfolio.meta.name}</strong>
+            <span>{portfolio.meta.title}</span>
           </div>
         </a>
 
@@ -159,59 +160,54 @@ function App() {
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
-          <a href="#journey">Journey</a>
-          <a href="#contact" className="nav-cta">
+          <a href="#experience">Experience</a>
+          <a href="#contact" className="nav-pill">
             Contact
           </a>
         </nav>
       </header>
 
-      <main className="page">
-        <section id="home" className="hero-grid">
-          <div className="hero-copy card">
-            <span className="section-eyebrow">Student Portfolio</span>
-            <h1>
-              Hey, I&apos;m <span>{portfolio.hero.name}</span>
-            </h1>
-            <div className="typing-line">
-              <span className="typing-prefix">I am a </span>
-              <span className="typing-role">{typedRole || portfolio.hero.roles[0]}</span>
-            </div>
-            <p className="hero-text">{portfolio.hero.headline}</p>
-            <p className="hero-subtext">{portfolio.hero.subtext}</p>
+      <main className="page-layout">
+        <section id="home" className="hero-layout">
+          <div className="hero-copy card reveal">
+            <span className="section-eyebrow">{portfolio.hero.eyebrow}</span>
+            <h1>{portfolio.hero.headline}</h1>
+            <p className="hero-role">{portfolio.hero.roles[roleIndex]}</p>
+            <p className="hero-intro">{portfolio.hero.intro}</p>
+            <p className="hero-summary">{portfolio.hero.summary}</p>
 
             <div className="hero-actions">
               <a href="#projects" className="button button-primary">
                 View Projects
               </a>
               <a href="#contact" className="button button-secondary">
-                Contact Me
+                Work With Me
               </a>
             </div>
 
-            <div className="badge-row">
-              {portfolio.hero.badges.map((badge) => (
-                <span key={badge} className="badge">
-                  {badge}
+            <div className="chip-row">
+              {portfolio.hero.highlights.map((highlight) => (
+                <span key={highlight} className="chip">
+                  {highlight}
                 </span>
               ))}
             </div>
           </div>
 
           <div className="hero-side">
-            <div className="hero-profile card">
-              <div className="avatar-ring">
-                <div className="avatar-core">AS</div>
+            <div className="profile-card card reveal">
+              <div className="avatar-shell">
+                <div className="avatar-core">SB</div>
               </div>
-              <div className="hero-meta">
-                <h3>{portfolio.hero.availability}</h3>
+              <div className="profile-meta">
+                <h3>{portfolio.meta.name}</h3>
                 <p>{portfolio.hero.education}</p>
                 <p>{portfolio.hero.location}</p>
               </div>
             </div>
 
-            <div className="terminal-card card">
-              <div className="terminal-dots">
+            <div className="terminal-card card reveal">
+              <div className="terminal-top">
                 <span />
                 <span />
                 <span />
@@ -225,7 +221,7 @@ function App() {
 
         <section className="stats-grid">
           {portfolio.stats.map((stat) => (
-            <article key={stat.label} className="stat-card card">
+            <article key={stat.label} className="stat-card card reveal">
               <strong>{stat.value}</strong>
               <span>{stat.label}</span>
             </article>
@@ -234,33 +230,37 @@ function App() {
 
         <section id="about" className="section-block">
           <SectionHeader
-            eyebrow="About Me"
-            title="Student developer focused on building useful products and improving problem-solving skills."
-            text={portfolio.about.description}
+            eyebrow="About"
+            title={portfolio.about.title}
+            text={portfolio.about.body}
           />
 
           <div className="about-grid">
-            <article className="card about-main">
-              <p>{portfolio.about.intro}</p>
-              <div className="coursework-wrap">
-                <h3>Relevant Coursework</h3>
-                <div className="chip-grid">
-                  {portfolio.about.coursework.map((item) => (
-                    <span key={item} className="chip">
-                      {item}
-                    </span>
-                  ))}
-                </div>
+            <article className="about-panel card reveal">
+              <h3>What I bring</h3>
+              <ul className="detail-list">
+                {portfolio.about.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+
+              <h3>Relevant Coursework</h3>
+              <div className="chip-row">
+                {portfolio.about.coursework.map((item) => (
+                  <span key={item} className="chip chip-soft">
+                    {item}
+                  </span>
+                ))}
               </div>
             </article>
 
-            <article className="card quick-facts">
-              <h3>Quick Snapshot</h3>
-              <div className="facts-list">
-                {portfolio.about.quickFacts.map((fact) => (
-                  <div key={fact.label} className="fact-row">
-                    <span>{fact.label}</span>
-                    <strong>{fact.value}</strong>
+            <article className="facts-panel card reveal">
+              <h3>Quick Facts</h3>
+              <div className="facts-grid">
+                {portfolio.about.factCards.map((card) => (
+                  <div key={card.label} className="fact-card">
+                    <span>{card.label}</span>
+                    <strong>{card.value}</strong>
                   </div>
                 ))}
               </div>
@@ -270,18 +270,18 @@ function App() {
 
         <section id="skills" className="section-block">
           <SectionHeader
-            eyebrow="Tech Stack"
-            title="Skills usually expected in an engineering student portfolio."
-            text="Clear grouping, strong readability, and enough detail without turning the page into a wall of icons."
+            eyebrow="Skills"
+            title="A balanced stack across frontend, backend, and product delivery."
+            text="I am comfortable building interfaces, wiring APIs, handling data flow, and improving maintainability as projects grow."
           />
 
           <div className="skills-grid">
             {portfolio.skills.map((group) => (
-              <article key={group.title} className="card skill-card">
+              <article key={group.title} className="skill-card card reveal">
                 <h3>{group.title}</h3>
-                <div className="chip-grid">
+                <div className="chip-row">
                   {group.items.map((item) => (
-                    <span key={item} className="chip">
+                    <span key={item} className="chip chip-soft">
                       {item}
                     </span>
                   ))}
@@ -294,14 +294,14 @@ function App() {
         <section id="projects" className="section-block">
           <SectionHeader
             eyebrow="Projects"
-            title="Practical student projects with full-stack and problem-solving depth."
-            text="A focused set of projects covering full-stack development, collaboration, and student workflow problems."
+            title="Selected builds with practical full stack depth."
+            text="These projects reflect a mix of frontend quality, backend workflow handling, and attention to usability."
           />
 
           <div className="projects-grid">
             {portfolio.projects.map((project) => (
-              <article key={project.name} className="card project-card">
-                <div className="project-top">
+              <article key={project.name} className="project-card card reveal">
+                <div className="project-head">
                   <div>
                     <span className="project-type">{project.type}</span>
                     <h3>{project.name}</h3>
@@ -309,15 +309,15 @@ function App() {
                   <span className="project-year">{project.year}</span>
                 </div>
 
-                <p className="project-summary">{project.summary}</p>
+                <p>{project.summary}</p>
 
-                <ul className="project-points">
+                <ul className="detail-list">
                   {project.details.map((detail) => (
                     <li key={detail}>{detail}</li>
                   ))}
                 </ul>
 
-                <div className="chip-grid">
+                <div className="chip-row">
                   {project.stack.map((item) => (
                     <span key={item} className="chip chip-accent">
                       {item}
@@ -329,52 +329,64 @@ function App() {
           </div>
         </section>
 
-        <section id="journey" className="section-block">
+        <section id="experience" className="section-block">
           <SectionHeader
-            eyebrow="Journey"
-            title="Education, experience, and achievements in one place."
-            text="This follows the normal portfolio flow recruiters expect from engineering students."
+            eyebrow="Experience"
+            title="Internship, leadership, and academic journey."
+            text="A complete portfolio needs both projects and context, so this section covers the work and learning path behind the builds."
           />
 
-          <div className="journey-grid">
-            <article className="card timeline-card">
-              <h3>Education</h3>
+          <div className="experience-grid">
+            <article className="timeline-panel card reveal">
+              <h3>Experience</h3>
               <div className="timeline-list">
-                {portfolio.education.map((item) => (
+                {portfolio.experience.map((item) => (
                   <div key={item.title} className="timeline-item">
-                    <div className="timeline-row">
+                    <div className="timeline-head">
                       <strong>{item.title}</strong>
                       <span>{item.period}</span>
                     </div>
-                    <p>{item.subtitle}</p>
-                    <small>{item.detail}</small>
+                    <p>{item.org}</p>
+                    <ul className="detail-list">
+                      {item.points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
                   </div>
                 ))}
               </div>
             </article>
 
-            <article className="card timeline-card">
-              <h3>Experience and Leadership</h3>
+            <article className="timeline-panel card reveal">
+              <h3>Education</h3>
               <div className="timeline-list">
-                {portfolio.experience.map((item) => (
+                {portfolio.education.map((item) => (
                   <div key={item.title} className="timeline-item">
-                    <div className="timeline-row">
+                    <div className="timeline-head">
                       <strong>{item.title}</strong>
                       <span>{item.period}</span>
                     </div>
-                    <p>{item.subtitle}</p>
+                    <p>{item.org}</p>
                     <small>{item.detail}</small>
                   </div>
                 ))}
               </div>
             </article>
           </div>
+        </section>
 
-          <div className="achievement-grid">
-            {portfolio.achievements.map((item) => (
-              <article key={item} className="card achievement-card">
+        <section className="section-block">
+          <SectionHeader
+            eyebrow="Achievements"
+            title="Problem solving, project execution, and consistent learning."
+            text="A strong student portfolio should show both development output and the discipline behind it."
+          />
+
+          <div className="achievements-grid">
+            {portfolio.achievements.map((achievement) => (
+              <article key={achievement} className="achievement-card card reveal">
                 <span className="achievement-mark">+</span>
-                <p>{item}</p>
+                <p>{achievement}</p>
               </article>
             ))}
           </div>
@@ -382,22 +394,22 @@ function App() {
 
         <section className="section-block">
           <SectionHeader
-            eyebrow="Coding Profiles"
-            title="Coding profiles and practice platforms."
-            text="A simple overview of problem-solving activity and project work."
+            eyebrow="Profiles"
+            title="Coding profiles and project presence."
+            text="These cards keep the portfolio complete and make it easy to replace handles and links later."
           />
 
           <div className="profiles-grid">
             {portfolio.profiles.map((profile) => (
-              <article key={profile.platform} className="card profile-card">
-                <div className="profile-head">
+              <article key={profile.platform} className="profile-detail card reveal">
+                <div className="profile-top">
                   <h3>{profile.platform}</h3>
                   <span>{profile.handle}</span>
                 </div>
                 <p>{profile.summary}</p>
-                <ul className="profile-list">
-                  {profile.stats.map((item) => (
-                    <li key={item}>{item}</li>
+                <ul className="detail-list">
+                  {profile.points.map((point) => (
+                    <li key={point}>{point}</li>
                   ))}
                 </ul>
               </article>
@@ -408,30 +420,27 @@ function App() {
         <section id="contact" className="section-block">
           <SectionHeader
             eyebrow="Contact"
-            title="Get in touch for internships, freelance work, or collaboration."
-            text={portfolio.contact.note}
+            title={portfolio.contact.title}
+            text={portfolio.contact.copy}
           />
 
           <div className="contact-grid">
-            <article className="card contact-info">
-              <h3>Let&apos;s connect</h3>
-              <div className="facts-list">
-                <div className="fact-row">
-                  <span>Email</span>
-                  <strong>{portfolio.contact.email}</strong>
-                </div>
-                <div className="fact-row">
-                  <span>Location</span>
-                  <strong>{portfolio.contact.location}</strong>
-                </div>
-                <div className="fact-row">
-                  <span>Status</span>
-                  <strong>{portfolio.contact.availability}</strong>
-                </div>
+            <article className="contact-info card reveal">
+              <div className="fact-card">
+                <span>Email</span>
+                <strong>{portfolio.contact.email}</strong>
+              </div>
+              <div className="fact-card">
+                <span>Location</span>
+                <strong>{portfolio.contact.location}</strong>
+              </div>
+              <div className="fact-card">
+                <span>Response</span>
+                <strong>{portfolio.contact.availability}</strong>
               </div>
             </article>
 
-            <form className="card contact-form" onSubmit={handleSubmit}>
+            <form className="contact-form card reveal" onSubmit={handleSubmit}>
               <label>
                 <span>Name</span>
                 <input type="text" name="name" placeholder="Your name" required />
@@ -461,7 +470,7 @@ function App() {
                 <textarea
                   name="message"
                   rows="6"
-                  placeholder="Write your message here"
+                  placeholder="Tell me about the opportunity or project"
                   required
                 />
               </label>
@@ -476,7 +485,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="footer">
+      <footer className="footer reveal">
         <p>{portfolio.meta.footer}</p>
       </footer>
     </div>

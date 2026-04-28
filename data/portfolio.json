@@ -1,48 +1,48 @@
 {
   "meta": {
-    "brand": "Shreyash Bobalade",
-    "role": "Information Technology Undergraduate",
-    "footer": "Shreyash Bobalade | Information Technology Undergraduate | Full Stack Developer"
+    "name": "Shreyash Bobalade",
+    "title": "Full Stack Developer and IT Undergraduate",
+    "footer": "Built with React, Node.js, and a focus on clean product-minded engineering."
   },
   "hero": {
-    "name": "Shreyash Bobalade",
+    "eyebrow": "Available for internships and freelance work",
+    "intro": "I design and build modern web experiences with strong frontend polish and dependable backend logic.",
+    "headline": "Full stack developer building products that feel clean, fast, and actually useful.",
     "roles": [
-      "Full Stack Developer",
-      "IT Undergraduate",
+      "React Developer",
+      "Node.js Builder",
       "Problem Solver"
     ],
-    "headline": "I build clean full-stack web projects, solve DSA problems regularly, and enjoy turning ideas into products that are actually usable.",
-    "subtext": "Third-year B.Tech Information Technology student focused on React, Node.js, backend fundamentals, and interview-oriented problem solving.",
-    "availability": "Open to internships and fresher SDE roles",
+    "summary": "I am an Information Technology undergraduate focused on full stack development, product thinking, and shipping projects with clear structure. I like working on interfaces, APIs, and practical systems that solve real workflow problems.",
     "location": "Bhopal, India",
     "education": "B.Tech in Information Technology, 2023 - 2027",
-    "badges": [
+    "highlights": [
       "MERN Stack",
-      "DSA + OOP",
-      "Hackathon Projects",
-      "Open Source Learning"
+      "REST APIs",
+      "Responsive UI",
+      "DSA and problem solving"
     ],
     "code": [
-      "const student = {",
-      "  focus: ['React', 'Node.js', 'MongoDB'],",
-      "  learning: ['System Design', 'TypeScript'],",
+      "const developer = {",
+      "  stack: ['React', 'Node.js', 'MongoDB'],",
+      "  focus: ['UI quality', 'Backend systems'],",
       "  lookingFor: 'SDE Internship',",
-      "  strength: 'Build + Problem Solving'",
+      "  mindset: 'Ship clean and scalable products'",
       "};"
     ]
   },
   "stats": [
     {
+      "value": "8+",
+      "label": "projects built"
+    },
+    {
       "value": "650+",
       "label": "DSA problems solved"
     },
     {
-      "value": "8+",
-      "label": "projects completed"
-    },
-    {
       "value": "2",
-      "label": "internships and team roles"
+      "label": "internships and leadership roles"
     },
     {
       "value": "9.1",
@@ -50,24 +50,29 @@
     }
   ],
   "about": {
-    "intro": "I am a student developer who likes building practical projects instead of only tutorial clones. Most of my work is around web apps, dashboards, authentication flows, and clean frontend experiences.",
-    "description": "Along with development, I spend time on DSA, DBMS, OS, and networking fundamentals because I want to be strong in both coding rounds and actual product building. I enjoy working on team projects, hackathons, and features that improve real user workflows.",
-    "quickFacts": [
+    "title": "A builder-first approach to development.",
+    "body": "I enjoy taking an idea from rough scope to a usable product. My work usually starts with interface structure and user flow, then moves into component systems, API handling, data modeling, and cleanup for maintainability. I care about both the visual finish and the engineering underneath.",
+    "points": [
+      "Comfortable across frontend, backend, and API integration",
+      "Strong interest in product-driven problem solving",
+      "Focus on readable code, clean structure, and practical delivery"
+    ],
+    "factCards": [
       {
         "label": "Degree",
         "value": "B.Tech IT"
-      },
-      {
-        "label": "Year",
-        "value": "3rd Year"
       },
       {
         "label": "Primary Stack",
         "value": "React, Node.js, MongoDB"
       },
       {
+        "label": "Interests",
+        "value": "Web apps, dashboards, full stack products"
+      },
+      {
         "label": "Goal",
-        "value": "Software Development Engineer"
+        "value": "SDE internship and product engineering work"
       }
     ],
     "coursework": [
@@ -76,16 +81,16 @@
       "Database Management Systems",
       "Operating Systems",
       "Computer Networks",
-      "System Design Basics"
+      "Software Engineering"
     ]
   },
   "skills": [
     {
       "title": "Languages",
       "items": [
-        "C++",
         "JavaScript",
         "TypeScript",
+        "C++",
         "Python",
         "SQL"
       ]
@@ -98,7 +103,7 @@
         "HTML5",
         "CSS3",
         "Tailwind CSS",
-        "Responsive UI"
+        "Responsive Design"
       ]
     },
     {
@@ -108,7 +113,7 @@
         "Express",
         "REST APIs",
         "Authentication",
-        "CRUD Workflows"
+        "CRUD workflows"
       ]
     },
     {
@@ -117,9 +122,8 @@
         "MongoDB",
         "MySQL",
         "Git",
-        "Postman",
         "GitHub",
-        "Netlify",
+        "Postman",
         "Vercel"
       ]
     }
@@ -127,13 +131,13 @@
   "projects": [
     {
       "name": "Campus Connect",
-      "type": "Full Stack Project",
+      "type": "Full Stack Platform",
       "year": "2026",
-      "summary": "A student portal for clubs, event registrations, announcements, and participation tracking.",
+      "summary": "A college portal for events, club announcements, registrations, and participation tracking.",
       "details": [
-        "Built role-based login for students and club admins",
-        "Created event management, approval, and attendance workflows",
-        "Focused on dashboard UX and reusable React components"
+        "Designed student and admin flows with role-based access",
+        "Built event creation, approval, and attendance features",
+        "Focused on dashboard clarity and reusable UI patterns"
       ],
       "stack": [
         "React",
@@ -144,13 +148,13 @@
     },
     {
       "name": "CodeCollab",
-      "type": "Realtime Collaboration Project",
+      "type": "Realtime Collaboration",
       "year": "2025",
-      "summary": "A browser-based collaborative coding room for interview practice and pair programming sessions.",
+      "summary": "A collaborative coding room for peer practice, live sessions, and interview-style collaboration.",
       "details": [
-        "Added live room creation and code sync behaviour",
-        "Implemented editor state handling and session joining flow",
-        "Designed the interface for quick team-based practice use"
+        "Created room-based collaboration flows and session handling",
+        "Built UI for shared code interaction and quick usability",
+        "Focused on performance and a clear editing workflow"
       ],
       "stack": [
         "React",
@@ -161,115 +165,124 @@
     },
     {
       "name": "HostelHub",
-      "type": "Problem Solving Project",
+      "type": "Operations Dashboard",
       "year": "2025",
-      "summary": "A complaint and maintenance tracking portal for hostel students and administrators.",
+      "summary": "A complaint and maintenance tracking system for hostel students and administrators.",
       "details": [
-        "Allowed issue submission, status updates, and category filtering",
-        "Added admin-side tracking for open and resolved complaints",
-        "Focused on practical workflow design over unnecessary features"
+        "Added issue submission, filtering, and status updates",
+        "Built admin panels for tracking open and closed requests",
+        "Designed around a practical day-to-day workflow problem"
       ],
       "stack": [
         "React",
         "Node.js",
         "MongoDB",
-        "JWT Auth"
+        "JWT"
       ]
     },
     {
       "name": "PrepTrack",
-      "type": "Student Productivity App",
+      "type": "Productivity App",
       "year": "2024",
-      "summary": "A preparation planner for tracking DSA topics, contests, aptitude progress, and revision streaks.",
+      "summary": "A preparation planner for DSA, contests, aptitude progress, and revision tracking.",
       "details": [
-        "Created topic-wise progress tracking and revision status views",
-        "Used charts and filters to make preparation progress easier to monitor",
-        "Designed for placement preparation and self-discipline tracking"
+        "Created topic tracking, streaks, and progress indicators",
+        "Used data visualization for better revision awareness",
+        "Built around placement preparation discipline"
       ],
       "stack": [
         "React",
-        "Chart UI",
+        "Charts",
         "Local Storage",
         "JavaScript"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Frontend Developer Intern",
+      "org": "ByteBridge Labs",
+      "period": "Summer 2025",
+      "points": [
+        "Worked on dashboard screens, reusable components, and API-integrated pages",
+        "Improved interface consistency and reduced repeated frontend patterns",
+        "Collaborated on internal product workflows and implementation cleanup"
+      ]
+    },
+    {
+      "title": "Web Development Lead",
+      "org": "Coding Club Chapter",
+      "period": "2024 - Present",
+      "points": [
+        "Helped students with frontend fundamentals and project structure",
+        "Supported hackathon teams with React and backend integration guidance",
+        "Led smaller internal builds and collaboration workflows"
       ]
     }
   ],
   "education": [
     {
       "title": "B.Tech in Information Technology",
-      "subtitle": "Lakshmi Narain College of Technology, Bhopal",
+      "org": "Lakshmi Narain College of Technology, Bhopal",
       "period": "2023 - 2027",
       "detail": "CGPA: 9.1 / 10.0"
     },
     {
       "title": "Senior Secondary Education",
-      "subtitle": "CBSE Board",
+      "org": "CBSE Board",
       "period": "2021 - 2023",
       "detail": "PCM with Computer Science"
     }
   ],
-  "experience": [
-    {
-      "title": "Frontend Developer Intern",
-      "subtitle": "ByteBridge Labs",
-      "period": "Summer 2025",
-      "detail": "Worked on dashboard UI improvements, reusable component cleanup, and API-integrated screens for internal tools."
-    },
-    {
-      "title": "Web Development Lead",
-      "subtitle": "Coding Club, College Chapter",
-      "period": "2024 - Present",
-      "detail": "Helped juniors with React basics, project structuring, and hackathon team collaboration."
-    }
-  ],
   "achievements": [
-    "Solved 650+ problems across LeetCode, Codeforces, and college contests",
-    "Top 12 finish in a 24-hour college hackathon with a campus utility platform",
-    "Built and deployed multiple full-stack academic and hackathon projects",
-    "Regularly revise CS fundamentals for coding rounds and interview preparation"
+    "Solved 650+ problems across coding platforms and contests",
+    "Built multiple full stack projects with clean frontend and backend workflows",
+    "Finished in the top group at a 24-hour college hackathon",
+    "Regularly practice DSA along with development-focused project work"
   ],
   "profiles": [
     {
       "platform": "GitHub",
       "handle": "shreyash-bobalade",
-      "summary": "Project repositories, practice builds, and consistent learning logs.",
-      "stats": [
-        "Full-stack project code",
-        "Deployment-ready repos",
-        "Version control workflow"
+      "summary": "Project repositories, experiments, and full stack implementations.",
+      "points": [
+        "Frontend and backend project repos",
+        "Version control workflow",
+        "Deployment-ready codebases"
       ]
     },
     {
       "platform": "LeetCode",
       "handle": "shreyash_codes",
-      "summary": "Primary platform for DSA practice, arrays to graph problems, and interview prep.",
-      "stats": [
-        "500+ solved",
-        "Strong in medium-level questions",
-        "Daily streak based practice"
+      "summary": "Problem solving practice for placements and interview preparation.",
+      "points": [
+        "Strong medium-level practice",
+        "Regular revision habit",
+        "Interview-oriented DSA work"
       ]
     },
     {
       "platform": "Codeforces",
       "handle": "shreyash_cf",
-      "summary": "Contest practice for improving speed, implementation, and pattern recognition.",
-      "stats": [
-        "Regular contest attempts",
-        "Focus on implementation and greedy",
-        "Competitive problem solving"
+      "summary": "Contest practice for speed, logic, and implementation strength.",
+      "points": [
+        "Regular contest participation",
+        "Focus on greedy and implementation",
+        "Faster thinking under time limits"
       ]
     }
   ],
   "contact": {
+    "title": "Let us build something strong together.",
+    "copy": "If you want to discuss internships, freelance opportunities, product builds, or collaboration, send a message here.",
     "email": "shreyash.dev.contact@gmail.com",
     "location": "Bhopal, Madhya Pradesh",
-    "availability": "Available for internships, freelance work, and collaborative student projects",
-    "note": "If you want to discuss internships, freelance work, or project collaboration, feel free to reach out.",
+    "availability": "Usually replies within 24 to 48 hours",
     "interests": [
       "Internship opportunity",
       "Freelance project",
+      "Product collaboration",
       "Portfolio website",
-      "Hackathon collaboration",
       "General networking"
     ]
   }

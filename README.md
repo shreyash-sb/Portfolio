@@ -1,317 +1,254 @@
-<<<<<<< HEAD
 # Shreyash Portfolio
 
-A complete portfolio website built from scratch with:
+A complete full-stack portfolio website built from scratch using modern web technologies.
+This project showcases personal projects, skills, and experience with a clean UI and a functional backend.
 
-- React for the frontend
-- Vite for frontend tooling and build output
-- Node.js for serving the site and handling contact form submissions
-- JSON-based content and message storage
+---
 
-The project is structured so you can update content easily without changing the main UI code.
+## 🚀 Features
 
-## Features
+* Dark modern portfolio UI
+* Fully responsive (mobile + desktop)
+* Dynamic portfolio content via backend API
+* Working contact form with validation
+* Local message storage system
+* Clean project architecture
+* Separate development and production workflows
 
-- Dark modern portfolio UI
-- Responsive layout for desktop and mobile
-- Portfolio content loaded from a backend API
-- Working contact form with backend validation
-- Local message storage for submissions
-- Separate development and production workflows
+---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- React
-- Vite
-- Node.js
-- Vanilla CSS
+* **Frontend:** React, Vite
+* **Backend:** Node.js
+* **Styling:** Vanilla CSS
+* **Data Storage:** JSON
 
-## Project Structure
+---
 
-```text
-=======
-Shreyash Portfolio
-A complete portfolio website built from scratch with:
+## 📁 Project Structure
 
-React for the frontend
-Vite for frontend tooling and build output
-Node.js for serving the site and handling contact form submissions
-JSON-based content and message storage
-The project is structured so you can update content easily without changing the main UI code.
-
-Features
-Dark modern portfolio UI
-Responsive layout for desktop and mobile
-Portfolio content loaded from a backend API
-Working contact form with backend validation
-Local message storage for submissions
-Separate development and production workflows
-Tech Stack
-React
-Vite
-Node.js
-Vanilla CSS
-Project Structure
->>>>>>> 3ed606283d115f40cbe66251594f8b88fec65d09
+```
 Portfolio/
-|- data/
-|  |- messages.json
-|  |- portfolio.json
-|- dist/
-|- node_modules/
-|- src/
-|  |- App.jsx
-|  |- main.jsx
-|  |- styles.css
-|- .gitignore
-|- index.html
-|- package-lock.json
-|- package.json
-|- README.md
-|- server.js
-|- vite.config.js
-<<<<<<< HEAD
+├── data/
+│   ├── messages.json
+│   └── portfolio.json
+├── dist/
+├── node_modules/
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── styles.css
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+├── server.js
+├── vite.config.js
+└── README.md
 ```
 
-## Important Files
+---
 
-- `data/portfolio.json`
-  Main portfolio content such as hero text, skills, projects, experience, education, achievements, profiles, and contact details.
+## 📌 Important Files
 
-- `data/messages.json`
-  Stores contact form submissions received through the backend.
+### `data/portfolio.json`
 
-- `src/App.jsx`
-  Main React UI structure for the portfolio.
+Contains all portfolio content:
 
-- `src/styles.css`
-  All visual styling for the frontend.
+* Hero section
+* Skills
+* Projects
+* Experience
+* Education
+* Achievements
+* Profiles
+* Contact information
 
-- `server.js`
-  Node.js backend that serves the built frontend and handles the API routes.
+---
 
-## Installation
+### `data/messages.json`
 
-=======
-Important Files
-data/portfolio.json
-Main portfolio content such as hero text, skills, projects, experience, education, achievements, profiles, and contact details.
+Stores contact form submissions.
 
-data/messages.json
-Stores contact form submissions received through the backend.
+---
 
-src/App.jsx
-Main React UI structure for the portfolio.
+### `src/App.jsx`
 
-src/styles.css
-All visual styling for the frontend.
+Main React UI structure.
 
-server.js
-Node.js backend that serves the built frontend and handles the API routes.
+---
 
-Installation
->>>>>>> 3ed606283d115f40cbe66251594f8b88fec65d09
+### `src/styles.css`
+
+Handles layout, styling, responsiveness, and UI design.
+
+---
+
+### `server.js`
+
+Backend server responsible for:
+
+* Serving production build
+* Handling API routes
+* Processing contact form submissions
+
+---
+
+## ⚙️ Installation
+
 Install dependencies:
 
+```
 npm install
-<<<<<<< HEAD
 ```
 
-## Development
+---
 
-Run the Vite frontend:
+## 💻 Development
 
-```bash
-=======
-Development
-Run the Vite frontend:
+Run frontend:
 
->>>>>>> 3ed606283d115f40cbe66251594f8b88fec65d09
+```
 npm run dev
-If you want the backend API available at the same time, run this in another terminal:
+```
 
-<<<<<<< HEAD
-If you want the backend API available at the same time, run this in another terminal:
+Run backend (in another terminal):
 
-```bash
-=======
->>>>>>> 3ed606283d115f40cbe66251594f8b88fec65d09
+```
 npm run backend
-Production Run
-Build the frontend:
+```
 
-<<<<<<< HEAD
-## Production Run
+---
 
-Build the frontend:
+## 🚀 Production Run
 
-```bash
+Build frontend:
+
+```
 npm run build
 ```
 
-Start the Node server:
+Start server:
 
-```bash
+```
 npm start
 ```
 
-The production site will run at:
+Application runs at:
 
-```text
+```
 http://localhost:3000
 ```
 
-## Available Scripts
+---
 
-- `npm install`
-  Installs project dependencies.
+## 📜 Available Scripts
 
-- `npm run dev`
-  Starts the Vite development server.
+* `npm install` → Install dependencies
+* `npm run dev` → Start Vite development server
+* `npm run build` → Build production frontend
+* `npm run backend` → Start backend server
+* `npm start` → Run production server
 
-- `npm run build`
-  Builds the production frontend into `dist/`.
+---
 
-- `npm run backend`
-  Starts only the Node backend.
+## 🔌 API Endpoints
 
-- `npm start`
-  Starts the Node server for the built production site.
+### `GET /api/portfolio`
 
-## API Endpoints
+Returns portfolio data from:
 
-- `GET /api/portfolio`
-  Returns the portfolio content from `data/portfolio.json`.
+```
+data/portfolio.json
+```
 
-- `POST /api/contact`
-  Accepts contact form submissions and stores them in `data/messages.json`.
+---
 
-## Contact Form Payload
+### `POST /api/contact`
 
-The backend expects:
+Stores contact form submissions in:
 
-```json
-=======
-npm run build
-Start the Node server:
+```
+data/messages.json
+```
 
-npm start
-The production site will run at:
+---
 
-http://localhost:3000
-Available Scripts
-npm install
-Installs project dependencies.
+## 📦 Contact Form Payload
 
-npm run dev
-Starts the Vite development server.
-
-npm run build
-Builds the production frontend into dist/.
-
-npm run backend
-Starts only the Node backend.
-
-npm start
-Starts the Node server for the built production site.
-
-API Endpoints
-GET /api/portfolio
-Returns the portfolio content from data/portfolio.json.
-
-POST /api/contact
-Accepts contact form submissions and stores them in data/messages.json.
-
-Contact Form Payload
-The backend expects:
-
->>>>>>> 3ed606283d115f40cbe66251594f8b88fec65d09
+```
 {
   "name": "Your Name",
   "email": "your@email.com",
   "interest": "Internship opportunity",
   "message": "Your message"
 }
-<<<<<<< HEAD
 ```
 
-Required fields:
+### Required Fields
 
-- `name`
-- `email`
-- `interest`
-- `message`
+* name
+* email
+* interest
+* message
 
-The backend also validates that the email format is correct.
+✔ Email format is validated on backend
 
-## Customization
+---
 
-To update visible portfolio content, edit:
+## 🎨 Customization
 
-```text
+### Update content:
+
+```
 data/portfolio.json
 ```
 
-To change the layout or sections, edit:
+### Update UI structure:
 
-```text
+```
 src/App.jsx
 ```
 
-To change colors, typography, spacing, cards, buttons, and overall UI, edit:
+### Update styling:
 
-```text
+```
 src/styles.css
 ```
 
-## Notes
+---
 
-- `dist/` is generated after running `npm run build`.
-- `node_modules/` contains installed dependencies and is ignored by git.
-- Contact messages are stored locally in `data/messages.json`.
-- The backend serves the built frontend only, so source files like `src/App.jsx` are not exposed directly.
+## 📝 Notes
 
-## Verification Status
+* `dist/` is generated after build
+* `node_modules/` is ignored by Git
+* Messages are stored locally (no database)
+* Backend serves only built files (secure approach)
 
-The project has already been verified for:
+---
 
-- successful frontend build
-- successful page load
-- successful `GET /api/portfolio`
-- successful valid contact form submission
-- successful invalid email validation
-- blocked direct access to source and data files
-=======
-Required fields:
+## ✅ Verification Status
 
-name
-email
-interest
-message
-The backend also validates that the email format is correct.
+* Frontend build successful
+* Application loads correctly
+* API working (`GET /api/portfolio`)
+* Contact form submission working
+* Email validation implemented
+* Source and data protection ensured
 
-Customization
-To update visible portfolio content, edit:
+---
 
-data/portfolio.json
-To change the layout or sections, edit:
+## 📬 Future Improvements
 
-src/App.jsx
-To change colors, typography, spacing, cards, buttons, and overall UI, edit:
+* Add database (MongoDB / PostgreSQL)
+* Deploy backend (Render / Railway)
+* Add authentication (admin panel)
+* Add email notifications
+* Improve UI animations
 
-src/styles.css
-Notes
-dist/ is generated after running npm run build.
-node_modules/ contains installed dependencies and is ignored by git.
-Contact messages are stored locally in data/messages.json.
-The backend serves the built frontend only, so source files like src/App.jsx are not exposed directly.
-Verification Status
-The project has already been verified for:
+---
 
-successful frontend build
-successful page load
-successful GET /api/portfolio
-successful valid contact form submission
-successful invalid email validation
-blocked direct access to source and data files
->>>>>>> 3ed606283d115f40cbe66251594f8b88fec65d09
+## 👨‍💻 Author
+
+**Shreyash Bobalade**

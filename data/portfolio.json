@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Shreyash Bobalade",
-    "title": "Full Stack Developer and IT Undergraduate",
+    "title": "Full Stack Developer and IT Undergraduate and Competitive Programmer",
     "footer": "Built with React, Node.js, and a focus on clean product-minded engineering."
   },
   "hero": {
@@ -14,8 +14,8 @@
       "Problem Solver"
     ],
     "summary": "I am an Information Technology undergraduate focused on full stack development, product thinking, and shipping projects with clear structure. I like working on interfaces, APIs, and practical systems that solve real workflow problems.",
-    "location": "Bhopal, India",
-    "education": "B.Tech in Information Technology, 2023 - 2027",
+    "location": "Sangli, India",
+    "education": "B.Tech in Information Technology, 2024 - 2028",
     "highlights": [
       "MERN Stack",
       "REST APIs",
@@ -45,7 +45,7 @@
       "label": "internships and leadership roles"
     },
     {
-      "value": "9.1",
+      "value": "8.0",
       "label": "current CGPA"
     }
   ],
@@ -223,15 +223,21 @@
   "education": [
     {
       "title": "B.Tech in Information Technology",
-      "org": "Lakshmi Narain College of Technology, Bhopal",
-      "period": "2023 - 2027",
-      "detail": "CGPA: 9.1 / 10.0"
+      "org": "Walchand College Of Engineering ,Sangli ,(Shivaji University)",
+      "period": "2024 - 2028",
+      "detail": "CGPA: 8.0 / 10.0"
     },
     {
-      "title": "Senior Secondary Education",
-      "org": "CBSE Board",
-      "period": "2021 - 2023",
-      "detail": "PCM with Computer Science"
+      "title": "Higher Secondary School",
+      "org": "Maharashtra Board",
+      "period": "2022 - 2024",
+      "detail": "PCM with Information"
+    },
+    {
+      "title": "Secondary School Certificate",
+      "org": "Maharashtra Board",
+      "period": "2016 - 2022",
+      "detail": "All Subjects"
     }
   ],
   "achievements": [
@@ -264,6 +270,16 @@
     {
       "platform": "Codeforces",
       "handle": "shreyash_cf",
+      "summary": "Contest practice for speed, logic, and implementation strength.",
+      "points": [
+        "Regular contest participation",
+        "Focus on greedy and implementation",
+        "Faster thinking under time limits"
+      ]
+    },
+    {
+      "platform": "CodeChef",
+      "handle": "shreyash_ccf",
       "summary": "Contest practice for speed, logic, and implementation strength.",
       "points": [
         "Regular contest participation",

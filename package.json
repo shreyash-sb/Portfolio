@@ -1,7 +1,7 @@
 {
   "name": "shreyash-portfolio",
   "version": "1.0.0",
-  "description": "A complete working portfolio website built from scratch with React and Node.js.",
+  "description": "A complete working portfolio website built from with React and Node.js.",
   "main": "server.js",
   "scripts": {
     "dev": "vite",

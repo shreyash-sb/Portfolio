@@ -1,308 +1,302 @@
 {
   "meta": {
     "name": "Shreyash Bobalade",
-    "title": "Full Stack Developer and IT Undergraduate and Competitive Programmer",
-    "footer": "Built with React, Node.js, and a focus on clean product-minded engineering."
+    "title": "Information Technology",
+    "subtitle": "Walchand College of Engineering, Sangli",
+    "footer": "© 2026 Shreyash Bobalade • Built with React & Node.js"
   },
   "hero": {
-    "eyebrow": "Available for internships and freelance work",
-    "intro": "I design and build modern web experiences with strong frontend polish and dependable backend logic.",
-    "headline": "Full stack developer building products that feel clean, fast, and actually useful.",
-    "roles": [
-      "React Developer",
-      "Node.js Builder",
-      "Problem Solver",
-      "App Developer",
-      "Spring-Boot Builder",
-      "My-Sql Builder"
-    ],
-    "summary": "I am an Information Technology undergraduate focused on full stack development, product thinking, and shipping projects with clear structure. I like working on interfaces, APIs, and practical systems that solve real workflow problems.",
-    "location": "Sangli, India",
-    "education": "B.Tech in Information Technology, 2024 - 2028",
-    "highlights": [
-      "MERN Stack",
-      "REST APIs",
-      "Responsive UI",
-      "DSA and problem solving"
-    ],
-    "code": [
-      "const developer = {",
-      "  stack: ['React', 'Node.js', 'MongoDB'],",
-      "  focus: ['UI quality', 'Backend systems'],",
-      "  lookingFor: 'SDE Internship',",
-      "  mindset: 'Ship clean and scalable products'",
-      "};"
+    "name": "Shreyash Bobalade",
+    "tagline": "Full-Stack Developer & Problem Solver",
+    "bio": "Information Technology undergraduate at Walchand College of Engineering, Sangli. Passionate about engineering scalable full-stack web platforms, real-time computer vision systems, and cloud-connected mobile applications.",
+    "location": "Sangli / Solapur, Maharashtra, India",
+    "email": "shreyashbobalade2006@gmail.com",
+    "phone": "+91 9322782746",
+    "whatsapp": "https://wa.me/919322782746",
+    "socials": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/shreyash-bobalade",
+        "icon": "🐙"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/shreyash-bobalade",
+        "icon": "💼"
+      },
+      {
+        "name": "LeetCode",
+        "url": "https://leetcode.com/shreyash_codes",
+        "icon": "⚡"
+      }
     ]
   },
   "stats": [
     {
-      "value": "8+",
-      "label": "projects built"
+      "value": "300+",
+      "label": "Problems",
+      "detail": "LeetCode & CodeChef"
     },
     {
-      "value": "650+",
-      "label": "DSA problems solved"
+      "value": "2★",
+      "label": "CodeChef",
+      "detail": "Contest Competitor"
     },
     {
-      "value": "2",
-      "label": "internships and leadership roles"
+      "value": "7.8",
+      "label": "CGPA",
+      "detail": "Walchand College of Engg"
     },
     {
-      "value": "8.0",
-      "label": "current CGPA"
+      "value": "4+",
+      "label": "Projects",
+      "detail": "MERN, Vision & Android"
     }
   ],
   "about": {
-    "title": "A builder-first approach to development.",
-    "body": "I enjoy taking an idea from rough scope to a usable product. My work usually starts with interface structure and user flow, then moves into component systems, API handling, data modeling, and cleanup for maintainability. I care about both the visual finish and the engineering underneath.",
-    "points": [
-      "Comfortable across frontend, backend, and API integration",
-      "Strong interest in product-driven problem solving",
-      "Focus on readable code, clean structure, and practical delivery"
-    ],
-    "factCards": [
+    "title": "About Me",
+    "bio": "I am an Information Technology undergraduate at Walchand College of Engineering, Sangli with a builder mindset and strong algorithmic foundation. My passion lies in designing end-to-end software solutions—from responsive, role-guarded web architectures to deep learning vision modules and cloud-synced mobile apps. I thrive on solving complex computational challenges and translating ideas into clean, maintainable code.",
+    "college": "Walchand College of Engineering, Sangli",
+    "degree": "B.Tech in Information Technology (2024 - 2028)",
+    "cgpa": "7.8 / 10.0 (till 4th Semester)",
+    "strengths": [
       {
-        "label": "Degree",
-        "value": "B.Tech IT"
+        "title": "Full-Stack Web Architecture",
+        "description": "Architecting modular RESTful APIs, secure JWT authentication with Role-Based Access Control (RBAC), and responsive modern UIs."
       },
       {
-        "label": "Primary Stack",
-        "value": "React, Node.js, MongoDB"
+        "title": "Computer Vision & Deep Learning",
+        "description": "Building real-time face detection, alignment, and multi-attribute classification models with OpenCV DNN and TensorFlow."
       },
       {
-        "label": "Interests",
-        "value": "Web apps, dashboards, full stack products"
+        "title": "Mobile Engineering",
+        "description": "Developing native Android applications with Material Design, offline persistence, and Firebase Realtime Database sync."
       },
       {
-        "label": "Goal",
-        "value": "SDE internship and product engineering work"
+        "title": "Algorithmic Problem Solving",
+        "description": "Consistent competitive programming practice with 300+ problems solved across LeetCode, CodeChef (2★), and GeeksforGeeks."
       }
-    ],
-    "coursework": [
-      "Data Structures and Algorithms",
-      "Object Oriented Programming",
-      "Database Management Systems",
-      "Operating Systems",
-      "Computer Networks",
-      "Software Engineering"
     ]
   },
-  "skills": [
+  "techStack": [
     {
-      "title": "Languages",
-      "items": [
-        "JavaScript",
-        "TypeScript",
-        "C++",
-        "Python",
-        "SQL"
-      ]
+      "category": "Languages",
+      "icon": "⚡",
+      "items": ["C", "C++", "Java", "Python", "JavaScript", "TypeScript", "SQL"]
     },
     {
-      "title": "Frontend",
-      "items": [
-        "React",
-        "Vite",
-        "HTML5",
-        "CSS3",
-        "Tailwind CSS",
-        "Responsive Design"
-      ]
+      "category": "Frontend",
+      "icon": "🎨",
+      "items": ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Responsive UI", "Vite"]
     },
     {
-      "title": "Backend",
-      "items": [
-        "Node.js",
-        "Express",
-        "REST APIs",
-        "Authentication",
-        "CRUD workflows"
-      ]
+      "category": "Backend",
+      "icon": "⚙️",
+      "items": ["Node.js", "Express.js", "Django", "REST APIs", "JWT Auth", "Cloudinary", "Firebase"]
     },
     {
-      "title": "Database and Tools",
-      "items": [
-        "MongoDB",
-        "MySQL",
-        "Git",
-        "GitHub",
-        "Postman",
-        "Vercel"
-      ]
+      "category": "Database",
+      "icon": "🗄️",
+      "items": ["MySQL", "MongoDB", "Firebase Realtime Database", "Query Optimization"]
+    },
+    {
+      "category": "AI/ML",
+      "icon": "🧠",
+      "items": ["OpenCV", "TensorFlow", "NumPy", "Pandas", "Matplotlib", "Deep Neural Networks"]
+    },
+    {
+      "category": "Tools",
+      "icon": "🛠️",
+      "items": ["Git", "GitHub", "Android Studio", "Red Hat Linux", "VS Code", "Postman"]
     }
   ],
-  "projects": [
+  "featuredProject": {
+    "id": "doctor-appointment",
+    "name": "Doctor Appointment Booking System",
+    "tagline": "Full-Stack Multi-Role Healthcare Management Platform",
+    "category": "Full-Stack",
+    "badge": "Featured Full-Stack Project",
+    "year": "2025 - 2026",
+    "summary": "A full-stack healthcare appointment management platform featuring dedicated Patient, Doctor, and Admin portals with Role-Based Access Control (RBAC).",
+    "architecture": "React.js • Node.js • Express.js • MongoDB • JWT Auth • Cloudinary • Tailwind CSS",
+    "points": [
+      "Architected multi-portal workflows for Patients, Doctors, and Administrators with role-based authorization guards.",
+      "Built secure JWT authentication, session middleware, and RESTful APIs for appointment scheduling, cancellation, and doctor availability management.",
+      "Integrated MongoDB for structured data storage and Cloudinary for doctor credentials and profile media uploads.",
+      "Engineered responsive, accessible dashboards using React.js and Tailwind CSS with real-time schedule management."
+    ],
+    "features": [
+      "Role-Based Access Control (Patient, Doctor, Admin)",
+      "Real-time Appointment Scheduling & Slot Locking",
+      "Doctor Verification & Credential Upload via Cloudinary",
+      "Responsive Interactive Dashboards with Analytics",
+      "Automated Status Notifications & History Tracking"
+    ],
+    "stack": ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Cloudinary", "Tailwind CSS"],
+    "github": "https://github.com/shreyash-bobalade"
+  },
+  "otherProjects": [
     {
-      "name": "Campus Connect",
-      "type": "Full Stack Platform",
-      "year": "2026",
-      "summary": "A college portal for events, club announcements, registrations, and participation tracking.",
-      "details": [
-        "Designed student and admin flows with role-based access",
-        "Built event creation, approval, and attendance features",
-        "Focused on dashboard clarity and reusable UI patterns"
-      ],
-      "stack": [
-        "React",
-        "Node.js",
-        "Express",
-        "MongoDB"
-      ]
-    },
-    {
-      "name": "CodeCollab",
-      "type": "Realtime Collaboration",
+      "id": "age-gender-detection",
+      "name": "Real-Time Age & Gender Detection System",
+      "category": "AI & Vision",
+      "badge": "Computer Vision & AI",
       "year": "2025",
-      "summary": "A collaborative coding room for peer practice, live sessions, and interview-style collaboration.",
-      "details": [
-        "Created room-based collaboration flows and session handling",
-        "Built UI for shared code interaction and quick usability",
-        "Focused on performance and a clear editing workflow"
+      "summary": "An optimized real-time computer vision system using Python and OpenCV DNN to detect faces and estimate age group and gender from video feeds.",
+      "architecture": "Python • OpenCV DNN • Pre-trained TensorFlow Models • NumPy • Matplotlib",
+      "points": [
+        "Developed a real-time face detection and demographic classification application using OpenCV Deep Neural Network (DNN) modules.",
+        "Implemented image preprocessing, face alignment, deep learning inference, and real-time bounding box annotations.",
+        "Optimized frame-by-frame processing to achieve smooth FPS during live webcam streams and support batch offline image analysis.",
+        "Engineered confidence threshold filtering to ensure accurate predictions across variable lighting conditions."
       ],
-      "stack": [
-        "React",
-        "Socket.IO",
-        "Node.js",
-        "CSS"
-      ]
+      "stack": ["Python", "OpenCV", "TensorFlow", "Deep Learning", "NumPy", "Matplotlib"],
+      "github": "https://github.com/shreyash-bobalade"
     },
     {
-      "name": "HostelHub",
-      "type": "Operations Dashboard",
+      "id": "smart-expense-tracker",
+      "name": "Smart Expense Tracker",
+      "category": "Mobile",
+      "badge": "Android Mobile App",
+      "year": "2024 - 2025",
+      "summary": "A native Android mobile application to record, categorize, and manage personal expenses with real-time cloud synchronization.",
+      "architecture": "Java • Android SDK • XML UI • Firebase Realtime Database • Material Design",
+      "points": [
+        "Built a native Android app with clean Material Design UI for daily income and expenditure tracking.",
+        "Integrated Firebase Realtime Database for zero-latency cloud sync, multi-device access, and offline persistence.",
+        "Implemented CRUD operations for transactions, automated balance calculation, and category-wise expense breakdowns.",
+        "Added transaction history filtering, search capabilities, and spending threshold alerts for financial tracking."
+      ],
+      "stack": ["Android", "Java", "XML", "Firebase Realtime DB", "Android Studio"],
+      "github": "https://github.com/shreyash-bobalade"
+    },
+    {
+      "id": "campus-connect",
+      "name": "Campus Connect Platform",
+      "category": "Full-Stack",
+      "badge": "University Portal",
       "year": "2025",
-      "summary": "A complaint and maintenance tracking system for hostel students and administrators.",
-      "details": [
-        "Added issue submission, filtering, and status updates",
-        "Built admin panels for tracking open and closed requests",
-        "Designed around a practical day-to-day workflow problem"
+      "summary": "A centralized digital portal for university clubs, event registration workflows, announcements, and student participation tracking.",
+      "architecture": "React.js • Node.js • Express.js • MongoDB • RESTful APIs",
+      "points": [
+        "Designed student and organizer flows for club announcements, registrations, and participation tracking.",
+        "Implemented administrative approval workflows for campus activities and automated registration counters.",
+        "Created a responsive announcement feed with fast search and category filtering."
       ],
-      "stack": [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "JWT"
-      ]
-    },
-    {
-      "name": "PrepTrack",
-      "type": "Productivity App",
-      "year": "2024",
-      "summary": "A preparation planner for DSA, contests, aptitude progress, and revision tracking.",
-      "details": [
-        "Created topic tracking, streaks, and progress indicators",
-        "Used data visualization for better revision awareness",
-        "Built around placement preparation discipline"
-      ],
-      "stack": [
-        "React",
-        "Charts",
-        "Local Storage",
-        "JavaScript"
-      ]
+      "stack": ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs"],
+      "github": "https://github.com/shreyash-bobalade"
     }
   ],
   "experience": [
     {
-      "title": "Frontend Developer Intern",
-      "org": "ByteBridge Labs",
-      "period": "Summer 2025",
+      "role": "Assistant Web Developer",
+      "organization": "SAIT, Walchand College of Engineering (WCE)",
+      "period": "2025 – 2026",
+      "location": "Sangli, Maharashtra",
+      "badge": "Leadership & Technical Mentorship",
       "points": [
-        "Worked on dashboard screens, reusable components, and API-integrated pages",
-        "Improved interface consistency and reduced repeated frontend patterns",
-        "Collaborated on internal product workflows and implementation cleanup"
+        "Led an intra-club competitive programming event for 40+ engineering students, organizing problem sets and contest strategies.",
+        "Conducted a hands-on technical workshop on AWS Cloud Services, introducing core cloud fundamentals and real-world deployment patterns.",
+        "Mentored junior peers in frontend development fundamentals, React, and REST API integration."
       ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "300+ Problems Solved",
+      "desc": "Solved 300+ algorithmic challenges across LeetCode, CodeChef, and GeeksforGeeks.",
+      "icon": "⚡"
     },
     {
-      "title": "Web Development Lead",
-      "org": "Coding Club Chapter",
-      "period": "2024 - Present",
-      "points": [
-        "Helped students with frontend fundamentals and project structure",
-        "Supported hackathon teams with React and backend integration guidance",
-        "Led smaller internal builds and collaboration workflows"
-      ]
+      "title": "2★ CodeChef Competitor",
+      "desc": "Active competitive programmer with 2-Star contest rating on CodeChef.",
+      "icon": "⭐"
+    },
+    {
+      "title": "98.67%ile MHT-CET",
+      "desc": "Scored 98.67 percentile in Maharashtra State Engineering Entrance Examination.",
+      "icon": "🎯"
+    },
+    {
+      "title": "AWS Cloud Workshop Speaker",
+      "desc": "Delivered an official departmental technical workshop on AWS Cloud fundamentals at SAIT WCE.",
+      "icon": "☁️"
+    },
+    {
+      "title": "40+ CP Event Lead",
+      "desc": "Organized and mentored a 40+ student competitive programming contest at SAIT WCE.",
+      "icon": "🏆"
+    },
+    {
+      "title": "Red Hat Certified — Linux Fundamentals",
+      "desc": "Certified in Linux fundamentals, shell scripting, permissions, and system administration.",
+      "icon": "🛡️"
     }
   ],
   "education": [
     {
-      "title": "B.Tech in Information Technology",
-      "org": "Walchand College Of Engineering ,Sangli ,(Shivaji University)",
-      "period": "2024 - 2028",
-      "detail": "CGPA: 8.0 / 10.0"
+      "institution": "Walchand College of Engineering, Sangli (WCE)",
+      "degree": "B.Tech in Information Technology",
+      "period": "2024 – 2028",
+      "grade": "CGPA: 7.8 (till 4th Semester)",
+      "details": "Rigorous undergraduate engineering curriculum with focus on Data Structures, Algorithms, DBMS, OS, Computer Networks, and Software Engineering."
     },
     {
-      "title": "Higher Secondary School",
-      "org": "Maharashtra Board",
-      "period": "2022 - 2024",
-      "detail": "PCM with Information"
-    },
-    {
-      "title": "Secondary School Certificate",
-      "org": "Maharashtra Board",
-      "period": "2016 - 2022",
-      "detail": "All Subjects"
+      "institution": "Ligadi-Patil Jr. College of Science",
+      "degree": "Senior Secondary Education (Class XII)",
+      "period": "2022 – 2024",
+      "grade": "80.17% | MHT-CET: 98.67%ile | JEE: 88.32%ile",
+      "details": "Strong analytical foundation in Physics, Chemistry, and Higher Mathematics."
     }
-  ],
-  "achievements": [
-    "Solved 650+ problems across coding platforms and contests",
-    "Built multiple full stack projects with clean frontend and backend workflows",
-    "Finished in the top group at a 24-hour college hackathon",
-    "Regularly practice DSA along with development-focused project work"
   ],
   "profiles": [
     {
       "platform": "GitHub",
       "handle": "shreyash-bobalade",
-      "summary": "Project repositories, experiments, and full stack implementations.",
-      "points": [
-        "Frontend and backend project repos",
-        "Version control workflow",
-        "Deployment-ready codebases"
-      ]
+      "url": "https://github.com/shreyash-bobalade",
+      "icon": "🐙",
+      "badge": "Code Repositories",
+      "detail": "MERN Platforms, Computer Vision, and Android Codebases"
+    },
+    {
+      "platform": "LinkedIn",
+      "handle": "shreyash-bobalade",
+      "url": "https://www.linkedin.com/in/shreyash-bobalade",
+      "icon": "💼",
+      "badge": "Professional Profile",
+      "detail": "Engineering Updates, Collegiate Leadership & Networking"
     },
     {
       "platform": "LeetCode",
       "handle": "shreyash_codes",
-      "summary": "Problem solving practice for placements and interview preparation.",
-      "points": [
-        "Strong medium-level practice",
-        "Regular revision habit",
-        "Interview-oriented DSA work"
-      ]
-    },
-    {
-      "platform": "Codeforces",
-      "handle": "shreyash_cf",
-      "summary": "Contest practice for speed, logic, and implementation strength.",
-      "points": [
-        "Regular contest participation",
-        "Focus on greedy and implementation",
-        "Faster thinking under time limits"
-      ]
+      "url": "https://leetcode.com/shreyash_codes",
+      "icon": "⚡",
+      "badge": "300+ Solved",
+      "detail": "Consistent Data Structures & Algorithms Practice"
     },
     {
       "platform": "CodeChef",
       "handle": "shreyash_ccf",
-      "summary": "Contest practice for speed, logic, and implementation strength.",
-      "points": [
-        "Regular contest participation",
-        "Focus on greedy and implementation",
-        "Faster thinking under time limits"
-      ]
+      "url": "https://www.codechef.com/users/shreyash_ccf",
+      "icon": "⭐",
+      "badge": "2★ Rated Competitor",
+      "detail": "Live Contest Participation & Mathematical Algorithms"
     }
   ],
   "contact": {
-    "title": "Let us build something strong together.",
-    "copy": "If you want to discuss internships, freelance opportunities, product builds, or collaboration, send a message here.",
+    "title": "Let's build something together.",
+    "subtitle": "I am open to Summer 2026 SDE Internships, Full-Stack development roles, and collaborative engineering projects.",
     "email": "shreyashbobalade2006@gmail.com",
-    "location": "Solapur , Maharashtra",
-    "availability": "Usually replies within 24 to 48 hours",
-    "interests": [
-      "Internship opportunity",
-      "Freelance project",
-      "Product collaboration",
-      "Portfolio website",
-      "General networking"
+    "phone": "+91 9322782746",
+    "linkedin": "https://www.linkedin.com/in/shreyash-bobalade",
+    "whatsapp": "https://wa.me/919322782746",
+    "location": "Sangli / Solapur, Maharashtra, India",
+    "options": [
+      "Summer 2026 SDE Internship",
+      "Full-Stack Web Development Role",
+      "AI / Computer Vision Collaboration",
+      "Android Application Development",
+      "Technical Mentorship / Project"
     ]
   }
 }

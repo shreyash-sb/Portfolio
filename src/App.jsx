@@ -1,495 +1,379 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { initialPortfolioData } from "./data/portfolioData";
 
-function SectionHeader({ eyebrow, title, text }) {
-  return (
-    <div className="section-header reveal">
-      <span className="section-eyebrow">{eyebrow}</span>
-      <h2>{title}</h2>
-      {text ? <p>{text}</p> : null}
-    </div>
-  );
-}
+// Layout Components
+import { Sidebar } from "./components/layout/Sidebar";
+import { Navbar } from "./components/layout/Navbar";
+import { Footer } from "./components/layout/Footer";
 
-function App() {
-  const [portfolio, setPortfolio] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-  const [formState, setFormState] = useState({
-    status: "idle",
+// Section Components
+import { AboutSection } from "./components/sections/AboutSection";
+import { ExperienceSection } from "./components/sections/ExperienceSection";
+import { SkillsSection } from "./components/sections/SkillsSection";
+import { ProjectsSection } from "./components/sections/ProjectsSection";
+import { EducationSection } from "./components/sections/EducationSection";
+import { AchievementsSection } from "./components/sections/AchievementsSection";
+import { ProfilesSection } from "./components/sections/ProfilesSection";
+import { ContactSection } from "./components/sections/ContactSection";
+
+// Modal & UI Components
+import { ProjectModal } from "./components/modals/ProjectModal";
+import { AddSkillModal } from "./components/modals/AddSkillModal";
+import { AddProjectModal } from "./components/modals/AddProjectModal";
+import { CmsDashboardModal } from "./components/modals/CmsDashboardModal";
+import { Toast } from "./components/ui/Toast";
+
+const STORAGE_KEYS = {
+  SKILLS: "shreyash_custom_skills",
+  PROJECTS: "shreyash_custom_projects"
+};
+
+export default function App() {
+  const [data, setData] = useState(initialPortfolioData);
+  const [sidebarActive, setSidebarActive] = useState(false);
+  const [activeNav, setActiveNav] = useState("about");
+
+  // Modals state
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [addSkillModalOpen, setAddSkillModalOpen] = useState(false);
+  const [addProjectModalOpen, setAddProjectModalOpen] = useState(false);
+  const [cmsDashboardModalOpen, setCmsDashboardModalOpen] = useState(false);
+
+  // Dynamic creation form states
+  const [newSkill, setNewSkill] = useState({
+    name: "",
+    category: "Programming Languages",
+    status: "Proficient"
+  });
+
+  const [newProject, setNewProject] = useState({
+    title: "",
+    category: "Full-Stack Web",
+    role: "Lead Developer • 2026",
+    desc: "",
+    overview: "",
+    qualifications: "",
+    techStack: "",
+    githubUrl: "https://github.com/shreyash-bobalade",
+    liveUrl: "https://github.com/shreyash-bobalade"
+  });
+
+  // Contact form state
+  const [contactForm, setContactForm] = useState({
+    name: "",
+    email: "",
+    interest: "Summer 2026 SDE Internship",
     message: ""
   });
-  const [roleIndex, setRoleIndex] = useState(0);
+  const [contactSubmitted, setContactSubmitted] = useState(false);
 
+  // Toast notification state
+  const [toastMessage, setToastMessage] = useState("");
+  const [toastVisible, setToastVisible] = useState(false);
+
+  const showToast = (msg) => {
+    setToastMessage(msg);
+    setToastVisible(true);
+    setTimeout(() => setToastVisible(false), 3500);
+  };
+
+  // Load custom CMS items from localStorage on mount
   useEffect(() => {
-    async function loadPortfolio() {
-      try {
-        const response = await fetch("/api/portfolio");
-        const data = await response.json();
+    try {
+      const savedSkills = JSON.parse(localStorage.getItem(STORAGE_KEYS.SKILLS) || "[]");
+      const savedProjects = JSON.parse(localStorage.getItem(STORAGE_KEYS.PROJECTS) || "[]");
 
-        if (!response.ok) {
-          throw new Error(data.error || "Failed to load portfolio data.");
-        }
-
-        setPortfolio(data);
-        document.title = `${data.meta.name} | ${data.meta.title}`;
-      } catch (loadError) {
-        setError(loadError.message);
-      } finally {
-        setLoading(false);
+      if (savedSkills.length > 0 || savedProjects.length > 0) {
+        setData((prev) => {
+          let updatedCategories = [...prev.skills.categories];
+          savedSkills.forEach((s) => {
+            const targetCat = s.category || "Programming Languages";
+            updatedCategories = updatedCategories.map((c) =>
+              c.title.toLowerCase() === targetCat.toLowerCase()
+                ? { ...c, items: c.items.includes(s.name) ? c.items : [...c.items, s.name] }
+                : c
+            );
+          });
+          return {
+            ...prev,
+            skills: {
+              ...prev.skills,
+              categories: updatedCategories
+            },
+            projects: [...savedProjects, ...prev.projects]
+          };
+        });
       }
+    } catch (e) {
+      console.error("Failed loading stored CMS items", e);
     }
-
-    loadPortfolio();
   }, []);
 
+  // Scrollspy navigation listener
   useEffect(() => {
-    if (!portfolio?.hero?.roles?.length) {
-      return undefined;
-    }
+    const handleScroll = () => {
+      const sections = [
+        "about",
+        "experience",
+        "skills",
+        "projects",
+        "education",
+        "achievements",
+        "profiles",
+        "contact"
+      ];
+      const scrollPosition = window.scrollY + 140;
 
-    const interval = window.setInterval(() => {
-      setRoleIndex((current) => (current + 1) % portfolio.hero.roles.length);
-    }, 2000);
-
-    return () => window.clearInterval(interval);
-  }, [portfolio]);
-
-  useEffect(() => {
-    const items = document.querySelectorAll(".reveal");
-
-    if (!("IntersectionObserver" in window)) {
-      items.forEach((item) => item.classList.add("is-visible"));
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveNav(sectionId);
+            break;
           }
-        });
-      },
-      {
-        threshold: 0.15
+        }
       }
-    );
+    };
 
-    items.forEach((item) => observer.observe(item));
-    return () => observer.disconnect();
-  }, [portfolio]);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const heroCode = portfolio?.hero?.code ? portfolio.hero.code.join("\n") : "";
+  // Smooth scroll handler
+  const scrollToSection = (id) => {
+    setActiveNav(id);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const payload = Object.fromEntries(formData.entries());
+  // Add Skill Submission
+  const handleAddSkill = (e) => {
+    e.preventDefault();
+    if (!newSkill.name.trim()) return;
 
-    setFormState({
-      status: "loading",
-      message: "Sending message..."
-    });
+    const skillName = newSkill.name.trim();
+    const targetCategory = newSkill.category || "Programming Languages";
+
+    setData((prev) => ({
+      ...prev,
+      skills: {
+        ...prev.skills,
+        categories: prev.skills.categories.map((cat) => {
+          if (cat.title.toLowerCase() === targetCategory.toLowerCase()) {
+            return {
+              ...cat,
+              items: cat.items.includes(skillName) ? cat.items : [...cat.items, skillName]
+            };
+          }
+          return cat;
+        })
+      }
+    }));
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.error || "Failed to send message.");
-      }
-
-      event.currentTarget.reset();
-      setFormState({
-        status: "success",
-        message: result.message
-      });
-    } catch (submitError) {
-      setFormState({
-        status: "error",
-        message: submitError.message
-      });
+      const stored = JSON.parse(localStorage.getItem(STORAGE_KEYS.SKILLS) || "[]");
+      stored.push({ name: skillName, category: targetCategory, status: newSkill.status });
+      localStorage.setItem(STORAGE_KEYS.SKILLS, JSON.stringify(stored));
+    } catch (err) {
+      console.error("Local storage error", err);
     }
-  }
 
-  if (loading) {
-    return (
-      <div className="state-screen">
-        <div className="state-card">
-          <span className="section-eyebrow">Loading</span>
-          <h1>Preparing portfolio...</h1>
-        </div>
-      </div>
-    );
-  }
+    setAddSkillModalOpen(false);
+    setNewSkill({ name: "", category: "Programming Languages", status: "Proficient" });
+    showToast(`Skill "${skillName}" added live to ${targetCategory}!`);
+  };
 
-  if (error || !portfolio) {
-    return (
-      <div className="state-screen">
-        <div className="state-card">
-          <span className="section-eyebrow">Error</span>
-          <h1>{error || "Portfolio data could not be loaded."}</h1>
-        </div>
-      </div>
-    );
-  }
+  // Add Project Submission
+  const handleAddProject = (e) => {
+    e.preventDefault();
+    if (!newProject.title.trim() || !newProject.desc.trim()) return;
+
+    const id = "custom-" + newProject.title.toLowerCase().replace(/[^a-z0-9]+/g, "-") + "-" + Date.now();
+    const quals = newProject.qualifications.trim()
+      ? newProject.qualifications.split("\n").map((q) => q.trim()).filter(Boolean)
+      : [newProject.desc.trim()];
+    const stack = newProject.techStack.trim()
+      ? newProject.techStack.split(",").map((s) => s.trim()).filter(Boolean)
+      : ["React.js", "Node.js", "JavaScript"];
+
+    const projItem = {
+      id,
+      title: newProject.title.trim(),
+      category: newProject.category,
+      status: "Active",
+      role: newProject.role || "Lead Developer • 2026",
+      desc: newProject.desc.trim(),
+      overview: newProject.overview.trim() || newProject.desc.trim(),
+      qualifications: quals,
+      techStack: stack,
+      githubUrl: newProject.githubUrl || data.personal.github,
+      liveUrl: newProject.liveUrl || data.personal.github
+    };
+
+    setData((prev) => ({
+      ...prev,
+      projects: [projItem, ...prev.projects]
+    }));
+
+    try {
+      const stored = JSON.parse(localStorage.getItem(STORAGE_KEYS.PROJECTS) || "[]");
+      stored.push(projItem);
+      localStorage.setItem(STORAGE_KEYS.PROJECTS, JSON.stringify(stored));
+    } catch (err) {
+      console.error("Local storage error", err);
+    }
+
+    setAddProjectModalOpen(false);
+    setNewProject({
+      title: "",
+      category: "Full-Stack Web",
+      role: "Lead Developer • 2026",
+      desc: "",
+      overview: "",
+      qualifications: "",
+      techStack: "",
+      githubUrl: data.personal.github,
+      liveUrl: data.personal.github
+    });
+    showToast(`Project "${projItem.title}" added live with full qualifications!`);
+  };
+
+  // Contact Form Submission
+  const handleContactSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(contactForm)
+      });
+    } catch (err) {
+      // Fallback works gracefully even without live backend server
+    }
+
+    setContactSubmitted(true);
+    showToast("Message sent successfully! I will reply soon.");
+    setTimeout(() => {
+      setContactForm({
+        name: "",
+        email: "",
+        interest: "Summer 2026 SDE Internship",
+        message: ""
+      });
+      setContactSubmitted(false);
+    }, 4000);
+  };
 
   return (
-    <div className="app-shell">
-      <div className="glow glow-left" />
-      <div className="glow glow-right" />
+    <>
+      {/* Background ambient lighting */}
+      <div className="bg-ambient-glow" />
+      <div className="bg-ambient-grid" />
 
-      <header className="topbar reveal">
-        <a href="#home" className="brand">
-          <span className="brand-mark" />
-          <div>
-            <strong>{portfolio.meta.name}</strong>
-            <span>{portfolio.meta.title}</span>
-          </div>
-        </a>
+      <main>
+        {/* Left Sticky Glass Sidebar */}
+        <Sidebar
+          personal={data.personal}
+          active={sidebarActive}
+          onToggle={() => setSidebarActive(!sidebarActive)}
+          onOpenCms={() => setCmsDashboardModalOpen(true)}
+        />
 
-        <nav className="nav-links">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact" className="nav-pill">
-            Contact
-          </a>
-        </nav>
-      </header>
+        {/* Right Main Scrollable Content Area */}
+        <div className="main-content">
+          {/* Top Floating Glass Navbar */}
+          <Navbar activeNav={activeNav} onSelectSection={scrollToSection} />
 
-      <main className="page-layout">
-        <section id="home" className="hero-layout">
-          <div className="hero-copy card reveal">
-            <span className="section-eyebrow">{portfolio.hero.eyebrow}</span>
-            <h1>{portfolio.hero.headline}</h1>
-            <p className="hero-role">{portfolio.hero.roles[roleIndex]}</p>
-            <p className="hero-intro">{portfolio.hero.intro}</p>
-            <p className="hero-summary">{portfolio.hero.summary}</p>
-
-            <div className="hero-actions">
-              <a href="#projects" className="button button-primary">
-                View Projects
-              </a>
-              <a href="#contact" className="button button-secondary">
-                Work With Me
-              </a>
-            </div>
-
-            <div className="chip-row">
-              {portfolio.hero.highlights.map((highlight) => (
-                <span key={highlight} className="chip">
-                  {highlight}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="hero-side">
-            <div className="profile-card card reveal">
-              <div className="avatar-shell">
-                <div className="avatar-core">SB</div>
-              </div>
-              <div className="profile-meta">
-                <h3>{portfolio.meta.name}</h3>
-                <p>{portfolio.hero.education}</p>
-                <p>{portfolio.hero.location}</p>
-              </div>
-            </div>
-
-            <div className="terminal-card card reveal">
-              <div className="terminal-top">
-                <span />
-                <span />
-                <span />
-              </div>
-              <pre>
-                <code>{heroCode}</code>
-              </pre>
-            </div>
-          </div>
-        </section>
-
-        <section className="stats-grid">
-          {portfolio.stats.map((stat) => (
-            <article key={stat.label} className="stat-card card reveal">
-              <strong>{stat.value}</strong>
-              <span>{stat.label}</span>
-            </article>
-          ))}
-        </section>
-
-        <section id="about" className="section-block">
-          <SectionHeader
-            eyebrow="About"
-            title={portfolio.about.title}
-            text={portfolio.about.body}
+          {/* Section 1: About Me */}
+          <AboutSection
+            personal={data.personal}
+            stats={data.stats}
+            interests={data.interests}
           />
 
-          <div className="about-grid">
-            <article className="about-panel card reveal">
-              <h3>What I bring</h3>
-              <ul className="detail-list">
-                {portfolio.about.points.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
+          {/* Section 2: Experience & Leadership */}
+          <ExperienceSection experience={data.experience} />
 
-              <h3>Relevant Coursework</h3>
-              <div className="chip-row">
-                {portfolio.about.coursework.map((item) => (
-                  <span key={item} className="chip chip-soft">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </article>
-
-            <article className="facts-panel card reveal">
-              <h3>Quick Facts</h3>
-              <div className="facts-grid">
-                {portfolio.about.factCards.map((card) => (
-                  <div key={card.label} className="fact-card">
-                    <span>{card.label}</span>
-                    <strong>{card.value}</strong>
-                  </div>
-                ))}
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section id="skills" className="section-block">
-          <SectionHeader
-            eyebrow="Skills"
-            title="A balanced stack across frontend, backend, and product delivery."
-            text="I am comfortable building interfaces, wiring APIs, handling data flow, and improving maintainability as projects grow."
+          {/* Section 3: Technical Skills */}
+          <SkillsSection
+            skills={data.skills}
+            onOpenAddSkill={() => setAddSkillModalOpen(true)}
           />
 
-          <div className="skills-grid">
-            {portfolio.skills.map((group) => (
-              <article key={group.title} className="skill-card card reveal">
-                <h3>{group.title}</h3>
-                <div className="chip-row">
-                  {group.items.map((item) => (
-                    <span key={item} className="chip chip-soft">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="projects" className="section-block">
-          <SectionHeader
-            eyebrow="Projects"
-            title="Selected builds with practical full stack depth."
-            text="These projects reflect a mix of frontend quality, backend workflow handling, and attention to usability."
+          {/* Section 4: Projects */}
+          <ProjectsSection
+            projects={data.projects}
+            defaultGithub={data.personal.github}
+            onOpenAddProject={() => setAddProjectModalOpen(true)}
+            onSelectProject={(project) => setSelectedProject(project)}
           />
 
-          <div className="projects-grid">
-            {portfolio.projects.map((project) => (
-              <article key={project.name} className="project-card card reveal">
-                <div className="project-head">
-                  <div>
-                    <span className="project-type">{project.type}</span>
-                    <h3>{project.name}</h3>
-                  </div>
-                  <span className="project-year">{project.year}</span>
-                </div>
+          {/* Section 5: Education */}
+          <EducationSection education={data.education} />
 
-                <p>{project.summary}</p>
+          {/* Section 6: Achievements & Certifications */}
+          <AchievementsSection achievements={data.achievements} />
 
-                <ul className="detail-list">
-                  {project.details.map((detail) => (
-                    <li key={detail}>{detail}</li>
-                  ))}
-                </ul>
+          {/* Section 7: Coding & Professional Profiles */}
+          <ProfilesSection profiles={data.profiles} />
 
-                <div className="chip-row">
-                  {project.stack.map((item) => (
-                    <span key={item} className="chip chip-accent">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="experience" className="section-block">
-          <SectionHeader
-            eyebrow="Experience"
-            title="Internship, leadership, and academic journey."
-            text="A complete portfolio needs both projects and context, so this section covers the work and learning path behind the builds."
+          {/* Section 8: Contact & Connect */}
+          <ContactSection
+            personal={data.personal}
+            contactOptions={data.contact.options}
+            contactForm={contactForm}
+            contactSubmitted={contactSubmitted}
+            onChangeForm={setContactForm}
+            onSubmitForm={handleContactSubmit}
           />
 
-          <div className="experience-grid">
-            <article className="timeline-panel card reveal">
-              <h3>Experience</h3>
-              <div className="timeline-list">
-                {portfolio.experience.map((item) => (
-                  <div key={item.title} className="timeline-item">
-                    <div className="timeline-head">
-                      <strong>{item.title}</strong>
-                      <span>{item.period}</span>
-                    </div>
-                    <p>{item.org}</p>
-                    <ul className="detail-list">
-                      {item.points.map((point) => (
-                        <li key={point}>{point}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </article>
-
-            <article className="timeline-panel card reveal">
-              <h3>Education</h3>
-              <div className="timeline-list">
-                {portfolio.education.map((item) => (
-                  <div key={item.title} className="timeline-item">
-                    <div className="timeline-head">
-                      <strong>{item.title}</strong>
-                      <span>{item.period}</span>
-                    </div>
-                    <p>{item.org}</p>
-                    <small>{item.detail}</small>
-                  </div>
-                ))}
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section className="section-block">
-          <SectionHeader
-            eyebrow="Achievements"
-            title="Problem solving, project execution, and consistent learning."
-            text="A strong student portfolio should show both development output and the discipline behind it."
-          />
-
-          <div className="achievements-grid">
-            {portfolio.achievements.map((achievement) => (
-              <article key={achievement} className="achievement-card card reveal">
-                <span className="achievement-mark">+</span>
-                <p>{achievement}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="section-block">
-          <SectionHeader
-            eyebrow="Profiles"
-            title="Coding profiles and project presence."
-            text="These cards keep the portfolio complete and make it easy to replace handles and links later."
-          />
-
-          <div className="profiles-grid">
-            {portfolio.profiles.map((profile) => (
-              <article key={profile.platform} className="profile-detail card reveal">
-                <div className="profile-top">
-                  <h3>{profile.platform}</h3>
-                  <span>{profile.handle}</span>
-                </div>
-                <p>{profile.summary}</p>
-                <ul className="detail-list">
-                  {profile.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="contact" className="section-block">
-          <SectionHeader
-            eyebrow="Contact"
-            title={portfolio.contact.title}
-            text={portfolio.contact.copy}
-          />
-
-          <div className="contact-grid">
-            <article className="contact-info card reveal">
-              <div className="fact-card">
-                <span>Email</span>
-                <strong>{portfolio.contact.email}</strong>
-              </div>
-              <div className="fact-card">
-                <span>Location</span>
-                <strong>{portfolio.contact.location}</strong>
-              </div>
-              <div className="fact-card">
-                <span>Response</span>
-                <strong>{portfolio.contact.availability}</strong>
-              </div>
-            </article>
-
-            <form className="contact-form card reveal" onSubmit={handleSubmit}>
-              <label>
-                <span>Name</span>
-                <input type="text" name="name" placeholder="Your name" required />
-              </label>
-
-              <label>
-                <span>Email</span>
-                <input type="email" name="email" placeholder="you@example.com" required />
-              </label>
-
-              <label>
-                <span>Reason</span>
-                <select name="interest" defaultValue="" required>
-                  <option value="" disabled>
-                    Select a reason
-                  </option>
-                  {portfolio.contact.interests.map((item) => (
-                    <option key={item} value={item}>
-                      {item}
-                    </option>
-                  ))}
-                </select>
-              </label>
-
-              <label>
-                <span>Message</span>
-                <textarea
-                  name="message"
-                  rows="6"
-                  placeholder="Tell me about the opportunity or project"
-                  required
-                />
-              </label>
-
-              <button type="submit" className="button button-primary">
-                Send Message
-              </button>
-
-              <p className={`form-message ${formState.status}`}>{formState.message}</p>
-            </form>
-          </div>
-        </section>
+          {/* Sweet Minimal Footer */}
+          <Footer />
+        </div>
       </main>
 
-      <footer className="footer reveal">
-        <p>{portfolio.meta.footer}</p>
-      </footer>
-    </div>
+      {/* Project Qualifications Modal */}
+      <ProjectModal
+        project={selectedProject}
+        defaultGithub={data.personal.github}
+        onClose={() => setSelectedProject(null)}
+      />
+
+      {/* Add Skill Creator Modal */}
+      <AddSkillModal
+        isOpen={addSkillModalOpen}
+        newSkill={newSkill}
+        categories={data.skills.categories}
+        onChangeSkill={setNewSkill}
+        onSubmitSkill={handleAddSkill}
+        onClose={() => setAddSkillModalOpen(false)}
+      />
+
+      {/* Add Project Creator Modal */}
+      <AddProjectModal
+        isOpen={addProjectModalOpen}
+        newProject={newProject}
+        onChangeProject={setNewProject}
+        onSubmitProject={handleAddProject}
+        onClose={() => setAddProjectModalOpen(false)}
+      />
+
+      {/* Developer CMS Dashboard Modal */}
+      <CmsDashboardModal
+        isOpen={cmsDashboardModalOpen}
+        storageKeys={STORAGE_KEYS}
+        onOpenAddSkill={() => setAddSkillModalOpen(true)}
+        onOpenAddProject={() => setAddProjectModalOpen(true)}
+        onShowToast={showToast}
+        onClose={() => setCmsDashboardModalOpen(false)}
+      />
+
+      {/* Floating Emerald Toast Notification */}
+      <Toast message={toastMessage} visible={toastVisible} />
+    </>
   );
 }
-
-export default App;

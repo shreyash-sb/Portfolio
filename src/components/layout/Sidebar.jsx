@@ -18,26 +18,12 @@ export function Sidebar({ personal, active, onToggle, onOpenCms, onOpenResume })
     <aside className={`sidebar ${active ? "active" : ""}`} data-sidebar>
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <svg className="avatar-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#00F0FF" />
-                <stop offset="100%" stopColor="#0072FF" />
-              </linearGradient>
-              <linearGradient id="backGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#0F172A" />
-                <stop offset="100%" stopColor="#1E293B" />
-              </linearGradient>
-            </defs>
-            <circle cx="50" cy="50" r="48" fill="url(#backGrad)" stroke="url(#avatarGrad)" strokeWidth="2.5" />
-            <path d="M50 24 C40 24 35 32 35 42 C35 52 42 58 50 58 C58 58 65 52 65 42 C65 32 60 24 50 24 Z" fill="#E2E8F0" />
-            <path d="M50 38 L43 45 H57 Z" fill="#0072FF" opacity="0.35" />
-            <circle cx="45" cy="40" r="2.5" fill="#090D16" />
-            <circle cx="55" cy="40" r="2.5" fill="#090D16" />
-            <path d="M22 80 C22 68 32 62 50 62 C68 62 78 68 78 80 C78 82 76 84 74 84 H26 C24 84 22 82 22 80 Z" fill="url(#avatarGrad)" />
-            <circle cx="82" cy="24" r="3.5" fill="#00F0FF" className="float-dot-1" />
-            <circle cx="18" cy="28" r="4" fill="#0072FF" className="float-dot-2" />
-          </svg>
+          <img
+            src="/shreyash.jpg"
+            alt={personal.name}
+            className="avatar-img"
+            loading="eager"
+          />
         </figure>
 
         <div className="info-content">
@@ -68,19 +54,19 @@ export function Sidebar({ personal, active, onToggle, onOpenCms, onOpenResume })
             type="button"
             className="sidebar-resume-btn"
             onClick={onOpenResume}
-            title="Preview Full Qualifications & Resume"
+            title="Preview Shreyash's Verified Resume (PDF)"
           >
             <FileText size={16} />
-            <span>View Resume / CV</span>
+            <span>View Resume (PDF)</span>
           </button>
-          <button
-            type="button"
+          <a
+            href="/Shreyash_Bobalade_Resume.pdf"
+            download="Shreyash_Bobalade_Resume.pdf"
             className="sidebar-resume-download-btn"
-            onClick={onOpenResume}
-            title="Print or Save PDF"
+            title="Download Resume (PDF)"
           >
             <Download size={15} />
-          </button>
+          </a>
         </div>
 
         <div className="separator"></div>

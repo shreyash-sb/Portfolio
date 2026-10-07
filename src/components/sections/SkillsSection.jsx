@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Cpu,
-  PlusCircle,
   Code2,
   Layout,
   Server,
@@ -10,7 +9,7 @@ import {
   Wrench
 } from "lucide-react";
 
-export function SkillsSection({ skills, onOpenAddSkill }) {
+export function SkillsSection({ skills }) {
   const getCategoryIcon = (iconName) => {
     switch (iconName) {
       case "code":
@@ -42,14 +41,6 @@ export function SkillsSection({ skills, onOpenAddSkill }) {
             Technical Skills
           </h2>
         </div>
-        <button
-          className="add-cms-btn"
-          onClick={onOpenAddSkill}
-          title="Add New Skill"
-        >
-          <PlusCircle size={15} />
-          <span>Add Skill</span>
-        </button>
       </div>
 
       {/* Unified Technical Skills Grid (Single cohesive section matching resume) */}

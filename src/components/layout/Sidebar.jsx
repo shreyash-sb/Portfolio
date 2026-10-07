@@ -5,7 +5,6 @@ import {
   MapPin,
   GraduationCap,
   ChevronDown,
-  Wrench,
   Code2,
   Star,
   FileText,
@@ -13,7 +12,7 @@ import {
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../ui/Icons";
 
-export function Sidebar({ personal, active, onToggle, onOpenCms, onOpenResume }) {
+export function Sidebar({ personal, active, onToggle, onOpenResume }) {
   return (
     <aside className={`sidebar ${active ? "active" : ""}`} data-sidebar>
       <div className="sidebar-info">
@@ -170,17 +169,6 @@ export function Sidebar({ personal, active, onToggle, onOpenCms, onOpenResume })
             </a>
           </li>
         </ul>
-
-        <div className="sidebar-cms-trigger">
-          <button
-            className="cms-portal-btn"
-            onClick={onOpenCms}
-            title="Developer CMS Dashboard"
-          >
-            <Wrench size={14} />
-            <span>Developer CMS</span>
-          </button>
-        </div>
       </div>
     </aside>
   );

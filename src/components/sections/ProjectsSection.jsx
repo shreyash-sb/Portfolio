@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  PlusCircle,
   ChevronDown,
   Sparkles,
   CheckCircle2,
@@ -15,7 +14,6 @@ import { ProjectSvgThumbnail } from "../ui/ProjectThumbnail";
 export function ProjectsSection({
   projects,
   defaultGithub,
-  onOpenAddProject,
   onSelectProject
 }) {
   const [selectedFilter, setSelectedFilter] = useState("All Projects");
@@ -64,14 +62,6 @@ export function ProjectsSection({
             Featured Projects
           </h2>
         </div>
-        <button
-          className="add-cms-btn"
-          onClick={onOpenAddProject}
-          title="Add New Project"
-        >
-          <PlusCircle size={15} />
-          <span>Add Project</span>
-        </button>
       </header>
 
       {/* Project Controls Bar: Instant Search & Results Counter */}

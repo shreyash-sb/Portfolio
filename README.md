@@ -13,6 +13,9 @@ A modern developer portfolio for **Shreyash Bobalade** (B.Tech IT, Walchand Coll
 
 * **🎨 Dynamic Blue Glassmorphism:** Obsidian canvas (`#090D16`), cyan neon accents (`#00F0FF`), glowing blur panels, and ambient grid.
 * **📜 Seamless Continuous Scroll:** All sections flow naturally with a top glass navbar tracking active sections via Scrollspy.
+* **📄 Interactive Resume & CV:** Prominent sidebar CTA opening a print-ready (`window.print()`) A4 preview modal with instant PDF/text download.
+* **⚡ Instant Project Search:** Real-time search bar filtering 12+ projects by keywords, tech stack (React, OpenCV, IoT), and categories with instant match counts.
+* **🌐 Open Graph & Social Preview:** Fully tagged for LinkedIn, WhatsApp, and Twitter card sharing with custom 1200x630 banner.
 * **💼 12 Detailed Projects:** MERN platforms, real-time OpenCV computer vision, Android apps, and AI assistants.
 * **🔍 Project Qualification Modals:** Complete architectural overviews, technical qualification checklists, tech pills, and source links.
 * **🧠 Core Technical Arsenal:** Clean competency cards & categorized matrices without arbitrary percentage bars.
@@ -36,11 +39,12 @@ A modern developer portfolio for **Shreyash Bobalade** (B.Tech IT, Walchand Coll
 Portfolio/
 ├── data/                    # JSON data stores (messages.json, portfolio.json)
 ├── dist/                    # Optimized production bundle
+├── public/                  # Social preview image (og-preview.jpg) & downloadable CV
 ├── src/
 │   ├── components/
 │   │   ├── layout/          # Sidebar, Navbar, Footer
 │   │   ├── sections/        # About, Experience, Skills, Projects, Education, etc.
-│   │   ├── modals/          # ProjectModal, AddSkillModal, AddProjectModal, CmsModal
+│   │   ├── modals/          # ResumeModal, ProjectModal, AddSkillModal, AddProjectModal, CmsModal
 │   │   └── ui/              # Icons, ProjectThumbnails, Toast
 │   ├── data/                # portfolioData.js (Shreyash's data & 12 projects)
 │   ├── App.jsx              # Root orchestrator

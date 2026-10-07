@@ -7,11 +7,13 @@ import {
   ChevronDown,
   Wrench,
   Code2,
-  Star
+  Star,
+  FileText,
+  Download
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../ui/Icons";
 
-export function Sidebar({ personal, active, onToggle, onOpenCms }) {
+export function Sidebar({ personal, active, onToggle, onOpenCms, onOpenResume }) {
   return (
     <aside className={`sidebar ${active ? "active" : ""}`} data-sidebar>
       <div className="sidebar-info">
@@ -60,6 +62,27 @@ export function Sidebar({ personal, active, onToggle, onOpenCms }) {
       </div>
 
       <div className="sidebar-info_more">
+        {/* Prominent Resume CTA Card */}
+        <div className="sidebar-resume-card">
+          <button
+            type="button"
+            className="sidebar-resume-btn"
+            onClick={onOpenResume}
+            title="Preview Full Qualifications & Resume"
+          >
+            <FileText size={16} />
+            <span>View Resume / CV</span>
+          </button>
+          <button
+            type="button"
+            className="sidebar-resume-download-btn"
+            onClick={onOpenResume}
+            title="Print or Save PDF"
+          >
+            <Download size={15} />
+          </button>
+        </div>
+
         <div className="separator"></div>
 
         <ul className="contacts-list">

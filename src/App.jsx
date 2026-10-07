@@ -21,6 +21,7 @@ import { ProjectModal } from "./components/modals/ProjectModal";
 import { AddSkillModal } from "./components/modals/AddSkillModal";
 import { AddProjectModal } from "./components/modals/AddProjectModal";
 import { CmsDashboardModal } from "./components/modals/CmsDashboardModal";
+import { ResumeModal } from "./components/modals/ResumeModal";
 import { Toast } from "./components/ui/Toast";
 
 const STORAGE_KEYS = {
@@ -38,6 +39,7 @@ export default function App() {
   const [addSkillModalOpen, setAddSkillModalOpen] = useState(false);
   const [addProjectModalOpen, setAddProjectModalOpen] = useState(false);
   const [cmsDashboardModalOpen, setCmsDashboardModalOpen] = useState(false);
+  const [resumeModalOpen, setResumeModalOpen] = useState(false);
 
   // Dynamic creation form states
   const [newSkill, setNewSkill] = useState({
@@ -281,6 +283,7 @@ export default function App() {
           active={sidebarActive}
           onToggle={() => setSidebarActive(!sidebarActive)}
           onOpenCms={() => setCmsDashboardModalOpen(true)}
+          onOpenResume={() => setResumeModalOpen(true)}
         />
 
         {/* Right Main Scrollable Content Area */}
@@ -370,6 +373,13 @@ export default function App() {
         onOpenAddProject={() => setAddProjectModalOpen(true)}
         onShowToast={showToast}
         onClose={() => setCmsDashboardModalOpen(false)}
+      />
+
+      {/* Interactive Resume & CV Modal */}
+      <ResumeModal
+        isOpen={resumeModalOpen}
+        personal={data.personal}
+        onClose={() => setResumeModalOpen(false)}
       />
 
       {/* Floating Emerald Toast Notification */}

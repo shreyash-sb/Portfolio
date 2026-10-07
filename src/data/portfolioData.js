@@ -3,16 +3,16 @@ export const initialPortfolioData = {
     name: "Shreyash Bobalade",
     role: "Full-Stack Developer & Problem Solver",
     title: "Information Technology",
-    college: "Walchand College of Engineering, Sangli (WCE)",
+    college: "Walchand College of Engineering, Sangli (Shivaji University)",
     degree: "B.Tech in Information Technology (2024 – 2028)",
-    cgpa: "7.8 / 10.0 (till 4th Semester)",
+    cgpa: "7.69 / 10.0 (till 4th Sem)",
     location: "Sangli / Solapur, Maharashtra, India",
     email: "shreyashbobalade2006@gmail.com",
     phone: "+91 9322782746",
     whatsapp: "https://wa.me/919322782746",
     status: "Open to Internships",
-    bio: "Hello, I'm Shreyash Bobalade — an Information Technology undergraduate at Walchand College of Engineering, Sangli (WCE) and an aspiring Software Engineer. Passionate about Full-Stack Web Development, Artificial Intelligence & Computer Vision, and Algorithmic Problem Solving, I enjoy engineering scalable platforms and intelligent systems that solve real-world problems.",
-    subBio: "I believe in learning through hands-on projects, writing clean and maintainable code, and continuously improving my engineering instincts. My goal is to grow into an impact-driven software engineer who designs high-performance, user-focused technology while constantly exploring new innovations. I am actively seeking Summer 2026 software engineering internships and collaborative opportunities.",
+    bio: "Information Technology undergraduate with strong foundations in software engineering, DSA, OOP, and DBMS. Experienced in developing full-stack applications, backend APIs, Android applications, and AI-based solutions. Interested in building scalable, efficient, and reliable software systems.",
+    subBio: "Passionate about engineering scalable web platforms, backend APIs, and computer vision systems. Competitive programmer with 300+ problems solved across LeetCode and CodeChef. Actively seeking Summer 2026 software engineering internships and collaborative opportunities.",
     github: "https://github.com/shreyash-bobalade",
     linkedin: "https://www.linkedin.com/in/shreyash-bobalade",
     leetcode: "https://leetcode.com/shreyash_codes",
@@ -22,7 +22,7 @@ export const initialPortfolioData = {
   stats: [
     { value: "300+", label: "Problems Solved", sublabel: "LeetCode & CodeChef" },
     { value: "2★", label: "CodeChef Star", sublabel: "Rated Contestant" },
-    { value: "7.8", label: "B.Tech CGPA", sublabel: "WCE Sangli IT" },
+    { value: "7.69", label: "B.Tech CGPA", sublabel: "WCE Sangli (till 4th Sem)" },
     { value: "12+", label: "Core Projects", sublabel: "Full-Stack, Vision, Mobile" }
   ],
 
@@ -61,96 +61,80 @@ export const initialPortfolioData = {
 
   experience: [
     {
-      role: "Assistant Web Developer & Technical Lead",
-      organization: "SAIT, Walchand College of Engineering (WCE)",
+      role: "Assistant Web Developer",
+      organization: "SAIT, WCE (Students' Association of Information Technology)",
       period: "2025 – 2026",
       location: "Sangli, Maharashtra",
-      badge: "Leadership & Technical Mentorship",
+      badge: "Positions of Responsibility",
       points: [
-        "Led an intra-club competitive programming contest for 40+ engineering students, curating problem sets and contest strategies.",
-        "Conducted a hands-on technical workshop on AWS Cloud Services, introducing core cloud fundamentals and real-world deployment patterns.",
-        "Mentored junior peers in frontend development fundamentals, React, and REST API integration."
+        "Led an intra-club competitive programming event for 40+ students, promoting problem-solving and coding skills.",
+        "Organized and delivered a technical session on AWS Cloud Services, introducing cloud fundamentals and real-world applications."
       ]
     }
   ],
 
   skills: {
-    coreArsenal: [
-      {
-        title: "Full-Stack Web Engineering",
-        badge: "Core Strength",
-        tech: "React.js • Node.js • Express • MongoDB • Tailwind CSS",
-        desc: "Designing end-to-end web architectures, secure JWT authentication with RBAC, and responsive client interfaces."
-      },
-      {
-        title: "Computer Vision & Deep Learning",
-        badge: "Specialization",
-        tech: "Python • OpenCV DNN • TensorFlow • Neural Networks",
-        desc: "Building low-latency video inference pipelines, face alignment models, and demographic classification systems."
-      },
-      {
-        title: "Algorithmic Problem Solving",
-        badge: "Competitive",
-        tech: "C++ • Data Structures • Algorithms • LeetCode / CodeChef",
-        desc: "Consistent competitive problem solving with 300+ problems across graphs, DP, trees, and greedy techniques."
-      },
-      {
-        title: "Mobile App Development",
-        badge: "Hands-on",
-        tech: "Java • Android SDK • Firebase Realtime DB • Material Design",
-        desc: "Native Android development with zero-latency cloud sync, offline persistence, and clean UI design."
-      }
-    ],
     categories: [
       {
         id: "languages",
-        title: "Programming Languages",
-        icon: "terminal",
-        items: ["C", "C++", "Java", "Python", "JavaScript", "TypeScript", "SQL"]
+        title: "Languages",
+        icon: "code",
+        items: ["C", "C++", "Java", "Python", "JavaScript", "SQL"]
       },
       {
         id: "frontend",
-        title: "Frontend Engineering",
+        title: "Frontend",
         icon: "layout",
-        items: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Vite", "Responsive UI", "Framer Motion"]
+        items: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS"]
       },
       {
         id: "backend",
-        title: "Backend & Databases",
+        title: "Backend & APIs",
         icon: "server",
-        items: ["Node.js", "Express.js", "MongoDB", "MySQL", "Firebase Realtime DB", "REST APIs", "JWT Auth", "Cloudinary"]
+        items: ["Node.js", "Express.js", "Django", "FastAPI", "REST APIs", "JWT Authentication"]
+      },
+      {
+        id: "databases",
+        title: "Databases",
+        icon: "database",
+        items: ["MongoDB", "MySQL", "Firebase Firestore"]
       },
       {
         id: "aiml",
-        title: "AI, ML & Computer Vision",
+        title: "AI & Data Science",
         icon: "sparkles",
-        items: ["OpenCV DNN", "TensorFlow", "Deep Neural Networks", "NumPy", "Pandas", "Matplotlib", "Scikit-Learn"]
+        items: ["OpenCV", "TensorFlow", "NumPy", "Pandas", "Matplotlib"]
       },
       {
         id: "core",
-        title: "Core CS, Tools & Cloud",
+        title: "Core CS",
+        icon: "cpu",
+        items: ["Data Structures & Algorithms", "OOP", "DBMS", "Computer Networks", "Software Engineering"]
+      },
+      {
+        id: "tools",
+        title: "Tools & Platforms",
         icon: "tool",
-        items: ["Data Structures & Algorithms", "OOPs", "DBMS", "Operating Systems", "Git & GitHub", "Linux / Red Hat", "AWS Cloud", "Postman", "Android Studio"]
+        items: ["Git", "GitHub", "Android Studio", "Cloudinary", "Docker", "Postman", "Vercel", "Render"]
       }
     ]
   },
 
   projects: [
     {
-      id: "doctor-appointment",
-      title: "Doctor Appointment Booking System",
+      id: "prescripto",
+      title: "Prescripto – Doctor Appointment & Healthcare Platform",
       category: "Full-Stack Web",
       status: "Featured",
-      role: "Lead Full-Stack Architect • 2025 – 2026",
-      desc: "A full-stack healthcare appointment management platform featuring dedicated Patient, Doctor, and Admin portals with Role-Based Access Control (RBAC).",
-      overview: "A comprehensive production-grade healthcare appointment management system engineered to streamline scheduling and medical management. Features dedicated secured portals for Patients, Doctors, and Administrators with strict JWT authentication and role-based route guards. Includes real-time slot conflict prevention, doctor credential verification via Cloudinary, and responsive administrative dashboards.",
+      role: "Lead Full-Stack Developer • 2025 – 2026",
+      desc: "A full-stack healthcare platform with Patient, Doctor, and Admin portals, secure JWT authentication, digital prescriptions, and Gemini AI assistant.",
+      overview: "Prescripto is a comprehensive healthcare appointment and clinical platform engineered to streamline scheduling and medical administration. Features dedicated secured portals for Patients, Doctors, and Administrators with strict JWT authentication, role-based access control, digital prescriptions, reviews/ratings, and Cloudinary image persistence, integrated with Gemini AI and deployed on Vercel, Render, and MongoDB Atlas.",
       qualifications: [
-        "Architected multi-portal workflows for Patients, Doctors, and Administrators with role-based authorization guards.",
-        "Built secure JWT authentication, session middleware, and RESTful APIs for appointment scheduling, cancellation, and doctor availability management.",
-        "Integrated MongoDB for structured data storage and Cloudinary for doctor credentials and profile media uploads.",
-        "Engineered responsive, accessible dashboards using React.js and Tailwind CSS with real-time schedule management."
+        "Built a full-stack healthcare platform with Patient, Doctor, and Admin portals, secure JWT authentication, appointment booking, and role-based access.",
+        "Implemented digital prescriptions, reviews/ratings, doctor availability, and Cloudinary image uploads with MongoDB persistence.",
+        "Integrated a project-aware Gemini AI assistant and deployed the platform using Vercel, Render, and MongoDB Atlas."
       ],
-      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Auth", "Cloudinary", "Tailwind CSS"],
+      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Cloudinary", "Gemini AI", "Tailwind CSS"],
       githubUrl: "https://github.com/shreyash-bobalade",
       liveUrl: "https://github.com/shreyash-bobalade",
       badgeColor: "#00F0FF"
@@ -161,15 +145,14 @@ export const initialPortfolioData = {
       category: "Machine Learning & AI",
       status: "Featured",
       role: "AI & Computer Vision Engineer • 2025",
-      desc: "An optimized real-time computer vision system using Python and OpenCV DNN to detect faces and estimate demographic attributes from video feeds.",
-      overview: "High-performance computer vision system utilizing OpenCV Deep Neural Network (DNN) caffe models to detect human faces and classify age brackets and gender in real-time. Features pre-processing algorithms, spatial bounding box tracking, and low-latency inference optimized for standard CPU execution.",
+      desc: "A real-time deep learning computer vision system for face, age, and gender detection using webcam and image preprocessing.",
+      overview: "High-performance computer vision system utilizing OpenCV DNN and TensorFlow deep learning models to detect human faces and predict demographic attributes in real-time. Features robust frame-by-frame preprocessing and optimized video stream inference.",
       qualifications: [
-        "Developed a real-time face detection and demographic classification application using OpenCV Deep Neural Network (DNN) modules.",
-        "Implemented image preprocessing, face alignment, deep learning inference, and real-time bounding box annotations.",
-        "Optimized frame-by-frame processing to achieve smooth 30+ FPS during live webcam streams and support batch offline image analysis.",
-        "Engineered confidence threshold filtering to ensure accurate predictions across variable lighting conditions."
+        "Built a real-time system for face, age, and gender detection using webcam and images.",
+        "Implemented image preprocessing and deep-learning inference with OpenCV DNN and TensorFlow models.",
+        "Optimized frame processing for fast real-time predictions and visualization."
       ],
-      techStack: ["Python", "OpenCV DNN", "TensorFlow", "Deep Learning", "NumPy", "Matplotlib"],
+      techStack: ["Python", "OpenCV", "OpenCV DNN", "TensorFlow", "NumPy", "Deep Learning", "Computer Vision"],
       githubUrl: "https://github.com/shreyash-bobalade",
       liveUrl: "https://github.com/shreyash-bobalade",
       badgeColor: "#0072FF"
@@ -368,25 +351,18 @@ export const initialPortfolioData = {
 
   education: [
     {
-      institution: "Walchand College of Engineering, Sangli (WCE)",
-      degree: "B.Tech in Information Technology",
-      period: "2024 – 2028 (Currently in 3rd Year)",
-      grade: "CGPA: 7.8 / 10.0 (till 4th Semester)",
-      details: "Premier autonomous engineering institute. Rigorous undergraduate curriculum with deep focus on Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks, and Software Engineering. Active student leader in SAIT technical events."
+      institution: "Walchand College of Engineering, Sangli (Shivaji University)",
+      degree: "B.Tech, Information Technology",
+      period: "2024 – 2028",
+      grade: "7.69 (till 4th Sem)",
+      details: "Premier engineering institute affiliated with Shivaji University. Deep foundations in Data Structures & Algorithms, OOP, DBMS, Computer Networks, and Software Engineering."
     },
     {
-      institution: "Ligadi-Patil Jr. College of Science",
-      degree: "Higher Secondary Certificate (HSC / Class XII)",
+      institution: "Ligadi-Patil Jr. College of Science, (Maharashtra Board)",
+      degree: "Senior Secondary (Class XII) — MHT-CET & JEE Examination",
       period: "2022 – 2024",
-      grade: "80.17% | MHT-CET: 98.67%ile | JEE: 88.32%ile",
-      details: "Top 1.33 percentile in Maharashtra State Engineering Entrance Examination (MHT-CET). Strong analytical and mathematical foundation in Calculus, Mechanics, Chemistry, and Computer Science."
-    },
-    {
-      institution: "English Medium High School",
-      degree: "Secondary School Certificate (SSC / Class X)",
-      period: "2022",
-      grade: "93.40% (Distinction)",
-      details: "Exemplary academic benchmarks cultivating strong logical reasoning, mathematics proficiency, and scientific inquiry."
+      grade: "80.17% || 98.67 (MHT-CET) || 88.32 (JEE)",
+      details: "Top 1.33 percentile in Maharashtra State Engineering Entrance Examination (MHT-CET: 98.67%ile, JEE: 88.32%ile). Strong foundations in Mathematics, Physics, and analytical logic."
     }
   ],
 

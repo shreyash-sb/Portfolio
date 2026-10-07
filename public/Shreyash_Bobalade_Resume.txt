@@ -1,0 +1,49 @@
+===============================================================
+Shreyash Bobalade
+📞 +91 9322782746 | ✉️ shreyashbobalade2006@gmail.com
+GitHub: https://github.com/shreyash-bobalade | LinkedIn: https://www.linkedin.com/in/shreyash-bobalade | CodeChef: https://www.codechef.com/users/shreyash_ccf
+===============================================================
+
+About
+Information Technology undergraduate with strong foundations in software engineering, DSA, OOP, and DBMS. Experienced in developing full-stack applications, backend APIs, Android applications, and AI-based solutions. Interested in building scalable, efficient, and reliable software systems.
+
+Technical Skills
+ Languages: C, C++, Java, Python, JavaScript, SQL
+ Frontend: React.js, Next.js, HTML5, CSS3, Tailwind CSS
+ Backend & APIs: Node.js, Express.js, Django, FastAPI, REST APIs, JWT Authentication
+ Databases: MongoDB, MySQL, Firebase Firestore
+ AI & Data Science: OpenCV, TensorFlow, NumPy, Pandas, Matplotlib
+ Core CS: Data Structures & Algorithms, OOP, DBMS, Computer Networks, Software Engineering
+ Tools & Platforms: Git, GitHub, Android Studio, Cloudinary, Docker, Postman, Vercel, Render
+
+Projects
+Prescripto – Doctor Appointment & Healthcare Platform | React.js, Node.js, Express.js, MongoDB, JWT, Cloudinary, Gemini AI
+ Built a full-stack healthcare platform with Patient, Doctor, and Admin portals, secure JWT authentication, appointment booking, and role-based access.
+ Implemented digital prescriptions, reviews/ratings, doctor availability, and Cloudinary image uploads with MongoDB persistence.
+ Integrated a project-aware Gemini AI assistant and deployed the platform using Vercel, Render, and MongoDB Atlas.
+
+Real-Time Age & Gender Detection System | Python, OpenCV, OpenCV DNN, TensorFlow, NumPy, Deep Learning, Computer Vision
+ Built a real-time system for face, age, and gender detection using webcam and images.
+ Implemented image preprocessing and deep-learning inference with OpenCV DNN and TensorFlow models.
+ Optimized frame processing for fast real-time predictions and visualization.
+
+Education
+B.Tech, Information Technology
+Walchand College of Engineering, Sangli (Shivaji University)
+Grade: 7.69(till 4th Sem) | 2024 – 2028
+
+Senior Secondary (Class XII)
+Ligadi-Patil Jr. College of Science, (Maharashtra Board)
+Grade: 80.17% || 98.67 || 88.32 | 2022 – 2024
+MHT-CET & JEE Examination
+
+Positions of Responsibility
+Assistant Web Developer – SAIT, WCE | 2025 – 2026
+ Led an intra-club competitive programming event for 40+ students, promoting problem-solving and coding skills.
+ Organized and delivered a technical session on AWS Cloud Services, introducing cloud fundamentals and real-world applications.
+
+Certifications & Achievements
+ CodeChef - 2* Rating Problem Solver
+ Leetcode – Problem Solver
+ Linux Fundamentals - Red Hat
+===============================================================

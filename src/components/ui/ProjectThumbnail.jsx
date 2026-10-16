@@ -249,6 +249,65 @@ export function ProjectSvgThumbnail({ projectId, title }) {
         </svg>
       );
 
+    case "food-recipe":
+      return (
+        <svg className="project-svg-thumb" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="foodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#0B0F14" />
+              <stop offset="100%" stopColor="#1E160C" />
+            </linearGradient>
+            <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#F59E0B" />
+              <stop offset="100%" stopColor="#EF4444" />
+            </linearGradient>
+          </defs>
+          <rect width="400" height="240" fill="url(#foodGrad)" />
+          {/* Main App Container Mockup */}
+          <rect x="70" y="32" width="260" height="155" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="#F59E0B" strokeWidth="1.5" />
+          
+          {/* Search Bar header */}
+          <rect x="85" y="44" width="165" height="22" rx="6" fill="rgba(245, 158, 11, 0.12)" stroke="rgba(245, 158, 11, 0.3)" strokeWidth="1" />
+          <circle cx="98" cy="55" r="4.5" fill="none" stroke="#F59E0B" strokeWidth="1.5" />
+          <line x1="101" y1="58" x2="106" y2="63" stroke="#F59E0B" strokeWidth="1.5" strokeLinecap="round" />
+          <text x="114" y="59" fill="#E2E8F0" fontSize="10" fontFamily="Outfit" fontWeight="500">search recipes...</text>
+          
+          {/* Favorite Heart Button */}
+          <circle cx="295" cy="55" r="12" fill="rgba(239, 68, 68, 0.15)" stroke="rgba(239, 68, 68, 0.4)" strokeWidth="1" />
+          <path d="M295,59 C295,59 289,55 289,52 C289,49.8 290.8,48 293,48 C294.2,48 295,48.8 295,49.5 C295,48.8 295.8,48 297,48 C299.2,48 301,49.8 301,52 C301,55 295,59 295,59 Z" fill="#EF4444" />
+          
+          {/* Recipe Card Mockup Inside */}
+          <rect x="85" y="76" width="230" height="95" rx="10" fill="rgba(30, 41, 59, 0.7)" stroke="rgba(245, 158, 11, 0.2)" strokeWidth="1" />
+          
+          {/* Dish / Bowl Graphic */}
+          <circle cx="125" cy="120" r="26" fill="rgba(245, 158, 11, 0.1)" stroke="url(#amberGrad)" strokeWidth="2" />
+          <ellipse cx="125" cy="120" rx="18" ry="12" fill="none" stroke="#F59E0B" strokeWidth="1.5" />
+          <circle cx="125" cy="120" r="7" fill="#F97316" />
+          {/* Aroma Steam */}
+          <path d="M120,96 Q118,90 121,85" fill="none" stroke="#F59E0B" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
+          <path d="M125,95 Q127,88 124,82" fill="none" stroke="#F59E0B" strokeWidth="1.5" strokeLinecap="round" opacity="0.8" />
+          <path d="M130,97 Q132,91 129,86" fill="none" stroke="#F59E0B" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
+          
+          {/* Recipe Meta Details */}
+          <text x="165" y="96" fill="#F8FAFC" fontSize="12" fontFamily="Outfit" fontWeight="700">Recipe Finder</text>
+          <text x="165" y="112" fill="#94A3B8" fontSize="10" fontFamily="Outfit">⏱ 20 mins • 4.9 ★ (120+)</text>
+          
+          {/* Tags */}
+          <rect x="165" y="122" width="46" height="18" rx="4" fill="rgba(245, 158, 11, 0.18)" stroke="#F59E0B" strokeWidth="0.8" />
+          <text x="188" y="134" textAnchor="middle" fill="#F59E0B" fontSize="9" fontFamily="Outfit" fontWeight="600">React</text>
+          
+          <rect x="216" y="122" width="54" height="18" rx="4" fill="rgba(56, 189, 248, 0.15)" stroke="#38BDF8" strokeWidth="0.8" />
+          <text x="243" y="134" textAnchor="middle" fill="#38BDF8" fontSize="9" fontFamily="Outfit" fontWeight="600">Tailwind</text>
+          
+          <rect x="275" y="122" width="35" height="18" rx="4" fill="rgba(16, 185, 129, 0.15)" stroke="#10B981" strokeWidth="0.8" />
+          <text x="292" y="134" textAnchor="middle" fill="#10B981" fontSize="9" fontFamily="Outfit" fontWeight="600">APIs</text>
+
+          <text x="50%" y="90%" dominantBaseline="middle" textAnchor="middle" fill="#E2E8F0" fontFamily="Outfit" fontWeight="600" fontSize="15">
+            {title}
+          </text>
+        </svg>
+      );
+
     default:
       return (
         <svg className="project-svg-thumb" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">

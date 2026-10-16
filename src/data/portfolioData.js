@@ -21,7 +21,7 @@ export const initialPortfolioData = {
 
   stats: [
     { value: "7.69", label: "B.Tech CGPA", sublabel: "WCE Sangli (till 4th Sem)" },
-    { value: "9+", label: "Core Projects", sublabel: "Full-Stack, AIML, Systems" },
+    { value: "10+", label: "Core Projects", sublabel: "Full-Stack, AIML, Systems" },
     { value: "300+", label: "Problems Solved", sublabel: "LeetCode" },
     { value: "2★", label: "CodeChef Star", sublabel: "Rated Contestant" }
   ],
@@ -250,6 +250,25 @@ export const initialPortfolioData = {
       githubUrl: "https://github.com/shreyash-sb/Finora",
       liveUrl: "https://github.com/shreyash-sb/Finora",
       badgeColor: "#10B981"
+    },
+    {
+      id: "food-recipe",
+      title: "Food Recipe – Culinary Search & Meal Discovery Web App",
+      category: "Full-Stack Web",
+      status: "Completed",
+      role: "Frontend & Web Developer • 2025",
+      desc: "A React-based recipe search web app with favorites, API integration, and modern UI using Tailwind CSS.",
+      overview: "Food Recipe is an interactive recipe discovery and meal exploration web application built with React and Tailwind CSS. It enables food enthusiasts to search through extensive culinary databases, filter by ingredients and dietary preferences, bookmark favorite dishes with persistent state, and follow step-by-step cooking instructions with comprehensive ingredient breakdowns.",
+      qualifications: [
+        "Built a responsive culinary search and meal discovery web application using React.js and Tailwind CSS.",
+        "Integrated external recipe REST APIs to fetch real-time meal datasets, ingredients, and step-by-step cooking instructions.",
+        "Implemented a favorites collection system with persistent local storage state and quick bookmarking.",
+        "Architected smooth client-side multi-page navigation using React Router for recipe details, search, and favorites."
+      ],
+      techStack: ["React.js", "Tailwind CSS", "JavaScript", "React Router", "REST APIs", "Context API"],
+      githubUrl: "https://github.com/shreyash-sb/food-recipe",
+      liveUrl: "https://github.com/shreyash-sb/food-recipe",
+      badgeColor: "#F59E0B"
     },
     {
       id: "age-gender-detection",

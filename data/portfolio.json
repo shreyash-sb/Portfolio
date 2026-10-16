@@ -48,7 +48,7 @@
       "detail": "WCE Sangli (till 4th Sem)"
     },
     {
-      "value": "9+",
+      "value": "10+",
       "label": "Core Projects",
       "detail": "Full-Stack, AIML, Systems"
     }
@@ -195,6 +195,22 @@
       ],
       "stack": ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs"],
       "github": "https://github.com/shreyash-bobalade"
+    },
+    {
+      "id": "food-recipe",
+      "name": "Food Recipe Finder & Meal Discovery",
+      "category": "Frontend & Web",
+      "badge": "React & Tailwind App",
+      "year": "2025",
+      "summary": "A React-based recipe search web app with favorites, API integration, and modern UI using Tailwind CSS.",
+      "architecture": "React.js • JavaScript • Tailwind CSS • React Router • REST APIs • Context API",
+      "points": [
+        "Built a responsive recipe search and discovery web application using React.js and Tailwind CSS.",
+        "Integrated external recipe REST APIs for ingredients, preparation steps, and meal categories.",
+        "Implemented a favorites collection system with persistent state and seamless React Router navigation."
+      ],
+      "stack": ["React.js", "Tailwind CSS", "JavaScript", "React Router", "REST APIs"],
+      "github": "https://github.com/shreyash-sb/food-recipe"
     }
   ],
   "experience": [

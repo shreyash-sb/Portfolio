@@ -43,14 +43,14 @@
       "detail": "Contest Competitor"
     },
     {
-      "value": "7.8",
+      "value": "7.69",
       "label": "CGPA",
-      "detail": "Walchand College of Engg"
+      "detail": "WCE Sangli (till 4th Sem)"
     },
     {
-      "value": "4+",
-      "label": "Projects",
-      "detail": "MERN, Vision & Android"
+      "value": "9+",
+      "label": "Core Projects",
+      "detail": "Full-Stack, AIML, Systems"
     }
   ],
   "about": {
@@ -58,7 +58,7 @@
     "bio": "I am an Information Technology undergraduate at Walchand College of Engineering, Sangli with a builder mindset and strong algorithmic foundation. My passion lies in designing end-to-end software solutions—from responsive, role-guarded web architectures to deep learning vision modules and cloud-synced mobile apps. I thrive on solving complex computational challenges and translating ideas into clean, maintainable code.",
     "college": "Walchand College of Engineering, Sangli",
     "degree": "B.Tech in Information Technology (2024 - 2028)",
-    "cgpa": "7.8 / 10.0 (till 4th Semester)",
+    "cgpa": "7.69 / 10.0 (till 4th Semester)",
     "strengths": [
       {
         "title": "Full-Stack Web Architecture",
@@ -248,7 +248,7 @@
       "institution": "Walchand College of Engineering, Sangli (WCE)",
       "degree": "B.Tech in Information Technology",
       "period": "2024 – 2028",
-      "grade": "CGPA: 7.8 (till 4th Semester)",
+      "grade": "CGPA: 7.69 (till 4th Semester)",
       "details": "Rigorous undergraduate engineering curriculum with focus on Data Structures, Algorithms, DBMS, OS, Computer Networks, and Software Engineering."
     },
     {

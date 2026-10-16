@@ -78,6 +78,7 @@ input:focus, textarea:focus, select:focus { outline: none; }
 
 html {
   font-family: var(--ff-poppins);
+  font-size: 16.5px;
   background: var(--bg-primary);
   color: var(--text-secondary);
   scroll-behavior: smooth;
@@ -167,7 +168,7 @@ main {
 .h1 {
   font-family: var(--ff-outfit);
   color: var(--text-primary);
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: -0.3px;
 }
@@ -175,7 +176,7 @@ main {
 .h2 {
   font-family: var(--ff-outfit);
   color: var(--text-primary);
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
   text-transform: capitalize;
 }
@@ -183,21 +184,21 @@ main {
 .h3 {
   font-family: var(--ff-outfit);
   color: var(--text-primary);
-  font-size: 20px;
+  font-size: 21.5px;
   font-weight: 600;
 }
 
 .h4 {
   font-family: var(--ff-outfit);
   color: var(--text-primary);
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
 }
 
 .h5 {
   font-family: var(--ff-outfit);
   color: var(--text-primary);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -292,14 +293,14 @@ main {
 .info-content .name {
   color: var(--text-primary);
   font-family: var(--ff-outfit);
-  font-size: 19px;
+  font-size: 20.5px;
   font-weight: 700;
   letter-spacing: -0.2px;
 }
 
 .info-content .title {
   color: var(--text-secondary);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   background: rgba(0, 240, 255, 0.08);
   border: 1px solid rgba(0, 240, 255, 0.2);
@@ -317,7 +318,7 @@ main {
   background: rgba(16, 185, 129, 0.08);
   border: 1px solid rgba(16, 185, 129, 0.25);
   color: #10B981;
-  font-size: 11.5px;
+  font-size: 12.5px;
   font-weight: 500;
   padding: 4px 11px;
   border-radius: 20px;
@@ -421,14 +422,14 @@ main {
 
 .contact-title {
   color: var(--text-muted);
-  font-size: 11px;
+  font-size: 11.5px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .contact-link, address {
   color: var(--text-primary);
-  font-size: 12.5px;
+  font-size: 13.5px;
   font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
@@ -442,7 +443,7 @@ main {
 .contact-action {
   display: inline-flex;
   align-items: center;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--accent-cyan);
   font-weight: 500;
   margin-top: 2px;
@@ -514,7 +515,7 @@ main {
 .navbar-link {
   color: var(--text-secondary);
   font-family: var(--ff-outfit);
-  font-size: 12.5px;
+  font-size: 13.5px;
   font-weight: 500;
   padding: 8px 12px;
   border-radius: 10px;
@@ -579,7 +580,7 @@ article:last-of-type {
 
 .about-text {
   color: var(--text-secondary);
-  font-size: 14.5px;
+  font-size: 15.5px;
   font-weight: 300;
   line-height: 1.75;
   margin-bottom: 25px;
@@ -614,7 +615,7 @@ article:last-of-type {
 
 .stat-value {
   font-family: var(--ff-outfit);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--accent-cyan);
   text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
@@ -622,13 +623,13 @@ article:last-of-type {
 
 .stat-label {
   font-family: var(--ff-outfit);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text-primary);
 }
 
 .stat-sublabel {
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--text-muted);
 }
 
@@ -724,13 +725,13 @@ article:last-of-type {
 }
 
 .service-item-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--text-primary);
 }
 
 .service-item-text {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.6;
 }
@@ -800,14 +801,14 @@ article:last-of-type {
 .timeline-item-title {
   margin-bottom: 5px;
   font-family: var(--ff-outfit);
-  font-size: 16px;
+  font-size: 17.5px;
   font-weight: 600;
   color: var(--text-primary);
 }
 
 .timeline-item-org {
   color: var(--accent-cyan);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   display: inline-block;
   margin-bottom: 4px;
@@ -817,7 +818,7 @@ article:last-of-type {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 11px;
+  font-size: 12px;
   color: hsl(215, 20%, 75%);
   background: rgba(30, 41, 59, 0.5);
   border: 1px solid var(--border-glass);
@@ -834,7 +835,7 @@ article:last-of-type {
 }
 
 .timeline-bullet-item {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.6;
   color: var(--text-secondary);
@@ -935,7 +936,7 @@ article:last-of-type {
 
 .skill-cat-title {
   font-family: var(--ff-outfit);
-  font-size: 14.5px;
+  font-size: 15.5px;
   font-weight: 600;
   color: var(--text-primary);
   display: flex;
@@ -949,7 +950,7 @@ article:last-of-type {
 
 .skill-count-badge {
   font-family: var(--ff-outfit);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--accent-cyan);
   background: rgba(0, 240, 255, 0.08);
@@ -966,7 +967,7 @@ article:last-of-type {
 }
 
 .skill-pill {
-  font-size: 12px;
+  font-size: 13px;
   font-family: var(--ff-outfit);
   font-weight: 500;
   color: hsl(210, 40%, 92%);
@@ -1136,7 +1137,7 @@ article:last-of-type {
 }
 
 .project-category-badge {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--accent-cyan);
   background: rgba(0, 240, 255, 0.08);
@@ -1147,7 +1148,7 @@ article:last-of-type {
 }
 
 .project-status-pill {
-  font-size: 11px;
+  font-size: 12px;
   color: #10B981;
   background: rgba(16, 185, 129, 0.1);
   padding: 2px 8px;
@@ -1160,7 +1161,7 @@ article:last-of-type {
 
 .project-title {
   font-family: var(--ff-outfit);
-  font-size: 17px;
+  font-size: 18.5px;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 6px;
@@ -1168,12 +1169,13 @@ article:last-of-type {
 
 .project-desc {
   color: var(--text-secondary);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.55;
   margin-bottom: 12px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1186,7 +1188,7 @@ article:last-of-type {
 }
 
 .tech-tag {
-  font-size: 11px;
+  font-size: 12px;
   font-family: var(--ff-outfit);
   color: hsl(210, 40%, 90%);
   background: rgba(30, 41, 59, 0.6);
@@ -1209,7 +1211,7 @@ article:last-of-type {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   font-family: var(--ff-outfit);
   color: var(--accent-cyan);
@@ -1369,19 +1371,19 @@ article:last-of-type {
 
 .profile-platform {
   font-family: var(--ff-outfit);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--text-primary);
 }
 
 .profile-handle {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-muted);
 }
 
 .profile-badge {
   font-family: var(--ff-outfit);
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--accent-cyan);
   background: rgba(0, 240, 255, 0.08);
@@ -1402,7 +1404,7 @@ article:last-of-type {
 }
 
 .connect-text {
-  font-size: 14.5px;
+  font-size: 15.5px;
   line-height: 1.7;
   font-weight: 300;
 }
@@ -2027,13 +2029,13 @@ article:last-of-type {
   }
 
   .info-content .name {
-    font-size: 22px;
+    font-size: 23.5px;
     margin-top: 5px;
   }
 
   .info-content .title {
     margin-inline: auto;
-    font-size: 12.5px;
+    font-size: 13.5px;
   }
 
   .status-badge {
@@ -2076,7 +2078,7 @@ article:last-of-type {
   .filter-item button {
     color: var(--text-secondary);
     font-family: var(--ff-outfit);
-    font-size: 13.5px;
+    font-size: 14.5px;
     padding: 6px 14px;
     border-radius: 10px;
     transition: var(--transition-1);

@@ -5,7 +5,7 @@ export const initialPortfolioData = {
     title: "Information Technology",
     college: "Walchand College of Engineering, Sangli (Shivaji University)",
     degree: "B.Tech in Information Technology (2024 – 2028)",
-    cgpa: "8.1 / 10.0 (till 4th Sem)",
+    cgpa: "7.69 / 10.0 (till 4th Sem)",
     location: "Sangli, Maharashtra, India",
     email: "shreyashbobalade2006@gmail.com",
     phone: "+91 9322782746",
@@ -20,8 +20,8 @@ export const initialPortfolioData = {
   },
 
   stats: [
-    { value: "8.1", label: "B.Tech CGPA", sublabel: "WCE Sangli (till 4th Sem)" },
-    { value: "6+", label: "Core Projects", sublabel: "Full-Stack, AIML, Systems" },
+    { value: "7.69", label: "B.Tech CGPA", sublabel: "WCE Sangli (till 4th Sem)" },
+    { value: "9+", label: "Core Projects", sublabel: "Full-Stack, AIML, Systems" },
     { value: "300+", label: "Problems Solved", sublabel: "LeetCode" },
     { value: "2★", label: "CodeChef Star", sublabel: "Rated Contestant" }
   ],
@@ -119,116 +119,175 @@ export const initialPortfolioData = {
 
   projects: [
     {
+      id: "apiforge",
+      title: "APIForge – AI-Powered API Testing & Mocking Platform",
+      category: "Full-Stack Web",
+      status: "Featured",
+      role: "Lead Full-Stack Developer • 2026",
+      desc: "An intelligent API development, automated testing, and mocking platform powered by AI with dynamic payload synthesis and real-time schema validation.",
+      overview: "APIForge is an AI-powered API development, testing, and mocking platform designed to accelerate backend engineering workflows. It provides intelligent payload synthesis, automated mock server generation, schema validation, and real-time request simulation with deep performance and response inspection.",
+      qualifications: [
+        "Engineered a full-stack platform for API testing, mock endpoint generation, and real-time request-response simulation.",
+        "Built AI-powered payload synthesis and validation engines to automate edge-case discovery and schema compliance testing.",
+        "Implemented dynamic route mocking with customizable response latency, status code simulation, and header overrides.",
+        "Designed a responsive developer dashboard in TypeScript and React featuring syntax-highlighted JSON viewers and collection export."
+      ],
+      techStack: ["TypeScript", "React.js", "Node.js", "Express.js", "AI/LLM APIs", "REST APIs", "Tailwind CSS"],
+      githubUrl: "https://github.com/shreyash-sb/APIForge",
+      liveUrl: "https://github.com/shreyash-sb/APIForge",
+      badgeColor: "#00F0FF"
+    },
+    {
+      id: "hexoai",
+      title: "HexoAI – Autonomous AI Agent powered by Google Gemini",
+      category: "Machine Learning & AI",
+      status: "Featured",
+      role: "AI & Systems Developer • 2026",
+      desc: "Next-generation autonomous AI agent system powered by Google Gemini, capable of multi-step task planning, dynamic tool calling, and automated execution.",
+      overview: "HexoAI is an advanced autonomous AI agent system engineered using Google Gemini APIs and modern agentic architectures. Features goal decomposition, dynamic tool orchestration, contextual memory retention, and automated execution pipelines for complex web and developer tasks.",
+      qualifications: [
+        "Architected an autonomous agent pipeline leveraging Google Gemini models for multi-step reasoning and dynamic tool execution.",
+        "Implemented structured function-calling mechanisms, contextual conversation memory, and recursive error-recovery loops.",
+        "Built real-time agent execution visualizer showcasing step-by-step thinking, tool invocations, and response distillation.",
+        "Optimized latency and token consumption through intelligent context pruning and prompt caching."
+      ],
+      techStack: ["JavaScript", "Node.js", "Google Gemini API", "LLM Agents", "Web APIs", "AI Orchestration"],
+      githubUrl: "https://github.com/shreyash-sb/HexoAI",
+      liveUrl: "https://github.com/shreyash-sb/HexoAI",
+      badgeColor: "#8B5CF6"
+    },
+    {
+      id: "devforge",
+      title: "DevForge – Version Control & Collaborative Code Platform",
+      category: "Full-Stack Web",
+      status: "Featured",
+      role: "Full-Stack Developer • 2025 – 2026",
+      desc: "A software development platform for managing code repositories, branches, cryptographic commit histories, and collaborative team workflows.",
+      overview: "DevForge is a full-stack version control and repository management platform inspired by GitHub. It simulates Git core semantics including repository initialization, staging mechanisms, cryptographic commit hashing (SHA), commit tree DAG visualization, file diffing, and user repository management with a modern dark developer UI.",
+      qualifications: [
+        "Engineered repository management architecture simulating Git VCS workflows, cryptographic commit hashing, and staged changes.",
+        "Implemented commit tree generation, branch tracking, file version history diffing, and directory explorer navigation.",
+        "Architected secure user authentication, repository access control, and dynamic repository search and statistics.",
+        "Designed a high-performance responsive developer dashboard with dark mode, markdown rendering, and syntax-highlighted code viewer."
+      ],
+      techStack: ["JavaScript", "React.js", "Node.js", "Express.js", "MongoDB", "Git Architecture", "Tailwind CSS"],
+      githubUrl: "https://github.com/shreyash-sb/DevForge",
+      liveUrl: "https://github.com/shreyash-sb/DevForge",
+      badgeColor: "#38BDF8"
+    },
+    {
+      id: "streamly",
+      title: "Streamly – Real-Time Live Video & Streaming Platform",
+      category: "Full-Stack Web",
+      status: "Completed",
+      role: "Real-Time & Full-Stack Developer • 2025",
+      desc: "Real-time media communication and video streaming platform combining peer-to-peer WebRTC video feeds, low-latency signaling, and interactive conversations.",
+      overview: "Streamly is a modern video streaming and real-time communication platform engineered for low-latency live video feeds, conference rooms, and interactive messaging. Employs WebRTC peer-to-peer protocols and WebSockets signaling for seamless audio/video transmission across browsers without third-party plugins.",
+      qualifications: [
+        "Engineered real-time video streaming architecture using WebRTC peer-to-peer audio/video streaming and media constraints.",
+        "Implemented low-latency WebSockets signaling server for instant room creation, SDP handshake, and ICE candidate negotiation.",
+        "Built interactive in-call chat channels, screen sharing capabilities, and dynamic grid layouts for multi-participant rooms.",
+        "Optimized bitrate handling, camera/mic toggle controls, and responsive video player containers across viewports."
+      ],
+      techStack: ["JavaScript", "WebRTC", "WebSockets", "Node.js", "Express.js", "React.js", "HTML5 Media"],
+      githubUrl: "https://github.com/shreyash-sb/Streamly",
+      liveUrl: "https://github.com/shreyash-sb/Streamly",
+      badgeColor: "#EF4444"
+    },
+    {
       id: "prescripto",
       title: "Prescripto – Doctor Appointment & Healthcare Platform",
       category: "Full-Stack Web",
-      status: "Featured",
+      status: "Completed",
       role: "Lead Full-Stack Developer • 2025 – 2026",
       desc: "A full-stack healthcare platform with Patient, Doctor, and Admin portals, secure JWT authentication, digital prescriptions, and Gemini AI assistant.",
       overview: "Prescripto is a comprehensive healthcare appointment and clinical platform engineered to streamline scheduling and medical administration. Features dedicated secured portals for Patients, Doctors, and Administrators with strict JWT authentication, role-based access control, digital prescriptions, reviews/ratings, and Cloudinary image persistence, integrated with Gemini AI and deployed on Vercel, Render, and MongoDB Atlas.",
       qualifications: [
         "Built a full-stack healthcare platform with Patient, Doctor, and Admin portals, secure JWT authentication, appointment booking, and role-based access.",
         "Implemented digital prescriptions, reviews/ratings, doctor availability, and Cloudinary image uploads with MongoDB persistence.",
-        "Integrated a project-aware Gemini AI assistant and deployed the platform using Vercel, Render, and MongoDB Atlas."
+        "Integrated a project-aware Gemini AI assistant and deployed the platform using Vercel, Render, and MongoDB Atlas.",
+        "Engineered responsive appointment scheduling workflows with automated status transitions (Booked, Completed, Cancelled)."
       ],
       techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Cloudinary", "Gemini AI", "Tailwind CSS"],
-      githubUrl: "https://github.com/shreyash-bobalade",
-      liveUrl: "https://github.com/shreyash-bobalade",
+      githubUrl: "https://github.com/shreyash-sb/prescripto",
+      liveUrl: "https://github.com/shreyash-sb/prescripto",
       badgeColor: "#00F0FF"
+    },
+    {
+      id: "proconnect",
+      title: "ProConnect – Professional Networking & Career Discovery Platform",
+      category: "Full-Stack Web",
+      status: "Completed",
+      role: "Full-Stack Developer • 2025",
+      desc: "A platform for building professional relationships, showcasing verified technical skills, networking with peers, and discovering career opportunities.",
+      overview: "ProConnect is a LinkedIn-inspired professional networking and career platform engineered to connect students, developers, and industry professionals. Features personalized profile portfolios, skill endorsements, activity feeds, connection requests, and dynamic career opportunity listings.",
+      qualifications: [
+        "Designed and implemented full-stack social networking architecture with user authentication, profile customization, and experience timelines.",
+        "Engineered bidirectional connection request workflows, follower counters, and interactive post feeds with likes and comments.",
+        "Built career discovery and job listing modules with keyword search, role filtering, and one-click application tracking.",
+        "Developed normalized MongoDB schemas with optimized indexing for low-latency network feed queries and profile lookups."
+      ],
+      techStack: ["JavaScript", "React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Tailwind CSS"],
+      githubUrl: "https://github.com/shreyash-sb/ProConnect",
+      liveUrl: "https://github.com/shreyash-sb/ProConnect",
+      badgeColor: "#0072FF"
+    },
+    {
+      id: "finora",
+      title: "Finora – Premium Financial & Wealth Management Platform",
+      category: "Full-Stack Web",
+      status: "Completed",
+      role: "Full-Stack Developer • 2025",
+      desc: "A modern financial intelligence platform to track multi-account cashflows, monitor investment budgets, and generate visual wealth analytics.",
+      overview: "Finora is a premium personal finance and wealth management web platform designed to give individuals clear insights into their financial health. Delivers real-time expense classification, automated budget threshold alerts, monthly cashflow analytics, and interactive data visualization charts.",
+      qualifications: [
+        "Architected financial tracking engine supporting multi-account income/expense logging, category tagging, and recurring budgets.",
+        "Built interactive financial analytics dashboards featuring income vs expense charts, category distributions, and monthly trends.",
+        "Implemented dynamic budget threshold alerts and automated summary metrics for net savings and liquidity.",
+        "Engineered a polished, responsive user interface with glassmorphism aesthetics, dark mode, and seamless transaction filtering."
+      ],
+      techStack: ["JavaScript", "React.js", "Node.js", "Express.js", "MongoDB", "Chart.js", "Tailwind CSS"],
+      githubUrl: "https://github.com/shreyash-sb/Finora",
+      liveUrl: "https://github.com/shreyash-sb/Finora",
+      badgeColor: "#10B981"
     },
     {
       id: "age-gender-detection",
       title: "Real-Time Age & Gender Detection System",
       category: "Machine Learning & AI",
-      status: "Featured",
-      role: "AI & Computer Vision Engineer • 2025",
-      desc: "A real-time deep learning computer vision system for face, age, and gender detection using webcam and image preprocessing.",
-      overview: "High-performance computer vision system utilizing OpenCV DNN and TensorFlow deep learning models to detect human faces and predict demographic attributes in real-time. Features robust frame-by-frame preprocessing and optimized video stream inference.",
+      status: "Completed",
+      role: "Computer Vision & AI Engineer • 2025",
+      desc: "A Deep Learning-based computer vision application that detects faces and predicts age groups and gender from live webcam streams using OpenCV DNN.",
+      overview: "A high-performance computer vision system utilizing OpenCV DNN and pre-trained Caffe deep learning models to detect human faces and predict demographic attributes in real-time. Features robust frame-by-frame preprocessing, confidence thresholding, and optimized video stream inference.",
       qualifications: [
-        "Built a real-time system for face, age, and gender detection using webcam and images.",
-        "Implemented image preprocessing and deep-learning inference with OpenCV DNN and TensorFlow models.",
-        "Optimized frame processing for fast real-time predictions and visualization."
+        "Built a real-time computer vision pipeline for facial detection, age estimation, and gender classification from webcam streams and images.",
+        "Integrated OpenCV DNN module with pre-trained Caffe deep learning architectures for fast inference without heavy GPU dependencies.",
+        "Implemented frame preprocessing, blob generation, confidence threshold filtering, and bounding box overlay rendering.",
+        "Optimized multi-threaded frame processing loop to maintain steady real-time frame rates during live video analysis."
       ],
-      techStack: ["Python", "OpenCV", "OpenCV DNN", "TensorFlow", "NumPy", "Deep Learning", "Computer Vision"],
-      githubUrl: "https://github.com/shreyash-bobalade",
-      liveUrl: "https://github.com/shreyash-bobalade",
+      techStack: ["Python", "OpenCV", "OpenCV DNN", "Deep Learning", "Caffe Models", "NumPy", "Computer Vision"],
+      githubUrl: "https://github.com/shreyash-sb/Age-Gender-Detection-OpenCV",
+      liveUrl: "https://github.com/shreyash-sb/Age-Gender-Detection-OpenCV",
       badgeColor: "#0072FF"
     },
     {
       id: "smart-expense-tracker",
-      title: "Smart Expense Tracker Mobile App",
+      title: "Smart Expense Tracker – Android Mobile App",
       category: "Mobile & IoT",
       status: "Completed",
       role: "Android Mobile Developer • 2024 – 2025",
-      desc: "A native Android mobile application to record, categorize, and manage personal expenses with real-time cloud synchronization.",
-      overview: "A native Android mobile application with Material Design UI engineered for personal finance tracking. Supports zero-latency synchronization with Firebase Realtime Database, robust offline SQLite caching, automatic expense categorization, and interactive monthly analytics breakdowns.",
+      desc: "Native Android application built with Java, XML & Firebase to record, categorize, and manage personal expenses with real-time cloud synchronization.",
+      overview: "Smart Expense Tracker is a native Android mobile application with Material Design UI engineered for personal finance tracking. Supports zero-latency synchronization with Firebase Realtime Database, robust offline SQLite caching, automatic expense categorization, and interactive monthly analytics breakdowns.",
       qualifications: [
-        "Built a native Android app in Java following clean MVC patterns and Material Design guidelines.",
-        "Integrated Firebase Realtime Database for zero-latency cloud sync, multi-device access, and offline persistence.",
-        "Implemented CRUD operations for transactions, automated balance calculation, and category-wise expense breakdowns.",
-        "Added transaction history filtering, search capabilities, and spending threshold alerts for financial tracking."
+        "Built a native Android application in Java following clean MVC architectural patterns and Material Design guidelines in Android Studio.",
+        "Integrated Firebase Realtime Database for zero-latency cloud sync, multi-device access, and offline data persistence.",
+        "Implemented full CRUD operations for income/expense records, automated balance calculations, and category-wise breakdowns.",
+        "Added transaction history filtering, date range queries, and spending threshold alerts for active financial management."
       ],
       techStack: ["Java", "Android SDK", "Firebase Realtime DB", "XML UI", "Material Design", "Android Studio"],
-      githubUrl: "https://github.com/shreyash-bobalade",
-      liveUrl: "https://github.com/shreyash-bobalade",
+      githubUrl: "https://github.com/shreyash-sb/Smart-Expense-Tracker",
+      liveUrl: "https://github.com/shreyash-sb/Smart-Expense-Tracker",
       badgeColor: "#10B981"
-    },
-    {
-      id: "campus-connect",
-      title: "Campus Connect Platform",
-      category: "Full-Stack Web",
-      status: "Active",
-      role: "Full-Stack Developer • 2025",
-      desc: "A centralized digital portal for university clubs, event registration workflows, announcements, and student participation tracking.",
-      overview: "A centralized digital community portal for technical clubs, departmental bulletins, event registration workflows, and live participation tracking at Walchand College of Engineering. Features dynamic role management, ticketing pass generation, and administrative approvals.",
-      qualifications: [
-        "Designed student and organizer flows for club announcements, registrations, and participation tracking.",
-        "Implemented administrative approval workflows for campus activities and automated registration counters.",
-        "Created a responsive announcement feed with fast search and category filtering.",
-        "Architected RESTful API endpoints with Express and MongoDB with indexing for fast student record lookups."
-      ],
-      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Tailwind CSS"],
-      githubUrl: "https://github.com/shreyash-bobalade",
-      liveUrl: "https://github.com/shreyash-bobalade",
-      badgeColor: "#00F0FF"
-    },
-    {
-      id: "ai-chatbot",
-      title: "AI Chatbot",
-      category: "Machine Learning & AI",
-      status: "Completed",
-      role: "ML Developer • 2025",
-      desc: "An intelligent conversational chatbot trained to comprehend user intentions, classify queries, and generate dynamic responses in real-time.",
-      overview: "An intelligent conversational chatbot trained to comprehend user intentions, classify input queries, and generate dynamic responses in real-time.",
-      qualifications: [
-        "Constructed NLP text processing pipeline for intent recognition and query classification.",
-        "Implemented lightweight response dispatching with fast inference time.",
-        "Built fallback handlers to gracefully handle ambiguous or unrecognized inputs.",
-        "Embedded into an interactive web chat widget for user engagement."
-      ],
-      techStack: ["Python", "NLP", "Scikit-Learn", "Flask", "JavaScript"],
-      githubUrl: "https://github.com/shreyash-bobalade",
-      liveUrl: "https://github.com/shreyash-bobalade",
-      badgeColor: "#0072FF"
-    },
-    {
-      id: "github-clone",
-      title: "Version Control System (GitHub Clone)",
-      category: "Full-Stack Web",
-      status: "Completed",
-      role: "Full-Stack Developer • 2025",
-      desc: "Full-stack version control and repository management platform simulating Git workflows, commit histories, branching, and code exploration.",
-      overview: "A full-stack version control and repository hosting platform inspired by GitHub. Implements core VCS mechanics including repository initialization, staging area simulation, cryptographic commit hashing (SHA), commit tree traversal, file diffing, and user repository management with an intuitive modern developer UI.",
-      qualifications: [
-        "Engineered a full-stack repository management platform simulating Git architecture, cryptographic commit hashing, and staged changes.",
-        "Implemented commit tree generation, branch tracking, file version history diffing, and directory explorer navigation.",
-        "Architected secure user authentication, repository access control, and dynamic repository search and statistics.",
-        "Designed a high-performance responsive developer dashboard with dark mode, markdown rendering, and syntax-highlighted code viewer."
-      ],
-      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Git Concepts", "REST APIs", "Tailwind CSS"],
-      githubUrl: "https://github.com/shreyash-bobalade",
-      liveUrl: "https://github.com/shreyash-bobalade",
-      badgeColor: "#8B5CF6"
     }
   ],
 
@@ -237,7 +296,7 @@ export const initialPortfolioData = {
       institution: "Walchand College of Engineering, Sangli (Shivaji University)",
       degree: "B.Tech, Information Technology",
       period: "2024 – 2028",
-      grade: "8.1 (till 4th Sem)",
+      grade: "7.69 (till 4th Sem)",
       details: ""
     },
     {

@@ -24,8 +24,7 @@ export function ProjectsSection({
     "All Projects",
     "Full-Stack Web",
     "Machine Learning & AI",
-    "Mobile & IoT",
-    "Python & Games"
+    "Mobile & IoT"
   ];
 
   const filteredProjects = projects.filter((p) => {

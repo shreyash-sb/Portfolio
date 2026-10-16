@@ -31,9 +31,9 @@ export function AboutSection({ personal, stats, interests }) {
         ))}
       </div>
 
-      {/* Core Domains & Interests */}
+      {/* Core Domains */}
       <section className="service">
-        <h3 className="h3 service-title">My Core Domains & Interests</h3>
+        <h3 className="h3 service-title">My Core Domains</h3>
         <ul className="service-list">
           {interests.map((item, idx) => (
             <li key={idx} className="service-item">

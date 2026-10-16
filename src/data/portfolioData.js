@@ -20,10 +20,10 @@ export const initialPortfolioData = {
   },
 
   stats: [
-    { value: "300+", label: "Problems Solved", sublabel: "LeetCode" },
-    { value: "2★", label: "CodeChef Star", sublabel: "Rated Contestant" },
     { value: "8.1", label: "B.Tech CGPA", sublabel: "WCE Sangli (till 4th Sem)" },
-    { value: "12+", label: "Core Projects", sublabel: "Full-Stack, AIML, Networking" }
+    { value: "12+", label: "Core Projects", sublabel: "Full-Stack, AIML, Networking" },
+    { value: "300+", label: "Problems Solved", sublabel: "LeetCode" },
+    { value: "2★", label: "CodeChef Star", sublabel: "Rated Contestant" }
   ],
 
   interests: [
@@ -36,16 +36,6 @@ export const initialPortfolioData = {
       title: "AI & Computer Vision",
       icon: "eye",
       desc: "Engineering real-time vision pipelines with OpenCV DNN, deep learning classifiers, and demographic attribute estimation models."
-    },
-    {
-      title: "Mobile App Engineering",
-      icon: "smartphone",
-      desc: "Developing native Android applications in Java with Material Design, offline persistence, and zero-latency Firebase sync."
-    },
-    {
-      title: "Algorithmic Problem Solving",
-      icon: "cpu",
-      desc: "Strong computer science fundamentals with 300+ problems solved across data structures, dynamic programming, and graph algorithms."
     },
     {
       title: "Cloud & DevOps",

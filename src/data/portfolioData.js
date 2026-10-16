@@ -16,7 +16,7 @@ export const initialPortfolioData = {
     linkedin: "https://www.linkedin.com/in/shreyash-bobalade",
     leetcode: "https://leetcode.com/u/Shreyash1_6/",
     codechef: "https://www.codechef.com/users/shreyash_61",
-    hackerrank: "https://www.hackerrank.com/profile/shreyash_sb"
+    hackerrank: "https://www.hackerrank.com/profile/shreyash_16"
   },
 
   stats: [
@@ -443,7 +443,7 @@ export const initialPortfolioData = {
     {
       platform: "HackerRank",
       handle: "shreyash_sb",
-      url: "https://www.hackerrank.com/profile/shreyash_sb",
+      url: "https://www.hackerrank.com/profile/shreyash_16",
       badge: "Problem Solving",
       icon: "hackerrank"
     }

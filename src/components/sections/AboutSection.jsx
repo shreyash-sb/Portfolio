@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Briefcase,
   Code2,
   Eye,
   Smartphone,
@@ -30,19 +29,6 @@ export function AboutSection({ personal, stats, interests }) {
             <span className="stat-sublabel">{stat.sublabel}</span>
           </div>
         ))}
-      </div>
-
-      {/* Internship Callout Banner */}
-      <div className="internship-banner">
-        <div className="banner-icon">
-          <Briefcase size={22} />
-        </div>
-        <div className="banner-content">
-          <h4>Actively Seeking Summer 2026 Internships!</h4>
-          <p>
-            Looking for Software Engineering, Full-Stack Development, and AI/ML internship opportunities. Open to relocation and remote positions.
-          </p>
-        </div>
       </div>
 
       {/* Core Domains & Interests */}

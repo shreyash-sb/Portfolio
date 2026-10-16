@@ -99,36 +99,6 @@ export function Sidebar({ personal, active, onToggle, onOpenResume }) {
 
           <li className="contact-item">
             <div className="icon-box">
-              <LinkedinIcon size={16} />
-            </div>
-            <div className="contact-info">
-              <p className="contact-title">LinkedIn</p>
-              <a href={personal.linkedin} target="_blank" rel="noreferrer" className="contact-link" title="Connect on LinkedIn">
-                shreyash-bobalade
-              </a>
-              <a href={personal.linkedin} target="_blank" rel="noreferrer" className="contact-action">
-                Connect →
-              </a>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <GithubIcon size={16} />
-            </div>
-            <div className="contact-info">
-              <p className="contact-title">GitHub</p>
-              <a href={personal.github} target="_blank" rel="noreferrer" className="contact-link" title="View Code on GitHub">
-                {personal.github ? personal.github.replace("https://github.com/", "") : "shreyash-sb"}
-              </a>
-              <a href={personal.github} target="_blank" rel="noreferrer" className="contact-action">
-                View Code →
-              </a>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
               <MapPin size={16} />
             </div>
             <div className="contact-info">
@@ -169,11 +139,6 @@ export function Sidebar({ personal, active, onToggle, onOpenResume }) {
           <li>
             <a href={personal.codechef} target="_blank" rel="noreferrer" className="social-link" title="CodeChef (2★)">
               <Star size={17} />
-            </a>
-          </li>
-          <li>
-            <a href={`mailto:${personal.email}`} className="social-link" title="Email Me">
-              <Mail size={17} />
             </a>
           </li>
         </ul>

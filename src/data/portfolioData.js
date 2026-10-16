@@ -70,7 +70,7 @@ export const initialPortfolioData = {
         id: "languages",
         title: "Languages",
         icon: "code",
-        items: ["C", "C++", "Java", "Python", "JavaScript", "TypeScript", "SQL", "Bash / Shell"]
+        items: ["C", "C++", "Java", "Python", "JavaScript", "TypeScript", "SQL"]
       },
       {
         id: "frontend",
@@ -82,7 +82,7 @@ export const initialPortfolioData = {
         id: "backend",
         title: "Backend & APIs",
         icon: "server",
-        items: ["Node.js", "Express.js", "Django", "FastAPI", "RESTful APIs", "JWT Authentication", "MVC Architecture"]
+        items: ["Node.js", "Express.js", "Django", "FastAPI", "RESTful APIs", "JWT Authentication"]
       },
       {
         id: "databases",
@@ -106,13 +106,13 @@ export const initialPortfolioData = {
         id: "core",
         title: "Core CS",
         icon: "cpu",
-        items: ["Data Structures & Algorithms", "Object-Oriented Programming (OOP)", "DBMS & ACID Properties", "Computer Networks", "Operating Systems", "Software Engineering"]
+        items: ["Data Structures & Algorithms", "Object-Oriented Programming", "DBMS", "Computer Networks", "Operating Systems", "Software Engineering"]
       },
       {
         id: "tools",
         title: "Tools & Platforms",
         icon: "tool",
-        items: ["Git", "GitHub", "Android Studio", "Android SDK (Java)", "Postman", "VS Code", "Cloudinary"]
+        items: ["Git", "GitHub", "Android Studio", "Postman", "VS Code", "Cloudinary"]
       }
     ]
   },

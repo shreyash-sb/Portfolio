@@ -443,7 +443,7 @@ export const initialPortfolioData = {
 
   contact: {
     title: "Let's build something together.",
-    subtitle: "I am open to Summer 2026 SDE Internships, Full-Stack development roles, and collaborative engineering projects.",
+    subtitle: "I am open to SDE Internships, Full-Stack development roles, and collaborative engineering projects.",
     email: "shreyashbobalade2006@gmail.com",
     phone: "+91 9322782746",
     linkedin: "https://www.linkedin.com/in/shreyash-bobalade",
@@ -452,9 +452,9 @@ export const initialPortfolioData = {
     options: [
       "Summer 2026 SDE Internship",
       "Full-Stack Web Development Role",
-      "AI / Computer Vision Collaboration",
-      "Android Application Project",
-      "Technical Mentorship / Project Inquiry"
+      "AIML Role",
+      "Android Development Role",
+      "Project Collaboration"
     ]
   }
 };

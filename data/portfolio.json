@@ -87,27 +87,37 @@
     {
       "category": "Frontend",
       "icon": "🎨",
-      "items": ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS", "Responsive UI", "Vite"]
+      "items": ["React.js", "Next.js", "JavaScript (ES6+)", "Tailwind CSS", "HTML5", "CSS3", "Vite", "Responsive UI"]
     },
     {
       "category": "Backend",
       "icon": "⚙️",
-      "items": ["Node.js", "Express.js", "Django", "REST APIs", "JWT Auth", "Cloudinary", "Firebase"]
+      "items": ["Node.js", "Express.js", "Django", "FastAPI", "RESTful APIs", "JWT Authentication"]
     },
     {
       "category": "Database",
       "icon": "🗄️",
-      "items": ["MySQL", "MongoDB", "Firebase Realtime Database", "Query Optimization"]
+      "items": ["MongoDB", "MySQL", "PostgreSQL", "Firebase Firestore", "Firebase Realtime DB"]
     },
     {
       "category": "AI/ML",
       "icon": "🧠",
-      "items": ["OpenCV", "TensorFlow", "NumPy", "Pandas", "Matplotlib", "Deep Neural Networks"]
+      "items": ["OpenCV", "OpenCV DNN", "TensorFlow", "Deep Learning (CNNs)", "NumPy", "Pandas", "Matplotlib", "Scikit-Learn", "Gemini AI API"]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "icon": "☁️",
+      "items": ["AWS (EC2, S3, IAM)", "Docker", "Linux / Red Hat", "CI/CD Pipelines", "Vercel", "Render", "Nginx"]
+    },
+    {
+      "category": "Core CS",
+      "icon": "💻",
+      "items": ["Data Structures & Algorithms", "Object-Oriented Programming", "DBMS", "Computer Networks", "Operating Systems", "Software Engineering"]
     },
     {
       "category": "Tools",
       "icon": "🛠️",
-      "items": ["Git", "GitHub", "Android Studio", "Red Hat Linux", "VS Code", "Postman"]
+      "items": ["Git", "GitHub", "Android Studio", "Postman", "VS Code", "Cloudinary"]
     }
   ],
   "featuredProject": {

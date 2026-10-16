@@ -92,67 +92,6 @@ export function ProjectSvgThumbnail({ projectId, title }) {
         </svg>
       );
 
-    case "interviewforge":
-      return (
-        <svg className="project-svg-thumb" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="240" fill="#0A0E1A" />
-          <circle cx="200" cy="98" r="44" fill="none" stroke="#00F0FF" strokeWidth="2.5" />
-          <circle cx="200" cy="98" r="28" fill="none" stroke="#0072FF" strokeWidth="2" strokeDasharray="6 3" />
-          <circle cx="200" cy="98" r="12" fill="#00F0FF" />
-          <path d="M150,60 L135,60 L135,75 M250,60 L265,60 L265,75 M150,140 L135,140 L135,125 M250,140 L265,140 L265,125" stroke="#38BDF8" strokeWidth="2.5" strokeLinecap="round" />
-          <text x="50%" y="90%" dominantBaseline="middle" textAnchor="middle" fill="#E2E8F0" fontFamily="Outfit" fontWeight="600" fontSize="15">
-            {title}
-          </text>
-        </svg>
-      );
-
-    case "research-agent":
-      return (
-        <svg className="project-svg-thumb" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="240" fill="#090D16" />
-          <circle cx="185" cy="92" r="38" fill="none" stroke="#00F0FF" strokeWidth="3" />
-          <line x1="212" y1="119" x2="245" y2="152" stroke="#0072FF" strokeWidth="4" strokeLinecap="round" />
-          <circle cx="185" cy="92" r="14" fill="#0072FF" opacity="0.4" />
-          <circle cx="140" cy="65" r="4" fill="#38BDF8" />
-          <circle cx="230" cy="60" r="4" fill="#00F0FF" />
-          <line x1="140" y1="65" x2="160" y2="78" stroke="#38BDF8" strokeWidth="1.5" strokeDasharray="3 2" />
-          <line x1="230" y1="60" x2="205" y2="75" stroke="#00F0FF" strokeWidth="1.5" strokeDasharray="3 2" />
-          <text x="50%" y="90%" dominantBaseline="middle" textAnchor="middle" fill="#E2E8F0" fontFamily="Outfit" fontWeight="600" fontSize="15">
-            {title}
-          </text>
-        </svg>
-      );
-
-    case "nosy-neighbor":
-      return (
-        <svg className="project-svg-thumb" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="240" fill="#0F172A" />
-          <circle cx="200" cy="100" r="42" fill="none" stroke="#00F0FF" strokeWidth="3" />
-          <circle cx="200" cy="100" r="16" fill="#0072FF" />
-          <line x1="200" y1="20" x2="200" y2="55" stroke="#38BDF8" strokeWidth="2" />
-          <line x1="200" y1="145" x2="200" y2="180" stroke="#38BDF8" strokeWidth="2" />
-          <line x1="120" y1="100" x2="155" y2="100" stroke="#38BDF8" strokeWidth="2" />
-          <line x1="245" y1="100" x2="280" y2="100" stroke="#38BDF8" strokeWidth="2" />
-          <text x="50%" y="90%" dominantBaseline="middle" textAnchor="middle" fill="#E2E8F0" fontFamily="Outfit" fontWeight="600" fontSize="15">
-            {title}
-          </text>
-        </svg>
-      );
-
-    case "jarvis":
-      return (
-        <svg className="project-svg-thumb" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="240" fill="#0F172A" />
-          <circle cx="200" cy="100" r="48" fill="none" stroke="#0072FF" strokeWidth="2" />
-          <circle cx="200" cy="100" r="36" fill="none" stroke="#00F0FF" strokeWidth="3.5" strokeDasharray="10 5" />
-          <circle cx="200" cy="100" r="10" fill="#00F0FF" />
-          <path d="M150,100 L170,100 M230,100 L250,100 M200,55 L200,75 M200,125 L200,145" stroke="#38BDF8" strokeWidth="2" />
-          <text x="50%" y="90%" dominantBaseline="middle" textAnchor="middle" fill="#E2E8F0" fontFamily="Outfit" fontWeight="600" fontSize="15">
-            {title}
-          </text>
-        </svg>
-      );
-
     case "ai-chatbot":
       return (
         <svg className="project-svg-thumb" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
@@ -169,45 +108,27 @@ export function ProjectSvgThumbnail({ projectId, title }) {
         </svg>
       );
 
-    case "iot-water-sensor":
+    case "github-clone":
       return (
         <svg className="project-svg-thumb" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="240" fill="#0F172A" />
-          <path d="M200,45 C155,100 155,145 200,165 C245,145 245,100 200,45 Z" fill="none" stroke="#00F0FF" strokeWidth="2.5" />
-          <path d="M200,85 C175,115 175,140 200,155 C225,140 225,115 200,85 Z" fill="#0072FF" opacity="0.6" />
-          <path d="M115,85 A 18,18 0 0,1 150,85" fill="none" stroke="#38BDF8" strokeWidth="2" />
-          <path d="M250,85 A 18,18 0 0,1 285,85" fill="none" stroke="#38BDF8" strokeWidth="2" />
-          <text x="50%" y="90%" dominantBaseline="middle" textAnchor="middle" fill="#E2E8F0" fontFamily="Outfit" fontWeight="600" fontSize="15">
-            {title}
+          <rect width="400" height="240" fill="#0D1117" />
+          {/* Main branch line */}
+          <line x1="100" y1="95" x2="300" y2="95" stroke="#38BDF8" strokeWidth="3" strokeLinecap="round" />
+          {/* Feature branch curve */}
+          <path d="M 140,95 C 160,55 200,55 220,55 L 250,55 C 270,55 280,75 290,95" fill="none" stroke="#A855F7" strokeWidth="2.5" strokeDasharray="3 3" />
+          {/* Main branch commits */}
+          <circle cx="110" cy="95" r="7" fill="#0D1117" stroke="#38BDF8" strokeWidth="3" />
+          <circle cx="160" cy="95" r="7" fill="#0D1117" stroke="#38BDF8" strokeWidth="3" />
+          <circle cx="230" cy="95" r="7" fill="#0D1117" stroke="#38BDF8" strokeWidth="3" />
+          <circle cx="290" cy="95" r="7" fill="#38BDF8" />
+          {/* Feature branch commits */}
+          <circle cx="180" cy="55" r="6" fill="#0D1117" stroke="#A855F7" strokeWidth="2.5" />
+          <circle cx="235" cy="55" r="6" fill="#A855F7" />
+          {/* Git branch icon badge / pill */}
+          <rect x="145" y="125" width="110" height="26" rx="13" fill="rgba(56, 189, 248, 0.1)" stroke="rgba(56, 189, 248, 0.3)" strokeWidth="1" />
+          <text x="200" y="142" dominantBaseline="middle" textAnchor="middle" fill="#38BDF8" fontFamily="Outfit" fontWeight="600" fontSize="11" letterSpacing="0.5">
+            main • 4 commits
           </text>
-        </svg>
-      );
-
-    case "amazon-clone":
-      return (
-        <svg className="project-svg-thumb" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="240" fill="#0F172A" />
-          <rect x="110" y="50" width="180" height="100" rx="10" fill="none" stroke="#00F0FF" strokeWidth="2.5" />
-          <line x1="110" y1="78" x2="290" y2="78" stroke="rgba(0, 240, 255, 0.3)" strokeWidth="1.5" />
-          <circle cx="130" cy="64" r="4" fill="#00F0FF" />
-          <circle cx="145" cy="64" r="4" fill="#38BDF8" />
-          <path d="M150,110 C180,130 220,130 250,110" fill="none" stroke="#FF9900" strokeWidth="3" strokeLinecap="round" />
-          <polygon points="252,108 245,105 248,114" fill="#FF9900" />
-          <text x="50%" y="90%" dominantBaseline="middle" textAnchor="middle" fill="#E2E8F0" fontFamily="Outfit" fontWeight="600" fontSize="15">
-            {title}
-          </text>
-        </svg>
-      );
-
-    case "snake-water-gun":
-      return (
-        <svg className="project-svg-thumb" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="240" fill="#090D16" />
-          <circle cx="200" cy="100" r="42" fill="none" stroke="#00F0FF" strokeWidth="2.5" />
-          <path d="M175,90 Q190,75 200,90 T225,90" fill="none" stroke="#10B981" strokeWidth="3" strokeLinecap="round" />
-          <circle cx="170" cy="120" r="7" fill="#0072FF" />
-          <circle cx="230" cy="120" r="7" fill="#38BDF8" />
-          <line x1="160" y1="100" x2="240" y2="100" stroke="rgba(0, 240, 255, 0.2)" strokeWidth="1.5" />
           <text x="50%" y="90%" dominantBaseline="middle" textAnchor="middle" fill="#E2E8F0" fontFamily="Outfit" fontWeight="600" fontSize="15">
             {title}
           </text>

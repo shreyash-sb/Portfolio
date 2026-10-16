@@ -21,7 +21,7 @@ export const initialPortfolioData = {
 
   stats: [
     { value: "8.1", label: "B.Tech CGPA", sublabel: "WCE Sangli (till 4th Sem)" },
-    { value: "12+", label: "Core Projects", sublabel: "Full-Stack, AIML, Networking" },
+    { value: "6+", label: "Core Projects", sublabel: "Full-Stack, AIML, Systems" },
     { value: "300+", label: "Problems Solved", sublabel: "LeetCode" },
     { value: "2★", label: "CodeChef Star", sublabel: "Rated Contestant" }
   ],
@@ -193,82 +193,6 @@ export const initialPortfolioData = {
       badgeColor: "#00F0FF"
     },
     {
-      id: "interviewforge",
-      title: "InterviewForge",
-      category: "Machine Learning & AI",
-      status: "Active",
-      role: "AI & Full Stack Developer • 2025",
-      desc: "AI-powered interview preparation platform generating personalized technical & behavioral questions, simulating sessions, and providing readiness feedback.",
-      overview: "InterviewForge is an AI-powered interview preparation platform designed to help students and job seekers practice for technical and behavioral interviews. It generates personalized interview questions based on job roles, simulates realistic interview sessions, and provides structured AI-driven feedback and answer readiness scoring.",
-      qualifications: [
-        "Engineered role-specific AI prompt pipelines to dynamically generate tailored technical, behavioral, and algorithmic interview questions.",
-        "Built an automated evaluation engine analyzing user answers for clarity, technical depth, and actionable improvement recommendations.",
-        "Designed a responsive and accessible user interface for seamless session simulation and history tracking.",
-        "Integrated secure API communication flows with low-latency response streaming for real-time practice."
-      ],
-      techStack: ["Python", "AI/LLM APIs", "Web Technologies", "JavaScript", "HTML5", "CSS3"],
-      githubUrl: "https://github.com/shreyash-bobalade",
-      liveUrl: "https://github.com/shreyash-bobalade",
-      badgeColor: "#38BDF8"
-    },
-    {
-      id: "research-agent",
-      title: "Research Agent",
-      category: "Machine Learning & AI",
-      status: "Completed",
-      role: "AI & Python Developer • 2025",
-      desc: "AI-driven research assistant designed to explore complex topics, retrieve relevant information, and generate structured research briefs.",
-      overview: "An AI-powered autonomous research assistant designed to help users explore complex subjects, discover relevant information, and synthesize comprehensive, structured research responses through conversational AI workflows.",
-      qualifications: [
-        "Integrated AI/LLM APIs with information retrieval mechanisms to automate knowledge synthesis and topic exploration.",
-        "Architected structured distillation workflows that transform multi-source findings into concise, readable briefs.",
-        "Implemented a dynamic conversational interface for interactive multi-turn exploration and query refinement.",
-        "Built error-handling routines for reliable query resolution and high response quality."
-      ],
-      techStack: ["Python", "AI/LLM APIs", "Web Technologies", "NLP", "JSON/REST"],
-      githubUrl: "https://github.com/shreyash-bobalade",
-      liveUrl: "https://github.com/shreyash-bobalade",
-      badgeColor: "#818CF8"
-    },
-    {
-      id: "nosy-neighbor",
-      title: "Nosy Neighbor (Smart Security)",
-      category: "Mobile & IoT",
-      status: "Completed",
-      role: "Lead Vision Developer • 2025",
-      desc: "A smart home security monitor designed to capture camera feeds in real-time, stream video with low latency, and trigger instant safety notifications.",
-      overview: "A smart home security and surveillance monitor designed to detect anomalies, capture camera feeds in real-time, stream video with low latency, and trigger instant safety notifications.",
-      qualifications: [
-        "Implemented computer vision motion detection algorithms to identify visual anomalies in live feeds.",
-        "Configured video streaming pipeline with low latency for continuous surveillance.",
-        "Integrated automated security alert dispatching and snapshot logging upon trigger events.",
-        "Engineered a responsive dashboard interface for monitoring feeds across viewports."
-      ],
-      techStack: ["Python", "Flask", "OpenCV", "WebSockets", "HTML5", "CSS3"],
-      githubUrl: "https://github.com/shreyash-bobalade",
-      liveUrl: "https://github.com/shreyash-bobalade",
-      badgeColor: "#00F0FF"
-    },
-    {
-      id: "jarvis",
-      title: "Jarvis (Virtual Assistant)",
-      category: "Machine Learning & AI",
-      status: "Completed",
-      role: "AI & Python Developer • 2024 – 2025",
-      desc: "A Python voice assistant that automates local operations, runs web searches, and processes desktop instructions hands-free.",
-      overview: "A Python voice assistant that automates local operations, runs web searches, and processes desktop instructions hands-free through speech recognition and voice synthesis.",
-      qualifications: [
-        "Built natural speech-to-text processing for accurate command interpretation and speech feedback.",
-        "Automated system operations including launching applications, executing file commands, and opening web URLs.",
-        "Integrated dynamic query routing for quick Wikipedia, web search, and calculation answers.",
-        "Created modular command handler structure to easily register new voice skills."
-      ],
-      techStack: ["Python", "SpeechRecognition", "Pyttsx3", "OS Automation"],
-      githubUrl: "https://github.com/shreyash-bobalade",
-      liveUrl: "https://github.com/shreyash-bobalade",
-      badgeColor: "#38BDF8"
-    },
-    {
       id: "ai-chatbot",
       title: "AI Chatbot",
       category: "Machine Learning & AI",
@@ -288,61 +212,23 @@ export const initialPortfolioData = {
       badgeColor: "#0072FF"
     },
     {
-      id: "iot-water-sensor",
-      title: "IoT Based Water Sensor",
-      category: "Mobile & IoT",
-      status: "Completed",
-      role: "IoT & Hardware Developer • 2024",
-      desc: "An automated IoT device measuring water reservoir levels and transmitting live telemetry metrics to prevent overflow and conserve resources.",
-      overview: "An automated IoT device measuring water reservoir levels and transmitting live telemetry metrics to prevent overflow and conserve resources.",
-      qualifications: [
-        "Calibrated ultrasonic distance sensors for accurate water volume percentage calculations.",
-        "Implemented threshold-triggered alerts and safety alarms when reservoir levels cross safe limits.",
-        "Streamed live sensor metrics to cloud IoT endpoints for remote monitoring.",
-        "Engineered reliable microcontroller firmware for continuous hardware uptime."
-      ],
-      techStack: ["C / C++", "Arduino / ESP32", "Ultrasonic Sensors", "IoT Cloud"],
-      githubUrl: "https://github.com/shreyash-bobalade",
-      liveUrl: "https://github.com/shreyash-bobalade",
-      badgeColor: "#10B981"
-    },
-    {
-      id: "amazon-clone",
-      title: "Amazon Clone",
+      id: "github-clone",
+      title: "Version Control System (GitHub Clone)",
       category: "Full-Stack Web",
       status: "Completed",
-      role: "Frontend Developer • 2025",
-      desc: "Responsive e-commerce web application inspired by Amazon with product listings, multi-level navigation, and shopping cart layouts.",
-      overview: "A responsive e-commerce web application inspired by Amazon, built to practice modern web development and user interface design principles. The project includes rich product listings, multi-level navigation, shopping layouts, and seamless responsiveness across devices.",
+      role: "Full-Stack Developer • 2025",
+      desc: "Full-stack version control and repository management platform simulating Git workflows, commit histories, branching, and code exploration.",
+      overview: "A full-stack version control and repository hosting platform inspired by GitHub. Implements core VCS mechanics including repository initialization, staging area simulation, cryptographic commit hashing (SHA), commit tree traversal, file diffing, and user repository management with an intuitive modern developer UI.",
       qualifications: [
-        "Constructed a high-fidelity Amazon-inspired layout featuring category banners, product grids, and header search navigation.",
-        "Implemented client-side interactivity including cart state updates, dynamic pricing calculations, and responsive menus.",
-        "Optimized mobile-first CSS architecture with fluid typography, responsive flexbox, and CSS grid layouts.",
-        "Ensured clean semantic HTML5 markup and cross-browser consistency."
+        "Engineered a full-stack repository management platform simulating Git architecture, cryptographic commit hashing, and staged changes.",
+        "Implemented commit tree generation, branch tracking, file version history diffing, and directory explorer navigation.",
+        "Architected secure user authentication, repository access control, and dynamic repository search and statistics.",
+        "Designed a high-performance responsive developer dashboard with dark mode, markdown rendering, and syntax-highlighted code viewer."
       ],
-      techStack: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Git Concepts", "REST APIs", "Tailwind CSS"],
       githubUrl: "https://github.com/shreyash-bobalade",
       liveUrl: "https://github.com/shreyash-bobalade",
-      badgeColor: "#F59E0B"
-    },
-    {
-      id: "snake-water-gun",
-      title: "Snake Water Gun Game",
-      category: "Python & Games",
-      status: "Completed",
-      role: "Python Developer • 2024",
-      desc: "Interactive game implementing classic Snake-Water-Gun game logic, random computer choices, score tracking, and result calculations.",
-      overview: "A simple interactive game based on the classic Snake-Water-Gun concept. The project implements core game logic, user input handling, random computer choices, and result calculations with engaging user feedback.",
-      qualifications: [
-        "Engineered clean conditional game logic and random selection algorithms in Python.",
-        "Implemented user input validation, round score tracking, and end-of-game summary statistics.",
-        "Structured reusable function modules for game loops, win/loss evaluation, and replay choices.",
-        "Designed clear and interactive feedback prompts for enjoyable gameplay sessions."
-      ],
-      techStack: ["Python", "Game Logic", "CLI / GUI", "Random Algorithms"],
-      githubUrl: "https://github.com/shreyash-bobalade",
-      liveUrl: "https://github.com/shreyash-bobalade",
-      badgeColor: "#10B981"
+      badgeColor: "#8B5CF6"
     }
   ],
 

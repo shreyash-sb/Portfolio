@@ -67,8 +67,9 @@ export const initialPortfolioData = {
       location: "Sangli, Maharashtra",
       badge: "Positions of Responsibility",
       points: [
-        "Led an intra-club competitive programming event for 40+ students, promoting problem-solving and coding skills.",
-        "Organized and delivered a technical session on AWS Cloud Services, introducing cloud fundamentals and real-world applications."
+        "Spearheaded and organized an intra-club competitive programming contest for 40+ students, designing algorithmic challenges and mentoring peers on data structures and efficient coding practices.",
+        "Conducted an interactive technical workshop on AWS Cloud Fundamentals, introducing 50+ attendees to cloud infrastructure, core services (EC2, S3, IAM), and scalable deployment workflows.",
+        "Collaborated on designing and maintaining departmental web platforms, ensuring high responsiveness, modern UI standards, and seamless student event registration flows."
       ]
     }
   ],

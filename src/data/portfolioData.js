@@ -369,45 +369,24 @@ export const initialPortfolioData = {
   achievements: [
     {
       id: "ach-1",
-      title: "300+ Problems Solved",
-      desc: "Solved 300+ algorithmic challenges across LeetCode, CodeChef, and GeeksforGeeks.",
-      badge: "Algorithmic Mastery",
-      icon: "zap"
+      title: "Red Hat Certified — Linux Fundamentals",
+      desc: "Certified in Linux fundamentals, shell scripting, permissions, and system administration.",
+      badge: "Certified",
+      icon: "shield"
     },
     {
       id: "ach-2",
-      title: "2★ CodeChef Rated Competitor",
-      desc: "Active competitive programmer with 2-Star contest rating on CodeChef.",
-      badge: "Global Contests",
-      icon: "star"
-    },
-    {
-      id: "ach-3",
-      title: "98.67%ile in MHT-CET",
-      desc: "Scored 98.67 percentile in Maharashtra State Engineering Entrance Examination (Top 1.33% statewide).",
-      badge: "State Distinction",
-      icon: "target"
-    },
-    {
-      id: "ach-4",
       title: "AWS Cloud Workshop Speaker",
       desc: "Delivered an official departmental technical workshop on AWS Cloud fundamentals at SAIT WCE.",
       badge: "Technical Speaker",
       icon: "cloud"
     },
     {
-      id: "ach-5",
+      id: "ach-3",
       title: "40+ CP Event Lead",
       desc: "Organized and mentored a 40+ student competitive programming contest at SAIT WCE.",
       badge: "Leadership",
       icon: "award"
-    },
-    {
-      id: "ach-6",
-      title: "Red Hat Certified — Linux Fundamentals",
-      desc: "Certified in Linux fundamentals, shell scripting, permissions, and system administration.",
-      badge: "Certified",
-      icon: "shield"
     }
   ],
 

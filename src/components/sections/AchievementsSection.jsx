@@ -1,5 +1,6 @@
 import React from "react";
 import { Zap, Star, Target, Cloud, Award, Shield } from "lucide-react";
+import { HackerrankIcon } from "../ui/Icons";
 
 export function AchievementsSection({ achievements }) {
   return (
@@ -18,6 +19,7 @@ export function AchievementsSection({ achievements }) {
               {ach.icon === "cloud" && <Cloud size={20} />}
               {ach.icon === "award" && <Award size={20} />}
               {ach.icon === "shield" && <Shield size={20} />}
+              {ach.icon === "hackerrank" && <HackerrankIcon size={20} />}
             </div>
             <div className="achievement-info">
               <span style={{ fontSize: "11px", color: "var(--accent-cyan)", fontWeight: "600" }}>

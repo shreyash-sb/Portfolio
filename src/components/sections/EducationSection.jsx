@@ -26,12 +26,14 @@ export function EducationSection({ education }) {
                   {edu.period} • {edu.grade}
                 </span>
               </div>
-              <p
-                className="timeline-text"
-                style={{ fontSize: "13px", lineHeight: "1.6", color: "var(--text-secondary)" }}
-              >
-                {edu.details}
-              </p>
+              {edu.details && (
+                <p
+                  className="timeline-text"
+                  style={{ fontSize: "13px", lineHeight: "1.6", color: "var(--text-secondary)" }}
+                >
+                  {edu.details}
+                </p>
+              )}
             </li>
           ))}
         </ol>

@@ -5,7 +5,7 @@ export const initialPortfolioData = {
     title: "Information Technology",
     college: "Walchand College of Engineering, Sangli (Shivaji University)",
     degree: "B.Tech in Information Technology (2024 – 2028)",
-    cgpa: "7.69 / 10.0 (till 4th Sem)",
+    cgpa: "8.1 / 10.0 (till 4th Sem)",
     location: "Sangli, Maharashtra, India",
     email: "shreyashbobalade2006@gmail.com",
     phone: "+91 9322782746",
@@ -354,15 +354,22 @@ export const initialPortfolioData = {
       institution: "Walchand College of Engineering, Sangli (Shivaji University)",
       degree: "B.Tech, Information Technology",
       period: "2024 – 2028",
-      grade: "7.69 (till 4th Sem)",
-      details: "Premier engineering institute affiliated with Shivaji University. Deep foundations in Data Structures & Algorithms, OOP, DBMS, Computer Networks, and Software Engineering."
+      grade: "8.1 (till 4th Sem)",
+      details: ""
     },
     {
       institution: "Ligadi-Patil Jr. College of Science, (Maharashtra Board)",
       degree: "Senior Secondary (Class XII) — MHT-CET & JEE Examination",
       period: "2022 – 2024",
       grade: "80.17% || 98.67 (MHT-CET) || 88.32 (JEE)",
-      details: "Top 1.33 percentile in Maharashtra State Engineering Entrance Examination (MHT-CET: 98.67%ile, JEE: 88.32%ile). Strong foundations in Mathematics, Physics, and analytical logic."
+      details: ""
+    },
+    {
+      institution: "Maharashtra State Board (SSC)",
+      degree: "Secondary School Certificate (Class X)",
+      period: "2021 – 2022",
+      grade: "90.20%",
+      details: ""
     }
   ],
 
@@ -376,13 +383,20 @@ export const initialPortfolioData = {
     },
     {
       id: "ach-2",
+      title: "HackerRank Certified — Problem Solving",
+      desc: "Verified skill certificate demonstrating proficiency in algorithms, data structures, and computational problem solving.",
+      badge: "Certified",
+      icon: "hackerrank"
+    },
+    {
+      id: "ach-3",
       title: "AWS Cloud Workshop Speaker",
       desc: "Delivered an official departmental technical workshop on AWS Cloud fundamentals at SAIT WCE.",
       badge: "Technical Speaker",
       icon: "cloud"
     },
     {
-      id: "ach-3",
+      id: "ach-4",
       title: "40+ CP Event Lead",
       desc: "Organized and mentored a 40+ student competitive programming contest at SAIT WCE.",
       badge: "Leadership",

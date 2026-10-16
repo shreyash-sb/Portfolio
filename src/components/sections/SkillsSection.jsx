@@ -6,6 +6,7 @@ import {
   Server,
   Database,
   Sparkles,
+  Cloud,
   Wrench
 } from "lucide-react";
 
@@ -22,6 +23,8 @@ export function SkillsSection({ skills }) {
         return <Database size={16} className="skill-cat-icon" />;
       case "sparkles":
         return <Sparkles size={16} className="skill-cat-icon" />;
+      case "cloud":
+        return <Cloud size={16} className="skill-cat-icon" />;
       case "cpu":
         return <Cpu size={16} className="skill-cat-icon" />;
       case "tool":

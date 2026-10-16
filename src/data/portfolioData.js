@@ -70,43 +70,49 @@ export const initialPortfolioData = {
         id: "languages",
         title: "Languages",
         icon: "code",
-        items: ["C", "C++", "Java", "Python", "JavaScript", "SQL"]
+        items: ["C", "C++", "Java", "Python", "JavaScript", "TypeScript", "SQL", "Bash / Shell"]
       },
       {
         id: "frontend",
-        title: "Frontend",
+        title: "Frontend Development",
         icon: "layout",
-        items: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS"]
+        items: ["React.js", "Next.js", "JavaScript (ES6+)", "Tailwind CSS", "HTML5", "CSS3", "Vite", "Responsive UI"]
       },
       {
         id: "backend",
         title: "Backend & APIs",
         icon: "server",
-        items: ["Node.js", "Express.js", "Django", "FastAPI", "REST APIs", "JWT Authentication"]
+        items: ["Node.js", "Express.js", "Django", "FastAPI", "RESTful APIs", "JWT Authentication", "MVC Architecture"]
       },
       {
         id: "databases",
         title: "Databases",
         icon: "database",
-        items: ["MongoDB", "MySQL", "Firebase Firestore"]
+        items: ["MongoDB", "MySQL", "PostgreSQL", "Firebase Firestore", "Firebase Realtime DB"]
       },
       {
         id: "aiml",
         title: "AI & Data Science",
         icon: "sparkles",
-        items: ["OpenCV", "TensorFlow", "NumPy", "Pandas", "Matplotlib"]
+        items: ["OpenCV", "OpenCV DNN", "TensorFlow", "Deep Learning (CNNs)", "NumPy", "Pandas", "Matplotlib", "Scikit-Learn", "Gemini AI API"]
+      },
+      {
+        id: "cloud",
+        title: "Cloud & DevOps",
+        icon: "cloud",
+        items: ["AWS (EC2, S3, IAM)", "Docker", "Linux / Red Hat", "CI/CD Pipelines", "Vercel", "Render", "Nginx"]
       },
       {
         id: "core",
         title: "Core CS",
         icon: "cpu",
-        items: ["Data Structures & Algorithms", "OOP", "DBMS", "Computer Networks", "Software Engineering"]
+        items: ["Data Structures & Algorithms", "Object-Oriented Programming (OOP)", "DBMS & ACID Properties", "Computer Networks", "Operating Systems", "Software Engineering"]
       },
       {
         id: "tools",
         title: "Tools & Platforms",
         icon: "tool",
-        items: ["Git", "GitHub", "Android Studio", "Cloudinary", "Docker", "Postman", "Vercel", "Render"]
+        items: ["Git", "GitHub", "Android Studio", "Android SDK (Java)", "Postman", "VS Code", "Cloudinary"]
       }
     ]
   },

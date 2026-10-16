@@ -30,22 +30,22 @@ export const initialPortfolioData = {
     {
       title: "Web Development",
       icon: "code",
-      desc: "Architecting modern, interactive, and responsive web platforms using React, Node.js, Express, MongoDB, and secure JWT authorization."
+      desc: "Building scalable full-stack applications with MERN (React.js, Node.js, Express, MongoDB). Experienced in RESTful API design, state management, RBAC authorization, JWT authentication, and database indexing for high-performance web systems."
     },
     {
       title: "AI & Computer Vision",
       icon: "eye",
-      desc: "Engineering real-time vision pipelines with OpenCV DNN, deep learning classifiers, and demographic attribute estimation models."
+      desc: "Developing real-time computer vision and deep learning pipelines with OpenCV DNN and TensorFlow. Skilled in CNN architectures, demographic attribute classification, image preprocessing, frame-rate optimization, and LLM API integrations."
     },
     {
       title: "Cloud & DevOps",
       icon: "cloud",
-      desc: "Conducted technical workshops on AWS Cloud fundamentals (EC2, S3, IAM) and hands-on system administration on Linux/Red Hat."
+      desc: "Hands-on experience with AWS Cloud infrastructure (EC2, S3, IAM), Linux/Red Hat system administration, shell scripting, and containerization with Docker. Proven leadership conducting technical cloud workshops at SAIT WCE."
     },
     {
       title: "Software Engineering",
       icon: "git-branch",
-      desc: "Studying scalable system patterns, modular REST architectures, and object-oriented design to craft clean, maintainable code."
+      desc: "Strong core foundations in Data Structures & Algorithms, Object-Oriented Design (OOP), SOLID principles, and DBMS schema normalization (ACID). Focused on writing clean, modular, and maintainable production-grade code."
     }
   ],
 

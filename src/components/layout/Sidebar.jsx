@@ -30,10 +30,6 @@ export function Sidebar({ personal, active, onToggle, onOpenResume }) {
             {personal.name}
           </h1>
           <p className="title">{personal.role}</p>
-          <div className="status-badge">
-            <span className="status-dot"></span>
-            <span>{personal.status}</span>
-          </div>
         </div>
 
         <button

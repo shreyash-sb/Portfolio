@@ -10,7 +10,6 @@ export const initialPortfolioData = {
     email: "shreyashbobalade2006@gmail.com",
     phone: "+91 9322782746",
     whatsapp: "https://wa.me/919322782746",
-    status: "Open to Internships",
     bio: "Information Technology undergraduate with strong foundations in software engineering, DSA, OOP, and DBMS. Experienced in developing full-stack applications, backend APIs, Android applications, and AI-based solutions. Interested in building scalable, efficient, and reliable software systems.",
     subBio: "Passionate about engineering scalable web platforms, backend APIs, and computer vision systems. Competitive programmer with 300+ problems solved across LeetCode and CodeChef. Actively seeking Summer 2026 software engineering internships and collaborative opportunities.",
     github: "https://github.com/shreyash-sb",
@@ -20,10 +19,10 @@ export const initialPortfolioData = {
   },
 
   stats: [
-    { value: "300+", label: "Problems Solved", sublabel: "LeetCode & CodeChef" },
+    { value: "300+", label: "Problems Solved", sublabel: "LeetCode" },
     { value: "2★", label: "CodeChef Star", sublabel: "Rated Contestant" },
-    { value: "7.69", label: "B.Tech CGPA", sublabel: "WCE Sangli (till 4th Sem)" },
-    { value: "12+", label: "Core Projects", sublabel: "Full-Stack, Vision, Mobile" }
+    { value: "8.1", label: "B.Tech CGPA", sublabel: "WCE Sangli (till 4th Sem)" },
+    { value: "12+", label: "Core Projects", sublabel: "Full-Stack, AIML, Networking" }
   ],
 
   interests: [

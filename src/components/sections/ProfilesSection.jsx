@@ -1,6 +1,6 @@
 import React from "react";
 import { Code2, Star } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "../ui/Icons";
+import { GithubIcon, LinkedinIcon, HackerrankIcon } from "../ui/Icons";
 
 export function ProfilesSection({ profiles }) {
   return (
@@ -24,6 +24,7 @@ export function ProfilesSection({ profiles }) {
                 {prof.icon === "linkedin" && <LinkedinIcon size={20} />}
                 {prof.icon === "code" && <Code2 size={20} />}
                 {prof.icon === "star" && <Star size={20} />}
+                {prof.icon === "hackerrank" && <HackerrankIcon size={20} />}
               </div>
               <div>
                 <h4 className="profile-platform">{prof.platform}</h4>

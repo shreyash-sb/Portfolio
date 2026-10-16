@@ -5,12 +5,9 @@ import {
   MapPin,
   GraduationCap,
   ChevronDown,
-  Code2,
-  Star,
   FileText,
   Download
 } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "../ui/Icons";
 
 export function Sidebar({ personal, active, onToggle, onOpenResume }) {
   return (
@@ -115,31 +112,6 @@ export function Sidebar({ personal, active, onToggle, onOpenResume }) {
               <p className="contact-title">College</p>
               <span className="contact-link">WCE Sangli (IT Dept)</span>
             </div>
-          </li>
-        </ul>
-
-        <div className="separator"></div>
-
-        <ul className="social-list">
-          <li>
-            <a href={personal.github} target="_blank" rel="noreferrer" className="social-link" title="GitHub">
-              <GithubIcon size={17} />
-            </a>
-          </li>
-          <li>
-            <a href={personal.linkedin} target="_blank" rel="noreferrer" className="social-link" title="LinkedIn">
-              <LinkedinIcon size={17} />
-            </a>
-          </li>
-          <li>
-            <a href={personal.leetcode} target="_blank" rel="noreferrer" className="social-link" title="LeetCode (300+ Solved)">
-              <Code2 size={17} />
-            </a>
-          </li>
-          <li>
-            <a href={personal.codechef} target="_blank" rel="noreferrer" className="social-link" title="CodeChef (2★)">
-              <Star size={17} />
-            </a>
           </li>
         </ul>
       </div>

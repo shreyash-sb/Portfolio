@@ -1326,6 +1326,12 @@ article:last-of-type {
   gap: 15px;
 }
 
+@media (min-width: 680px) {
+  .profiles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .profile-card {
   padding: 18px 20px;
   display: flex;

@@ -15,7 +15,8 @@ export const initialPortfolioData = {
     github: "https://github.com/shreyash-sb",
     linkedin: "https://www.linkedin.com/in/shreyash-bobalade",
     leetcode: "https://leetcode.com/u/Shreyash1_6/",
-    codechef: "https://www.codechef.com/users/shreyash_61"
+    codechef: "https://www.codechef.com/users/shreyash_61",
+    hackerrank: "https://www.hackerrank.com/profile/shreyash_sb"
   },
 
   stats: [
@@ -413,8 +414,8 @@ export const initialPortfolioData = {
   profiles: [
     {
       platform: "GitHub",
-      handle: "shreyash-bobalade",
-      url: "https://github.com/shreyash-bobalade",
+      handle: "shreyash-sb",
+      url: "https://github.com/shreyash-sb",
       badge: "Repositories",
       icon: "github"
     },
@@ -427,17 +428,24 @@ export const initialPortfolioData = {
     },
     {
       platform: "LeetCode",
-      handle: "shreyash_codes",
-      url: "https://leetcode.com/shreyash_codes",
+      handle: "Shreyash1_6",
+      url: "https://leetcode.com/u/Shreyash1_6/",
       badge: "300+ Solved",
       icon: "code"
     },
     {
       platform: "CodeChef",
-      handle: "shreyash_ccf",
-      url: "https://www.codechef.com/users/shreyash_ccf",
+      handle: "shreyash_61",
+      url: "https://www.codechef.com/users/shreyash_61",
       badge: "2★ Rated",
       icon: "star"
+    },
+    {
+      platform: "HackerRank",
+      handle: "shreyash_sb",
+      url: "https://www.hackerrank.com/profile/shreyash_sb",
+      badge: "Problem Solving",
+      icon: "hackerrank"
     }
   ],
 
@@ -447,7 +455,7 @@ export const initialPortfolioData = {
     email: "shreyashbobalade2006@gmail.com",
     phone: "+91 9322782746",
     linkedin: "https://www.linkedin.com/in/shreyash-bobalade",
-    github: "https://github.com/shreyash-bobalade",
+    github: "https://github.com/shreyash-sb",
     location: "Sangli / Solapur, Maharashtra, India",
     options: [
       "SDE Internship",

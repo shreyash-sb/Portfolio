@@ -38,3 +38,23 @@ export function LinkedinIcon({ size = 16, className = "" }) {
     </svg>
   );
 }
+
+export function HackerrankIcon({ size = 16, className = "" }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M12 2l8.5 4.9v9.8L12 21.6 3.5 16.7V6.9L12 2z" />
+      <path d="M9.5 8.5v7M14.5 8.5v7M9.5 12h5" />
+    </svg>
+  );
+}
+

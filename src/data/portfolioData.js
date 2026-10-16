@@ -450,8 +450,8 @@ export const initialPortfolioData = {
     github: "https://github.com/shreyash-bobalade",
     location: "Sangli / Solapur, Maharashtra, India",
     options: [
-      "Summer 2026 SDE Internship",
-      "Full-Stack Web Development Role",
+      "SDE Internship",
+      "Full-Stack Development Role",
       "AIML Role",
       "Android Development Role",
       "Project Collaboration"

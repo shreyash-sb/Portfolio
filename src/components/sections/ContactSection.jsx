@@ -1,6 +1,5 @@
 import React from "react";
-import { Mail, Phone, Send, Check } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "../ui/Icons";
+import { Send, Check } from "lucide-react";
 
 export function ContactSection({
   personal,
@@ -18,46 +17,8 @@ export function ContactSection({
 
       <div className="connect-dashboard">
         <p className="connect-text">
-          Let's collaborate on software engineering internships, full-stack web platforms, machine learning, or open-source projects. Reach out directly or send a message below:
+          Let's collaborate on software engineering, full-stack web platforms, machine learning, projects. Feel free to connect directly via the sidebar options or send a message below:
         </p>
-
-        <div className="contact-grid">
-          <a href={`mailto:${personal.email}`} className="contact-card-box">
-            <div className="card-icon-box">
-              <Mail size={22} />
-            </div>
-            <h3 className="card-h3">Email Me</h3>
-            <p className="card-val">{personal.email}</p>
-            <span className="card-action">Send Email →</span>
-          </a>
-
-          <a href={personal.whatsapp} target="_blank" rel="noreferrer" className="contact-card-box">
-            <div className="card-icon-box">
-              <Phone size={22} />
-            </div>
-            <h3 className="card-h3">Phone / WhatsApp</h3>
-            <p className="card-val">{personal.phone}</p>
-            <span className="card-action">Chat on WhatsApp →</span>
-          </a>
-
-          <a href={personal.linkedin} target="_blank" rel="noreferrer" className="contact-card-box">
-            <div className="card-icon-box">
-              <LinkedinIcon size={22} />
-            </div>
-            <h3 className="card-h3">LinkedIn</h3>
-            <p className="card-val">shreyash-bobalade</p>
-            <span className="card-action">Connect →</span>
-          </a>
-
-          <a href={personal.github} target="_blank" rel="noreferrer" className="contact-card-box">
-            <div className="card-icon-box">
-              <GithubIcon size={22} />
-            </div>
-            <h3 className="card-h3">GitHub</h3>
-            <p className="card-val">shreyash-bobalade</p>
-            <span className="card-action">View Code →</span>
-          </a>
-        </div>
 
         {/* Working Contact Form */}
         <div className="contact-form-card">
@@ -74,7 +35,7 @@ export function ContactSection({
                   type="text"
                   id="contact-name"
                   className="form-input"
-                  placeholder="e.g. John Doe"
+                  placeholder="e.g. XYZ"
                   value={contactForm.name}
                   onChange={(e) => onChangeForm({ ...contactForm, name: e.target.value })}
                   required
@@ -87,7 +48,7 @@ export function ContactSection({
                   type="email"
                   id="contact-email"
                   className="form-input"
-                  placeholder="e.g. john@example.com"
+                  placeholder="e.g. XYZ@example.com"
                   value={contactForm.email}
                   onChange={(e) => onChangeForm({ ...contactForm, email: e.target.value })}
                   required
@@ -116,7 +77,7 @@ export function ContactSection({
               <textarea
                 id="contact-message"
                 className="form-textarea"
-                placeholder="Hi Shreyash, I came across your portfolio and wanted to discuss..."
+                placeholder="Give your message"
                 value={contactForm.message}
                 onChange={(e) => onChangeForm({ ...contactForm, message: e.target.value })}
                 required

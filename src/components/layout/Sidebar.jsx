@@ -72,9 +72,12 @@ export function Sidebar({ personal, active, onToggle, onOpenResume }) {
               <Mail size={16} />
             </div>
             <div className="contact-info">
-              <p className="contact-title">Email</p>
-              <a href={`mailto:${personal.email}`} className="contact-link">
+              <p className="contact-title">Email Me</p>
+              <a href={`mailto:${personal.email}`} className="contact-link" title="Send Email">
                 {personal.email}
+              </a>
+              <a href={`mailto:${personal.email}`} className="contact-action">
+                Send Email →
               </a>
             </div>
           </li>
@@ -85,8 +88,41 @@ export function Sidebar({ personal, active, onToggle, onOpenResume }) {
             </div>
             <div className="contact-info">
               <p className="contact-title">Phone / WhatsApp</p>
-              <a href={personal.whatsapp} target="_blank" rel="noreferrer" className="contact-link">
+              <a href={personal.whatsapp} target="_blank" rel="noreferrer" className="contact-link" title="Chat on WhatsApp">
                 {personal.phone}
+              </a>
+              <a href={personal.whatsapp} target="_blank" rel="noreferrer" className="contact-action">
+                Chat on WhatsApp →
+              </a>
+            </div>
+          </li>
+
+          <li className="contact-item">
+            <div className="icon-box">
+              <LinkedinIcon size={16} />
+            </div>
+            <div className="contact-info">
+              <p className="contact-title">LinkedIn</p>
+              <a href={personal.linkedin} target="_blank" rel="noreferrer" className="contact-link" title="Connect on LinkedIn">
+                shreyash-bobalade
+              </a>
+              <a href={personal.linkedin} target="_blank" rel="noreferrer" className="contact-action">
+                Connect →
+              </a>
+            </div>
+          </li>
+
+          <li className="contact-item">
+            <div className="icon-box">
+              <GithubIcon size={16} />
+            </div>
+            <div className="contact-info">
+              <p className="contact-title">GitHub</p>
+              <a href={personal.github} target="_blank" rel="noreferrer" className="contact-link" title="View Code on GitHub">
+                {personal.github ? personal.github.replace("https://github.com/", "") : "shreyash-sb"}
+              </a>
+              <a href={personal.github} target="_blank" rel="noreferrer" className="contact-action">
+                View Code →
               </a>
             </div>
           </li>
@@ -108,30 +144,6 @@ export function Sidebar({ personal, active, onToggle, onOpenResume }) {
             <div className="contact-info">
               <p className="contact-title">College</p>
               <span className="contact-link">WCE Sangli (IT Dept)</span>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <LinkedinIcon size={16} />
-            </div>
-            <div className="contact-info">
-              <p className="contact-title">LinkedIn</p>
-              <a href={personal.linkedin} target="_blank" rel="noreferrer" className="contact-link">
-                shreyash-bobalade
-              </a>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <GithubIcon size={16} />
-            </div>
-            <div className="contact-info">
-              <p className="contact-title">GitHub</p>
-              <a href={personal.github} target="_blank" rel="noreferrer" className="contact-link">
-                shreyash-bobalade
-              </a>
             </div>
           </li>
         </ul>

@@ -439,6 +439,22 @@ main {
 
 .contact-link:hover { color: var(--accent-cyan); }
 
+.contact-action {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  color: var(--accent-cyan);
+  font-weight: 500;
+  margin-top: 2px;
+  opacity: 0.85;
+  transition: var(--transition-1);
+}
+
+.contact-item:hover .contact-action {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 .social-list {
   display: flex;
   justify-content: center;

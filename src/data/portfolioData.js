@@ -1,22 +1,22 @@
 export const initialPortfolioData = {
   personal: {
     name: "Shreyash Bobalade",
-    role: "Full-Stack Developer & Problem Solver",
+    role: "Software Engineer & AIML Engineer",
     title: "Information Technology",
     college: "Walchand College of Engineering, Sangli (Shivaji University)",
     degree: "B.Tech in Information Technology (2024 – 2028)",
     cgpa: "7.69 / 10.0 (till 4th Sem)",
-    location: "Sangli / Solapur, Maharashtra, India",
+    location: "Sangli, Maharashtra, India",
     email: "shreyashbobalade2006@gmail.com",
     phone: "+91 9322782746",
     whatsapp: "https://wa.me/919322782746",
     status: "Open to Internships",
     bio: "Information Technology undergraduate with strong foundations in software engineering, DSA, OOP, and DBMS. Experienced in developing full-stack applications, backend APIs, Android applications, and AI-based solutions. Interested in building scalable, efficient, and reliable software systems.",
     subBio: "Passionate about engineering scalable web platforms, backend APIs, and computer vision systems. Competitive programmer with 300+ problems solved across LeetCode and CodeChef. Actively seeking Summer 2026 software engineering internships and collaborative opportunities.",
-    github: "https://github.com/shreyash-bobalade",
+    github: "https://github.com/shreyash-sb",
     linkedin: "https://www.linkedin.com/in/shreyash-bobalade",
-    leetcode: "https://leetcode.com/shreyash_codes",
-    codechef: "https://www.codechef.com/users/shreyash_ccf"
+    leetcode: "https://leetcode.com/u/Shreyash1_6/",
+    codechef: "https://www.codechef.com/users/shreyash_61"
   },
 
   stats: [
